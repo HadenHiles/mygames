@@ -1,0 +1,116 @@
+body {
+    background: url('../images/background4.jpg') top left repeat #262626;
+    /*background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-webkit-background-size: cover;*/
+    /*-ms-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    min-width: 1000px;
+    font-family: 'Trebuchet Ms', helvetica;
+}
+
+/* Header of site */
+.header {
+    padding: 25px 0px;
+    text-align: center;
+}
+.loading {
+    text-align: center;
+    padding: 20px 0px;
+}
+.logo {
+    width: 450px;
+    margin: 25px auto 0px auto;
+}
+.logo img {
+    width: 100%;
+    opacity: 1;
+}
+.logo img:hover {
+    opacity: 0.9;
+}
+
+/* Main content section */
+.stable-height {
+    min-height: 40px;
+}
+#swap-able-content {
+    width: 960px;
+    margin: 0 auto;
+}
+nav {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    padding: 60px 0px;
+}
+.content {
+    margin-top: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.content p {
+    color: #fff;
+}
+
+/* Footer of site */
+footer .footer_content {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+    font-size: 22px;
+    letter-spacing: .1em;
+}
+footer .footer_content img.stamp {
+    margin-top: -15px;
+    width: 120px;
+}
+
+/* General width of site centered on page */
+.header, .loading, .content, footer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.button {
+    /* POSITIONING */
+    padding: 60px;
+    margin-right: 5px;
+    /* BUTTON STYLING */
+    /*border-top: 1px solid #fff;*/
+    border: 10px solid #000;
+    border-radius: 8px;
+    background: #278BF6;
+    background-image: -ms-linear-gradient(top, #4CAEFB 0%, #278BF6 100%);
+    background-image: -moz-linear-gradient(top, #4CAEFB 0%, #278BF6 100%);
+    background-image: -o-linear-gradient(top, #4CAEFB 0%, #278BF6 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4CAEFB), color-stop(1, #278BF6));
+    background-image: -webkit-linear-gradient(top, #4CAEFB 0%, #278BF6 100%);
+    background-image: linear-gradient(to bottom, #4CAEFB 0%, #278BF6 100%);
+    /*box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.4);*/
+    /* FONT STYLING */
+    font: bold 40px 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+    letter-spacing: 4px;
+    text-decoration: none;
+    text-shadow: -1px -1px 1px #1B61AC,1px 1px 1px #a1cfff;
+    color: #122D46;
+}
+.button:hover {
+    /* BUTTON STYLING */
+    background: #4CAEFB;
+    background-image: -ms-linear-gradient(top, #278BF6 0%, #278BF6 100%);
+    background-image: -moz-linear-gradient(top, #278BF6 0%, #4CAEFB 100%);
+    background-image: -o-linear-gradient(top, #278BF6 0%, #4CAEFB 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #278BF6), color-stop(1, #4CAEFB));
+    background-image: -webkit-linear-gradient(top, #278BF6 0%, #4CAEFB 100%);
+    background-image: linear-gradient(to bottom, #278BF6 0%, #4CAEFB 100%);
+    /* FONT STYLING */
+    text-shadow: 1px 1px -1px #1B61AC,-1px -1px -1px #a1cfff;
+    color: #122D46;
+}

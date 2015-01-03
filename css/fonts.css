@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CounterStrikeRegular';
+    src: url('../fonts/counter_strike.eot');
+    src: url('../fonts/counter_strike.eot') format('embedded-opentype'),
+         url('../fonts/counter_strike.woff2') format('woff2'),
+         url('../fonts/counter_strike.woff') format('woff'),
+         url('../fonts/counter_strike.ttf') format('truetype'),
+         url('../fonts/counter_strike.svg#CounterStrikeRegular') format('svg');
+}
