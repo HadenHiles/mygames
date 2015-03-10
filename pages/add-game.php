@@ -194,8 +194,8 @@
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-                                                <button class="btn btn-primary avatar-save" type="submit">Save</button>
+                                                <button class="form_button" data-dismiss="modal" type="button">Close</button>
+                                                <button class="form_button" type="submit">Save</button>
                                             </div>
                                         </form>
                                     </div>
