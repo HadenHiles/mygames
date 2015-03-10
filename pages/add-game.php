@@ -138,7 +138,7 @@
                                 float: left;
                                 color: #fff;
                                 background: #278BF6;
-                                border: 2px solid #000;
+                                border: 2px solid #278BF6;
                                 border-radius: 5px;
                                 -moz-border-radius: 5px;
                                 -webkit-border-radius: 5px;
@@ -151,6 +151,23 @@
                                 cursor: pointer;
                                 cursor: hand;
                                 background: #1B61AC;
+                                border-color: #1B61AC;
+                            }
+                            .form_button.modal_button {
+                                padding: 15px;
+                                width: 25%;
+                                float: right;
+                                margin: 0px 5px;
+                            }
+                            .form_button.modal_button.dark {
+                                color: #fff;
+                                background: #141414;
+                                border: 2px solid #141414;
+                            }
+                            .form_button.modal_button.dark:hover {
+                                color: #fff;
+                                background: #000;
+                                border: 2px solid #141414;
                             }
                         </style>
                         <!--Cropper styles-->
@@ -194,8 +211,8 @@
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button class="form_button" data-dismiss="modal" type="button">Close</button>
-                                                <button class="form_button" type="submit">Save</button>
+                                                <button class="form_button modal_button" type="submit">Save</button>
+                                                <button class="form_button modal_button dark" data-dismiss="modal" type="button">Close</button>
                                             </div>
                                         </form>
                                     </div>
