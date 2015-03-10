@@ -241,7 +241,7 @@
     },
 
     submitStart: function () {
-//      this.$loading.fadeIn();
+      this.$loading.fadeIn();
     },
 
     submitDone: function (data) {
@@ -279,7 +279,7 @@
 
     submitEnd: function () {
 //      this.$loading.fadeOut();
-//        this.$loading.css('display', 'none');
+        this.$loading.css('display', 'none');
     },
 
     cropDone: function () {
