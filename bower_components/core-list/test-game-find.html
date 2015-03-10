@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+
+<iframe style="position:absolute;top:-9999px" sandbox="allow-forms allow-scripts" src="http://ninjakiwi.com/Games/Tower-Defense/Play/SAS-Zombie-Assault-TD.html#.U-glboD2oeI" height="500"></iframe>
+<object>
+    <embed src="./testrelative/sadf"></embed>
+</object>
+<object>
+    <embed src="http://ninjakiwifiles.com/Games/gameswfs/zatd-dat.swf?v=20130905"></embed>
+</object>
+<object>
+    <embed src="http://testpath/blah.html"></embed>
+</object>
+<object type="application/x-shockwave-flash" id="game" name="game"
+        data="http://ninjakiwifiles.com/Games/gameswfs/zatd-dat.swf?v=20130905" width="800" height="620">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <param name="allowscriptaccess" value="always">
+    <param name="allowfullscreen" value="true">
+    <param name="wmode" value="direct">
+    <param name="flashvars" value="file=http://ninjakiwifiles.com/Games/gameswfs/zatd-dat.swf?v=20130905">
+</object>
+<script>
+    var elementSelector = 'object embed[src], object[data]';
+    function getGameUrls() {
+        var gameUrls = [];
+        var originalUrl;
+        var goodUrl;
+        $(elementSelector).each(function (e) {
+            originalUrl = $(this).attr('src') || $(this).attr('data');
+            if (/^http/i.test(originalUrl)) {
+                //continue
+                goodUrl = originalUrl;
+            } else if (/^\//i.test(originalUrl)) {
+                goodUrl = location.protocol + '//' + location.host + originalUrl;
+            } else {
+                goodUrl = location.href.substr(0, location.href.lastIndexOf("/") + 1) + originalUrl;
+            }
+            gameUrls.push(goodUrl);
+        });
+        return gameUrls;
+    }
+    console.log(getGameUrls());
+</script>
+</body>
+</html>

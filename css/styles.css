@@ -5,8 +5,16 @@ body {
     /*-webkit-background-size: cover;*/
     /*-ms-background-size: cover;*/
     /*-o-background-size: cover;*/
-    min-width: 1000px;
+    min-width: 970px;
     font-family: 'Trebuchet Ms', helvetica;
+}
+
+a{
+    text-decoration: none;
+    color: #278BF6;
+}
+a:hover {
+    color: #1B61AC;
 }
 
 /* Header of site */
@@ -19,11 +27,13 @@ body {
     padding: 20px 0px;
 }
 .logo {
-    width: 450px;
-    margin: 25px auto 0px auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
 }
 .logo img {
-    width: 100%;
+    width: 470px;
+    margin: 0px auto;
     opacity: 1;
 }
 .logo img:hover {
@@ -41,12 +51,14 @@ body {
 nav {
     width: 100%;
     text-align: center;
-    margin: 20px 0px 0px 0px;
+    margin: 0px auto;
     padding: 60px 0px;
 }
 .content {
-    margin-top: 10px;
+    float: left;
+    margin: 10px auto 0px auto;
     padding: 20px;
+    color: #fff;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     -moz-border-radius: 15px;
@@ -54,13 +66,64 @@ nav {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+.content h1 {
+    font-family: 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+    font-size: 40px;
+}
+.content h2 {
+    font-family: 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+    font-size: 36px;
+}
+.content a{
+    text-decoration: none;
+    color: #278BF6;
+}
+.content a:hover {
+    color: #1B61AC;
+}
 .content p {
     color: #fff;
+}
+/* Game list styles */
+ul.game_list_container {
+    width: 100%;
+    list-style: none;
+}
+ul.game_list_container li {
+    width: 200px;
+    height: 200px;
+    margin: 0px 16px 16px 0px;
+    float: left;
+    border: 4px solid #4CAEFB;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+ul.game_list_container li img {
+    height: 200px;
+    width: 200px;
+}
+
+/* Play game page styles */
+.game_container {
+    width: 100%;
+    text-align: center;
+}
+.game_name {
+    font: bold 34px 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+}
+.game_description {
+    width: 600px;
+    margin: 25px auto;
 }
 
 /* Footer of site */
 footer .footer_content {
     width: 100%;
+    padding: 10px 0px;
+    margin-top: 15px;
     text-align: center;
     color: #fff;
     font-family: 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
@@ -80,11 +143,11 @@ footer .footer_content img.stamp {
 
 .button {
     /* POSITIONING */
-    padding: 60px;
+    padding: 55px 45px;
     margin-right: 5px;
     /* BUTTON STYLING */
     /*border-top: 1px solid #fff;*/
-    border: 10px solid #000;
+    border: 8px solid #000;
     border-radius: 8px;
     background: #278BF6;
     background-image: -ms-linear-gradient(top, #4CAEFB 0%, #278BF6 100%);
@@ -113,4 +176,102 @@ footer .footer_content img.stamp {
     /* FONT STYLING */
     text-shadow: 1px 1px -1px #1B61AC,-1px -1px -1px #a1cfff;
     color: #122D46;
+}
+a.form_button {
+    padding: 15px;
+    float: left;
+    color: #fff;
+    background: #278BF6;
+    border: 2px solid #000;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font: bold 30px 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+}
+a.form_button:hover {
+    cursor: pointer;
+    cursor: hand;
+    background: #1B61AC;
+    color: #fff;
+}
+
+/* FORM STYLES */
+.form_container {
+    width: 255px;
+    padding: 20px 80px;
+    margin: -20px auto -25px auto;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.form_container .message_error {
+    font-size: 12px;
+    color: #E60000;
+    width: 380px;
+    margin-left: -60px;
+    text-align: center;
+}
+.form_container .message_success {
+    font-size: 12px;
+    color: #006600;
+    width: 380px;
+    margin-left: -60px;
+    text-align: center;
+}
+.form_container fieldset {
+    max-width: 100%;
+    border: none;
+    text-align: center;
+}
+.form_container fieldset div.input_wrapper {
+    width: 100%;
+}
+input:-webkit-autofill, #inputId:-webkit-autofill, input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #141414 inset;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff;
+}
+.form_container fieldset input.input {
+    width: 204px;
+    color: #fff !important;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-bottom: none;
+    outline: none;
+    padding: 10px;
+    background: #141414 !important;
+}
+.form_container a.form_button {
+    padding: 15px;
+    width: 194px;
+    float: left;
+    color: #fff;
+    background: #278BF6;
+    border: 2px solid #000;
+    font: bold 30px 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+}
+.form_container a.form_button:hover {
+    /* BUTTON STYLING */
+    cursor: pointer;
+    cursor: hand;
+    background: #1B61AC;
+}
+.form_container fieldset p {
+    font-size: 14px;
+    width: 210px;
+    float: left;
+    padding: 0px 2px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* ADDITIONAL STYLES */
+div.clear {
+    clear: both;
 }

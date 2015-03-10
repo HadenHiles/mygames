@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Url Input</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../platform/platform.js"></script>
+    <link rel="import" href="../core-ajax/core-ajax.html">
+    <link rel="import" href="../paper-input/paper-input.html">
+    <link rel="import" href="../paper-fab/paper-fab.html">
+    <style>
+        CoreStyle.g.paperInput.focusedColor {
+            color : green;
+        }
+
+        CoreStyle.g.paperInput.invalidColor {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+<polymer-element name="flash-game-element" attributes="url">
+    <template>
+		<object codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="700" height="550">
+			<param name="allowFullScreen" value="true">
+			<embed class="game" src="{{url}}" width="800" height="650" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer">
+		</object>
+    </template>
+</polymer-element>
+<polymer-element name="url-element" attributes="url, jQuery">
+    <template>
+        <paper-input floatingLabel label="Enter a URL" type="url" pattern="https?://.+" error="Input is not a URL!"
+                     value="{{url}}"></paper-input>
+        <!--<paper-fab icon="favorite" class="mini" on-tap="{{go}}"></paper-fab>-->
+        <core-ajax id="ajax" auto
+                url="{{proxifyUrl(url)}}"
+                handleAs="document"
+                on-core-response="{{handleResponse}}">
+                </core-ajax>
+        <iframe>{{sourceDocument}}</iframe>
+        <div>{{sourceDocument}}</div>
+        <p>{{url}}</p>
+        <template repeat="{{url in gameUrls(sourceDocument)}}">
+            <flash-game-element url="{{url}}"></flash-game-element>
+        </template>
+    </template>
+</polymer-element>
+<url-element></url-element>
+<script>
+    Polymer('url-element', {
+        ready: function () {
+            this.url = location.href;
+            this.sourceDocument = "todd really does rock; says Haden!";
+        },
+        proxifyUrl : function(url){
+            var proxyUrl = "";
+            if(url !== undefined && url != ""){
+                proxyUrl = location.origin + "/proxy.php?q=" + btoa(url);
+            }
+            return proxyUrl;
+        },
+        handleResponse: function (e) {
+            this.sourceDocument = e.detail.response;
+        },
+        elementSelector : 'object embed[src], object[data]',
+        gameUrls : function(document) {
+            var jDoc = $(document);
+            var gameUrls = [];
+            var originalUrl;
+			var element = this;
+			// Find game urls in html element src and data attributes.
+            jDoc.find(this.elementSelector).each(function (e) {
+                originalUrl = $(this).attr('src') || $(this).attr('data');
+                gameUrls.push(element.makeAbsoluteUrl(originalUrl));
+            });
+			// Find game urls in script element source.
+			var rawMatches;
+			var cleansedMatch;
+			jDoc.find('script').each(function () {
+				rawMatches = element.getMatches(this.textContent, /(['|"])([http|\/\/].*\.swf.*)(['|"])/igm, 2);
+				$(rawMatches).each( function () {
+					cleansedMatch = this.replace(/"|'/g,'');
+					var end = cleansedMatch.indexOf(',');
+					if (end == -1) end = cleansedMatch.length; 
+					cleansedMatch = cleansedMatch.substr(0, end);
+					gameUrls.push(element.makeAbsoluteUrl(cleansedMatch));
+				});
+			});
+            return element.unique(gameUrls);
+        },
+		unique : function(array) {
+			return array.filter(function(item, itemIndex) {
+				return (array.indexOf(item) == itemIndex) 
+			});
+		},
+		makeAbsoluteUrl : function(originalUrl) {
+            var absoluteUrl;
+			if (/^http/i.test(originalUrl)) {
+				//continue
+				absoluteUrl = originalUrl;
+			} else if (/^\/\//i.test(originalUrl)) {
+				absoluteUrl = location.protocol + originalUrl;
+			} else if (/^\/[^\/]/i.test(originalUrl)) {
+				absoluteUrl = location.protocol + '//' + location.host + originalUrl;
+			} else {
+				absoluteUrl = location.href.substr(0, location.href.lastIndexOf("/") + 1) + originalUrl;
+			}
+			return absoluteUrl;
+		},
+		getMatches : function(string, regex, capturingGroupIndex) {
+			capturingGroupIndex || (capturingGroupIndex = 1); // default to the first capturing group
+			var matches = [];
+			var match;
+			while (match = regex.exec(string)) {
+				matches.push(match[capturingGroupIndex]);
+			}
+			return matches;
+		}
+		
+        });
+		Polymer('flash-game-element', {
+			ready : function() {
+				this.bind
+			}
+		});
+</script>
+</body>
+</html>

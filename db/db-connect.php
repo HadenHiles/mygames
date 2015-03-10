@@ -5,7 +5,7 @@
     //connect to the db
     function connection() {
         try {
-            $connect = new PDO("mysql:host=sql302.byethost24.com; dbname=".dbName, dbUser, dbPassword);
+            $connect = new PDO("mysql:host=".dbHost . ";dbname=" . dbName, dbUser, dbPassword);
             $connect->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
