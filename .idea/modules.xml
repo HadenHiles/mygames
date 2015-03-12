@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bower_components/bower_components.iml" filepath="$PROJECT_DIR$/bower_components/bower_components.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cropper-master/cropper-master.iml" filepath="$PROJECT_DIR$/cropper-master/cropper-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/PHPMailer-master/docs/docs.iml" filepath="$PROJECT_DIR$/PHPMailer-master/docs/docs.iml" />
       <module fileurl="file://$PROJECT_DIR$/PHPMailer-master/examples/examples.iml" filepath="$PROJECT_DIR$/PHPMailer-master/examples/examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/cropper/js/js.iml" filepath="$PROJECT_DIR$/cropper/js/js.iml" />

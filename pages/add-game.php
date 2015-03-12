@@ -51,7 +51,7 @@
                             paper-input-decorator /deep/ .label-text,
                             paper-input-decorator /deep/ .error {
                                 /* inline label,  floating label, error message and error icon color when the input is unfocused */
-                                color: #278BF6 !important;
+                                color: #fff !important;
                             }
 
                             paper-input-decorator /deep/ ::-webkit-input-placeholder {

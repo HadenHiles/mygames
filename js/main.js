@@ -7,6 +7,29 @@
  */
 $(document).ready(function() {
     $('body').on('click', 'a.dynamic', swapContent);
+
+    //Search Trigger
+    $('#submit_search').on('click', function(e) {
+        e.preventDefault();
+        var search_value = $('#search').val();
+        var query = encodeURIComponent(search_value);
+        if(location.pathname != 'games.php' || location.pathname != 'mygames.php') {
+            window.location = location.protocol + '//' + location.host + '/pages/games.php' + '?name=' + query;
+        } else {
+            window.location = location.protocol + '//' + location.host + location.pathname + '?name=' + query;
+        }
+    });
+    $('#search').keypress(function (e) {
+        if (e.which == 13) {
+            var search_value = $(this).val();
+            var query = encodeURIComponent(search_value);
+            if(location.pathname != 'games.php' || location.pathname != 'mygames.php') {
+                window.location = location.protocol + '//' + location.host + '/pages/games.php' + '?name=' + query;
+            } else {
+                window.location = location.protocol + '//' + location.host + location.pathname + '?name=' + query;
+            }
+        }
+    });
 });
 function swapContent(e) {
     e && e.preventDefault();
