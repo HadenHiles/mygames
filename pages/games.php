@@ -1,5 +1,10 @@
 <?
 $relative_path = '../';
+
+require_once($relative_path . 'db/db-connect.php');
+$connect = connection();
+
+require_once($relative_path . 'auth/authenticate.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,9 +18,6 @@ $relative_path = '../';
         <div id="swap-able-content">
             <div class="content">
                 <?
-                require_once($relative_path . 'db/db-connect.php');
-                $connect = connection();
-
                 $tag = $_REQUEST['category'];
                 $name = $_REQUEST['name'];
 
@@ -69,7 +71,37 @@ $relative_path = '../';
                                         <?
                                         }
                                         ?>
-                                        <div><span><?=$row['name']?></span></div>
+                                        <div>
+                                            <span>
+                                                <?=$row['name']?>
+                                            </span>
+                                            <?
+                                            if(authUser()) {
+                                                $game_id = $row['id'];
+                                                $user_id = $_SESSION['user_id'];
+                                                $sql_check = "SELECT game_id FROM user_games WHERE game_id = '$game_id' AND user_id = '$user_id'";
+                                                $check_result = $connect->prepare($sql_check);
+                                                $check_result->execute();
+                                                if($check_result->rowCount() == 0) {
+                                                    ?>
+                                                    <br>
+                                                    <strong class="fav">
+                                                        <i class="fa fa-heart-o icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>">
+                                                        </i>
+                                                    </strong>
+                                                    <?
+                                                } else {
+                                                    ?>
+                                                    <br>
+                                                    <strong class="fav red">
+                                                        <i class="fa fa-heart icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>">
+                                                        </i>
+                                                    </strong>
+                                                    <?
+                                                }
+                                            }
+                                            ?>
+                                        </div>
                                         <!--                            <h3 class="game_name">--><?//=$row['name']?><!--</h3>-->
                                         <!--                            <p class="game_description">--><?//=$row['description']?><!--</p>-->
                                     </a>

@@ -9,4 +9,4 @@ session_unset();
 session_destroy();
 
 //redirect to the login page
-header('location: ../pages/login.php');
+header('location: ../index.php');

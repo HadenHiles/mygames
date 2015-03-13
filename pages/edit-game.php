@@ -1,8 +1,25 @@
 <?
+$relative_path = '../';
 require_once('../auth/authenticate.php');
+
+require_once('../db/db-connect.php');
+$connect = connection();
 
 if (!authUser()) {
     header('location: login.php');
+}
+
+$id = $_REQUEST['id'];
+$user_id = $_SESSION['user_id'];
+
+$sql = "SELECT name, img, description FROM games JOIN user_games ON games.id = user_games.game_id WHERE games.id = $id";
+$stmt = $connect->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll();
+foreach($result as $row) {
+    $title = $row['name'];
+    $img = $row['img'];
+    $description = $row['description'];
 }
 ?>
 <!DOCTYPE html>
@@ -184,7 +201,7 @@ if (!authUser()) {
                         <link href="../cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
                             <!-- Current avatar -->
-                            <div class="avatar-view" title="Upload an Image">
+                            <div class="avatar-view" id="current_image" title="Upload an Image">
                                 <img src="{{imageUrl}}" alt="No Image">
                             </div>
                             <!-- Cropping modal -->
@@ -228,7 +245,7 @@ if (!authUser()) {
                             </div>
                             <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
                         </div>
-                        <form id="add_game" class="form_container" method="post" action="save-game.php" style="width: 100%;">
+                        <form id="add_game" class="form_container" method="post" action="update-game.php" style="width: 100%;">
                             <div class="flash_element_container">
                                 <core-selector selected="{{game_url}}" valueattr="url">
                                     <template repeat="{{gameUrl in gameUrls(sourceDocument)}}">
@@ -279,7 +296,7 @@ if (!authUser()) {
                                 <!--<input type="hidden" name="game_url" value="{{game_url}}" class="input" />-->
                                 <div class="input_wrapper third">
                                     <paper-input-decorator label="Game Title" floatinglabel="" layout="" vertical="">
-                                        <input is="core-input" placeholder="Game Title" aria-label="Game Title" name="title" required="required" />
+                                        <input is="core-input" placeholder="Game Title" aria-label="Game Title" name="title" required="required" value="<?=$title?>" />
                                     </paper-input-decorator>
                                 </div>
                                 <input type="hidden" name="game_url" value="{{game_url}}" required="required" />
@@ -288,9 +305,10 @@ if (!authUser()) {
                                                  value="{{url}}"></paper-input>
                                 </div>
                                 <div class="input_wrapper third">
-                                    <input type="submit" value="Add Game" class="form_button" />
+                                    <input type="submit" value="Edit Game" class="form_button" />
                                 </div>
                                 <input id="image_url" type="hidden" name="image_url" value="{{imageUrl}}" />
+                                <input type="hidden" name="game_id" value="<?=$id?>" />
                                 <core-ajax id="ajax" auto
                                            url="{{proxifyUrl(url)}}"
                                            handleAs="document"
@@ -308,7 +326,7 @@ if (!authUser()) {
                                     //					this.url = location.href;
                                     //					this.sourceDocument = "todd really does rock; says Haden!";
                                     var example = new CropAvatar($(this.$.cropAvatar));
-                                    this.imageUrl = '../images/upload-image.jpg';
+                                    this.imageUrl = '..<?=$img?>';
 
                                     var me = this;
                                     $(window).on('avatar_src_change', function(e, url) {

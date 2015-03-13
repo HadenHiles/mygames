@@ -18,13 +18,13 @@ if(isset($_REQUEST['name'])) {
         require_once($relative_path . 'auth/authenticate.php');
         if (authUser()) {
             ?>
-            <a href="<?=$relative_path?>pages/mygames.php" class="button second" style="margin-left: 55px;">MY GAMES</a>
+            <a href="<?=$relative_path?>pages/favorites.php" class="button second" style="margin-left: 55px;">FAVORITES</a>
             <a href="<?=$relative_path?>pages/logout.php" class="button third">LOGOUT</a>
         <?
         }
         if(!authUser()) {
             ?>
-            <a href="<?=$relative_path?>pages/mygames.php" class="button second" style="margin-left: 55px;">LOGIN</a>
+            <a href="<?=$relative_path?>pages/favorites.php" class="button second" style="margin-left: 55px;">LOGIN</a>
             <a href="<?=$relative_path?>pages/sign-up.php" class="button third">JOIN</a>
         <?
         }
