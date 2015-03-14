@@ -15,14 +15,14 @@ $connect = connection();
 
 //set up and run the query
 $sql = "SELECT id FROM users WHERE (username = :username AND password = :password) AND activation IS NULL";
-$cmd = $connect -> prepare($sql);
+$cmd = $connect->prepare($sql);
 //Add the parameter values for the admin query
-$cmd -> bindParam(':username', $username, PDO::PARAM_STR, 50);
-$cmd -> bindParam(':password', $password, PDO::PARAM_STR, 512);
+$cmd->bindParam(':username', $username, PDO::PARAM_STR, 50);
+$cmd->bindParam(':password', $password, PDO::PARAM_STR, 512);
 
 //handle any pdo query errors
 try {
-    $cmd ->execute();
+    $cmd->execute();
 }	catch (PDOException $e) {
     header('location: ../pages/login.php?message=login_error');
 }
@@ -39,7 +39,7 @@ if ($count == 1) {
         //take the user's id from the database and store it in a session variable
         $_SESSION['user_id'] = $row['id'];
         //redirect the user
-        header('Location:../index.php');
+        header('Location:../pages/favorites.php');
     }
 }
 else {

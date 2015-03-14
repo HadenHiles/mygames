@@ -56,7 +56,7 @@ $(document).ready(function() {
 function search() {
     var search_value = $('#search').val();
     var query = encodeURIComponent(search_value);
-    if(location.pathname != '/pages/games.php' || location.pathname != '/pages/favorites.php') {
+    if(location.pathname != '/pages/games.php' && location.pathname != '/pages/favorites.php') {
         window.location = location.protocol + '//' + location.host + '/pages/games.php' + '?name=' + query;
     } else {
         window.location = location.protocol + '//' + location.host + location.pathname + '?name=' + query;

@@ -1,5 +1,6 @@
 <?
-require_once('../auth/authenticate.php');
+$relative_path = '../';
+require_once($relative_path . 'auth/authenticate.php');
 
 if (!authUser()) {
     header('location: login.php');
@@ -9,35 +10,29 @@ if (!authUser()) {
 <html>
 <head>
     <title>Add Game | My Games</title>
-    <script src="../js/lib/jquery-2.1.3.min.js"></script>
-    <script src="../bower_components/platform/platform.js"></script>
-
     <meta charset="utf-8" />
 
-    <!--Polymer imports-->
-    <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
-    <link rel="import" href="../bower_components/paper-input/paper-input.html">
-    <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
-    <link rel="import" href="../bower_components/paper-input-decorator/paper-input-decorator.html">
+    <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
+    <script src="<?=$relative_path?>bower_components/platform/platform.js"></script>
 
-    <!--Custom Page Styles-->
-    <link href="../css/fonts.css" type="text/css" rel="stylesheet" />
-    <link href="../css/styles.css" type="text/css" rel="stylesheet" />
+    <!--Polymer imports-->
+    <link rel="import" href="<?=$relative_path?>bower_components/core-ajax/core-ajax.html">
+    <link rel="import" href="<?=$relative_path?>bower_components/paper-input/paper-input.html">
+    <link rel="import" href="<?=$relative_path?>bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="<?=$relative_path?>bower_components/paper-input-decorator/paper-input-decorator.html">
 
     <!--Flash game element imports-->
 	<link rel="import" href="flash-game-element.html">
-    <link rel="import" href="../bower_components/core-selector/core-selector.html">
-    <link rel="import" href="../bower_components/core-layout/core-layout.html">
+    <link rel="import" href="<?=$relative_path?>bower_components/core-selector/core-selector.html">
+    <link rel="import" href="<?=$relative_path?>bower_components/core-layout/core-layout.html">
 
     <!--Cropper imports-->
     <link rel="import" href="cropper-import.html">
+
+    <? include($relative_path . 'includes/stylesheets.php') ?>
 </head>
 <body>
-    <div class="header" id="header">
-        <div class="logo">
-            <a href="/" title="home"><img src="../images/logos/logo2.png" /></a>
-        </div>
-    </div>
+    <? include($relative_path . 'templates/header.php'); ?>
     <div class="stable-height">
         <div id="swap-able-content">
             <div class="content" style="position: relative;">
@@ -180,8 +175,8 @@ if (!authUser()) {
                         </style>
                         <!--Cropper styles-->
                         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-                        <link href="../cropper/css/cropper.min.css" rel="stylesheet">
-                        <link href="../cropper/css/crop-avatar.css" rel="stylesheet">
+                        <link href="<?=$relative_path?>cropper/css/cropper.min.css" rel="stylesheet">
+                        <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
                             <!-- Current avatar -->
                             <div class="avatar-view" title="Upload an Image">
@@ -191,7 +186,7 @@ if (!authUser()) {
                             <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
-                                        <form class="avatar-form" action="../cropper/crop-game-image.php" enctype="multipart/form-data" method="post">
+                                        <form class="avatar-form" action="<?=$relative_path?>cropper/crop-game-image.php" enctype="multipart/form-data" method="post">
                                             <div class="modal-header">
                                                 <button class="close" data-dismiss="modal" type="button">&times;</button>
                                                 <h4 class="modal-title" id="avatar-modal-label" style="color: #000;">Upload An Image For Your Game</h4>
@@ -278,7 +273,7 @@ if (!authUser()) {
                                 <!--</div>-->
                                 <!--<input type="hidden" name="game_url" value="{{game_url}}" class="input" />-->
                                 <div class="input_wrapper third">
-                                    <paper-input-decorator label="Game Title" floatinglabel="" layout="" vertical="">
+                                    <paper-input-decorator label="Game Title" floatinglabel="" layout="" vertical="" error="A title is Required!">
                                         <input is="core-input" placeholder="Game Title" aria-label="Game Title" name="title" required="required" />
                                     </paper-input-decorator>
                                 </div>
@@ -308,7 +303,7 @@ if (!authUser()) {
                                     //					this.url = location.href;
                                     //					this.sourceDocument = "todd really does rock; says Haden!";
                                     var example = new CropAvatar($(this.$.cropAvatar));
-                                    this.imageUrl = '../images/upload-image.jpg';
+                                    this.imageUrl = '<?=$relative_path?>images/upload-image.jpg';
 
                                     var me = this;
                                     $(window).on('avatar_src_change', function(e, url) {
@@ -392,9 +387,9 @@ if (!authUser()) {
     <footer>
         <div class="footer_content">
             <p>Copyright &copy 2015</p>
-            <a href="http://haden.moonrockfamily.ca"><img src="../images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
+            <a href="http://haden.moonrockfamily.ca"><img src="<?=$relative_path?>images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="<?=$relative_path?>js/main.js"></script>
 </body>
 </html>

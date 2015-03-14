@@ -4,6 +4,7 @@ require_once('../db/db-connect.php');
 $connect = connection();
 
 $key = $_REQUEST['key'];
+$email = $_REQUEST['email'];
 $delta = 86400;
 
 //find the user that needs to be activated
@@ -22,20 +23,10 @@ if ($_SERVER["REQUEST_TIME"] - $timeStamp > $delta) {
     header('location:../pages/sign-up.php');
 }
 
-//make sure the email is set and is properly formatted
-if (isset($_REQUEST['email']) && preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $_REQUEST['email'])) {
-    $email = $_REQUEST['email'];
-}
-
-//The MD5 Hash Activation key will always be 32 characters long
-if (isset($_REQUEST['key']) && (strlen($_REQUEST['key']) == 32)) {
-    $key = $_REQUEST['key'];
-}
-
 //if the username and email contain data, then try a sql update
 if (isset($email) && isset($key)) {
     //Update the database to set the "activation" field to null (null is activated)
-    $sqlUpdate = "UPDATE users SET activation = NULL WHERE(email = :email && activation= :key)LIMIT 1";
+    $sqlUpdate = "UPDATE users SET activation = NULL WHERE email = :email AND activation= :key LIMIT 1";
     $cmd = $connect ->prepare($sqlUpdate);
     $cmd ->bindParam(':email', $email, PDO::PARAM_STR, 50);
     $cmd ->bindParam(':key', $key, PDO::PARAM_STR, 50);
@@ -61,5 +52,5 @@ if (isset($email) && isset($key)) {
     }
 }
 else {
-    echo 'Oops! Your account could not be activated. Please re-click the link or contact the system administrator: <a href="mail:hgameinc@gmail.com">hgameinc@gmail.com</a>.';
+    header('location: ../pages/login.php?message=activate_fail');
 }

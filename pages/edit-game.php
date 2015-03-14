@@ -1,8 +1,8 @@
 <?
 $relative_path = '../';
-require_once('../auth/authenticate.php');
+require_once($relative_path . 'auth/authenticate.php');
 
-require_once('../db/db-connect.php');
+require_once($relative_path . 'db/db-connect.php');
 $connect = connection();
 
 if (!authUser()) {
@@ -18,8 +18,11 @@ $stmt->execute();
 $result = $stmt->fetchAll();
 foreach($result as $row) {
     $title = $row['name'];
-    $img = $row['img'];
+    $img = $relative_path . $row['img'];
     $description = $row['description'];
+}
+if(!file_exists($img)) {
+    $img = $relative_path . 'images/no-image.jpg';
 }
 ?>
 <!DOCTYPE html>
@@ -50,15 +53,11 @@ foreach($result as $row) {
     <link rel="import" href="cropper-import.html">
 </head>
 <body>
-    <div class="header" id="header">
-        <div class="logo">
-            <a href="/" title="home"><img src="../images/logos/logo2.png" /></a>
-        </div>
-    </div>
+    <? include($relative_path . 'templates/header.php'); ?>
     <div class="stable-height">
         <div id="swap-able-content">
             <div class="content" style="position: relative;">
-                <h1 style="text-align: center;">Add Game</h1>
+                <h1 style="text-align: center;">Edit Game</h1>
                 <game-scraper-element></game-scraper-element>
                 <polymer-element name="game-scraper-element" attributes="url">
                     <template>
@@ -326,7 +325,7 @@ foreach($result as $row) {
                                     //					this.url = location.href;
                                     //					this.sourceDocument = "todd really does rock; says Haden!";
                                     var example = new CropAvatar($(this.$.cropAvatar));
-                                    this.imageUrl = '..<?=$img?>';
+                                    this.imageUrl = '<?=$img?>';
 
                                     var me = this;
                                     $(window).on('avatar_src_change', function(e, url) {

@@ -1,5 +1,6 @@
 <?
 //store the inputs posted from the admin page into variables
+$name = $_POST['first_name'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $confirm_password = $_POST['confirm_password'];
@@ -7,14 +8,23 @@ $confirm_password = $_POST['confirm_password'];
 //assign a variable for validating inputs
 $ok = true;
 
-//validate the email format
+//Validate name is entered
+if(empty($name)) {
+    header('location: ../pages/sign-up.php?message=name_error');
+    $ok = false;
+}
+//Check email for empty
+if($ok == true && empty($username)) {
+    header('location: ../pages/sign-up.php?message=email_empty&name=' . $name);
+    $ok = false;
+}
 if ($ok == true && (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/", $username))) {
-    header('location: ../pages/sign-up.php?message=email_error&un=' . $username);
+    header('location: ../pages/sign-up.php?message=email_error&un=' . urlencode($username));
     $ok = false;
 }
 //validate that the passwords entered are the same
 if ($ok == true && (empty($password)) || ($password != $confirm_password)) {
-    header('location: ../pages/sign-up.php?message=pwc_error&un=' . $username);
+    header('location: ../pages/sign-up.php?message=password_error&un=' . urlencode($username) . '&name=' . $name);
     $ok = false;
 }
 
@@ -37,7 +47,7 @@ if ($ok) {
     try {
         $cmd1 ->execute();
     }	catch (PDOException $e) {
-        header('location: ../pages/sign-up.php?message=signup_error&un=' . $username);
+        header('location: ../pages/sign-up.php?message=signup_error&un=' . urlencode($username));
     }
 
     //store the number of rows returned in a variable
@@ -47,13 +57,14 @@ if ($ok) {
         $activation = md5(uniqid(rand(), true));
         $timeStamp = $_SERVER["REQUEST_TIME"];
         //Set up the sql for inserting a new admin
-        $sqlInsert = "INSERT INTO users (email, username, password, activation, timeStamp) VALUES (trim(:email), trim(:username), :password, :activation, :timeStamp);";
+        $sqlInsert = "INSERT INTO users (name, email, username, password, activation, timeStamp) VALUES (trim(:name), trim(:email), trim(:username), :password, :activation, :timeStamp);";
         //handle any pdo query errors
         try {
             //insert the new admin
             $cmd2 = $connect -> prepare($sqlInsert);
             //Add the parameter values for the admin insert and execute the sql
-            $cmd2 -> bindParam(':email', $username, PDO::PARAM_STR, 50);
+            $cmd2 -> bindParam(':name', $name, PDO::PARAM_STR, 80);
+            $cmd2 -> bindParam(':email', $username, PDO::PARAM_STR, 80);
             $cmd2 -> bindParam(':username', $username, PDO::PARAM_STR, 50);
             $cmd2 -> bindParam(':password', $password, PDO::PARAM_STR, 50);
             $cmd2 -> bindParam(':activation', $activation, PDO::PARAM_STR, 50);
@@ -62,7 +73,7 @@ if ($ok) {
         }
         //handle any errors associated with inserting data to the db
         catch (PDOException $e) {
-            header('location: ../pages/sign-up.php?message=signup_error&un=' . $username);
+            header('location: ../pages/sign-up.php?message=signup_error&un=' . urlencode($username));
         }
         //assign the number of rows returned from the insert to a variable
         $insertCount = $cmd2 ->rowCount();
@@ -93,15 +104,15 @@ if ($ok) {
             //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
             $mail->isHTML(true);                                  // Set email format to HTML
 
-            $mail->Subject = 'Thank you for joining MyGames - The one stop website for all your flash games!';
-            $mail->Body    = '<img src="http://mygames.moonrockfamily.ca/images/logos/logo2.png" width="320" /><h2>Thank you for Joining MyGames! </h2>';
-            $mail->Body .= '<p>To activate your account, please click <a href="http://mygames.moonrockfamily.ca/auth/activate.php?email=' . urlencode($username) . '&key=' . $activation . '">Here.</a></p>';
+            $mail->Subject = 'MyGames - Join';
+            $mail->Body    = '<img src="http://mygames.moonrockfamily.ca/images/logos/logo2.png" width="320" /><h2>Thank you for Joining MyGames! The one stop website for all your flash games! </h2>';
+            $mail->Body .= '<p>To activate your account, please click <a href="http://mygames.moonrockfamily.ca/auth/activate.php?key=' . $activation . '&email=' . urlencode($username) . '">Here.</a></p>';
             $mail->AltBody = '<img src="http://mygames.moonrockfamily.ca/images/logos/logo2.png" width="320" />Thank you for Joining MyGames! \r\nTo activate your account, please click the following link: http://mygames.moonrockfamily.ca/auth/activate.php?email=' . urlencode($username) . '&key=' . $activation;
 
             if(!$mail->send()) {
-                header('location: ../pages/sign-up.php?message=signup_error&un=' . $username);
+                header('location: ../pages/sign-up.php?message=signup_error&un=' . urlencode($username));
             } else {
-                header('location: ../pages/sign-up.php?message=signup_success&un=' . $username);
+                header('location: ../pages/sign-up.php?message=signup_success&un=' . urlencode($username));
             }
         } else {
             echo '';
@@ -112,6 +123,6 @@ if ($ok) {
         }
     }
     else {
-        header('location: ../pages/sign-up.php?message=un_taken&un=' . $username);
+        header('location: ../pages/sign-up.php?message=un_taken&un=' . urlencode($username));
     }
 }
