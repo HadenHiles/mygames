@@ -8,17 +8,16 @@
 $(document).ready(function() {
 //    $('body').on('click', 'a.dynamic', swapContent);
 
-    //Search Trigger
+    //Search Triggers
     $('#submit_search').on('click', function(e) {
         e.preventDefault();
-        search();
+        getSearchResults();
     });
     $('#search').keypress(function (e) {
         if (e.which == 13) {
-            search();
+            getSearchResults();
         }
     });
-
     $('.search input').focus(function() {
         $(this).animate({width: "185px"}, 100);
     });
@@ -26,6 +25,7 @@ $(document).ready(function() {
         $(this).animate({width: "100px"}, 100);
     });
 
+    //Favorite click handler
     $('.fav').on('click', 'i.fa', function(e) {
         e.preventDefault();
         if($(this).hasClass('favorited')) {
@@ -50,11 +50,21 @@ $(document).ready(function() {
                 icon.addClass('fa-heart');
             }
         });
-
 //        request.fail(function(jqXHR, textStatus) {
 //            alert( "Request failed: " + textStatus );
 //        });
     });
+
+    //Determine whether the search field should be fixed or not
+    var search = $('.header #search_sticky');
+    if($(window).scrollTop() >= 171) {
+        search.css({position: 'fixed', top: '2px', left: '0px', right: '0px', width: '270px', 'z-index': '2', 'margin-left': 'auto', 'margin-right': 'auto'});
+        $('.logo').css({'margin-bottom': '50px'});
+    }
+    if($(window).scrollTop() < 171) {
+        search.css({position: 'static', top: 'auto'});
+        $('.logo').css({'margin-bottom': '0px'});
+    }
 });
 
 $(document).ready(function() {
@@ -87,7 +97,7 @@ $(window).scroll(function() {
 });
 
 //Trigger a game search on the correct pages
-function search() {
+function getSearchResults() {
     var search_value = $('#search').val();
     var query = encodeURIComponent(search_value);
     if(location.pathname != '/pages/games.php' && location.pathname != '/pages/favorites.php') {
