@@ -92,9 +92,9 @@ require_once($relative_path . 'auth/authenticate.php');
                                                         <strong class="fav">
                                                             <i class="fa fa-heart-o icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>" style="margin-left: -55px;"></i>
                                                         </strong>
-                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="edit_game" game_id="<?=$game_id?>"></i>
+                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="modify_game" type="edit-game" game_id="<?=$game_id?>"></i>
                                                         <strong class="normal">
-                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="delete_game" game_id="<?=$game_id?>"></i>
+                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="modify_game" type="delete-game" game_id="<?=$game_id?>"></i>
                                                         </strong>
                                                     <?
                                                     } else {
@@ -110,9 +110,9 @@ require_once($relative_path . 'auth/authenticate.php');
                                                         <strong class="fav">
                                                             <i class="fa fa-heart icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>" style="margin-left: -55px;"></i>
                                                         </strong>
-                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="edit_game" game_id="<?=$game_id?>"></i>
+                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="modify_game" type="edit-game" game_id="<?=$game_id?>"></i>
                                                         <strong class="normal">
-                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="delete_game" game_id="<?=$game_id?>"></i>
+                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="modify_game" type="delete-game" game_id="<?=$game_id?>"></i>
                                                         </strong>
                                                     <?
                                                     } else {
@@ -136,7 +136,7 @@ require_once($relative_path . 'auth/authenticate.php');
                         <?
                     } else {
                         ?>
-                        <p class='text-center'>There were no matches for your search. Please try again.</p>
+                        <h2 style="text-align: center; margin-top: 50px;">No Games Were Found :(</h2>
                     <?
                     }
                 } catch(PDOException $e) {

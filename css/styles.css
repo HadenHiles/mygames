@@ -46,28 +46,19 @@ a:hover {
     -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
     transform: rotate(-10deg);
 }
-.top_menu ul {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    margin: 0 auto;
-    top: 10px;
-    z-index: 5;
-    right: 0;
-    margin-right: 0px;
-    list-style: none;
-    width: 219px;
-}
 .top_menu ul li {
-    position: relative;
-    z-index: 5;
-    float: right;
+    float: left;
     display: inline-block;
+}
+.top_menu .bring_forward {
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+    margin-left: -44px;
 }
 .top_menu ul li a {
     color: #fff;
     padding: 10px;
-    width: 80px;
     margin-left: 5px;
     background: rgba(0, 0, 0, 0.7);
     border: 4px solid #278BF6;
@@ -77,6 +68,11 @@ a:hover {
     -webkit-border-radius: 0px 0px 10px 10px;
     -ms-border-radius: 0px 0px 10px 10px;
     -o-border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.3);
 }
 .top_menu ul li a.last {
     border-right: none !important;
@@ -98,25 +94,19 @@ a:hover {
 .header .search {
     padding: 0px 0px 20px 0px;
 }
-.header #search_sticky {
-    z-index: 4;
-}
 .header .search i {
     color: #278BF6;
     font-size: 28px;
     margin: 0px -40px 0px 0px;
     top: 3px;
-    position: relative;
-    z-index: 3;
 }
 .header .search input {
-    position: relative;
-    z-index: 2;
     color: #fff;
     font-size: 16px;
     line-height: 16px;
     width: 100px;
-    padding: 10px 40px 10px 40px;
+    line-height: 36px;
+    padding: 0px 40px 0px 40px;
     background: rgba(0, 0, 0, 0.7);
     border: 4px solid #278BF6;
     border-radius: 20px;
@@ -124,6 +114,11 @@ a:hover {
     -webkit-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
     transition: .4s ease-in-out;
     -moz-transition: .4s ease-in-out;
     -webkit-transition: .4s ease-in-out;
@@ -135,8 +130,6 @@ a:hover {
     border: 4px solid #278BF6;
 }
 .header .search a.go {
-    position: relative;
-    z-index: 3;
     line-height: 16px;
     color: #fff;
     background: #278BF6;
@@ -166,10 +159,6 @@ a:hover {
 .logo img {
     width: 470px;
     margin: 0px auto;
-    opacity: 1;
-}
-.logo img:hover {
-    opacity: 0.9;
 }
 
 /* Main content section */
@@ -203,6 +192,8 @@ nav a.button.third {
     text-align: center;
 }
 .content {
+    position: relative;
+    z-index: 0;
     margin: 10px auto 10px auto;
     padding: 20px 20px 40px 20px;
     color: #fff;
@@ -323,7 +314,7 @@ footer .footer_content img.stamp {
 
 .button {
     /* POSITIONING */
-    padding: 35px;
+    padding: 35px 35px 30px 35px;
     /* BUTTON STYLING */
     /*border-top: 1px solid #fff;*/
     border: 4px solid #000;

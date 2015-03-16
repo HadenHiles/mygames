@@ -58,25 +58,17 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('#game_manager').on('click', '#edit_game', function(e) {
+    $('#game_manager').on('click', '#modify_game', function(e) {
         e.preventDefault();
-        window.location = location.protocol + '//' + location.host + '/pages/edit-game.php' + '?id=' + $(this).attr('game_id');
-    });
-    $('#game_manager').on('click', '#delete_game', function(e) {
-        e.preventDefault();
-        if (confirm("Are you sure you want to delete this game?")){
-            $(this).closest('li').toggle('puff', {direction: 'up'}, 200);
-            var game_id = $(this).attr('game_id');
-            var request = $.ajax({
-                url: "../pages/delete-game.php",
-                type: "POST",
-                data: {id: game_id},
-                dataType: "html"
-            });
-
-            request.success(function() {
-                console.log(game_id + ' deleted');
-            });
+        var game_to_modify = $(this);
+        if(game_to_modify.attr('type') == 'edit-game') {
+            editGame(game_to_modify);
+        } else if(game_to_modify.attr('type') == 'delete-game') {
+            deleteGame(game_to_modify);
+        } else if(game_to_modify.attr('type') == 'approve-game') {
+            approveGame(game_to_modify);
+        } else if(game_to_modify.attr('type') == 'deny-game') {
+            denyGame(game_to_modify);
         }
     });
 });
@@ -84,16 +76,17 @@ $(document).ready(function() {
 //Stick the search field to the top of the screen
 $(window).scroll(function() {
     var search = $('.header #search_sticky');
-    if($(window).scrollTop() >= 173) {
-        search.css({position: 'fixed', top: '3px', left: '0px', right: '0px'});
-        $('.logo').css({'margin-bottom': '63px'});
+    if($(window).scrollTop() >= 171) {
+        search.css({position: 'fixed', top: '2px', left: '0px', right: '0px', width: '270px', 'z-index': '2', 'margin-left': 'auto', 'margin-right': 'auto'});
+        $('.logo').css({'margin-bottom': '50px'});
     }
-    if($(window).scrollTop() < 173) {
+    if($(window).scrollTop() < 171) {
         search.css({position: 'static', top: 'auto'});
         $('.logo').css({'margin-bottom': '0px'});
     }
 });
 
+//Trigger a game search on the correct pages
 function search() {
     var search_value = $('#search').val();
     var query = encodeURIComponent(search_value);
@@ -103,6 +96,57 @@ function search() {
         window.location = location.protocol + '//' + location.host + location.pathname + '?name=' + query;
     }
 }
+
+//Functions to modify game properties
+function editGame(element) {
+    window.location = location.protocol + '//' + location.host + '/pages/edit-game.php' + '?id=' + element.attr('game_id');
+}
+function deleteGame(element) {
+    if (confirm("Are you sure you want to delete this game?")){
+        element.closest('li').toggle('puff', {direction: 'up'}, 400);
+        var game_id = element.attr('game_id');
+        var request = $.ajax({
+            url: "../pages/delete-game.php",
+            type: "POST",
+            data: {id: game_id},
+            dataType: "html"
+        });
+
+        request.success(function() {
+            console.log(game_id + ' deleted');
+        });
+    }
+}
+function approveGame(element) {
+    element.closest('li').toggle('puff', {direction: 'up'}, 400);
+    var game_id = element.attr('game_id');
+    var request = $.ajax({
+        url: "../pages/approve-game.php",
+        type: "POST",
+        data: {id: game_id},
+        dataType: "html"
+    });
+
+    request.success(function() {
+        console.log(game_id + ' approved');
+    });
+}
+function denyGame(element) {
+    element.closest('li').toggle('puff', {direction: 'up'}, 400);
+    var game_id = element.attr('game_id');
+    var request = $.ajax({
+        url: "../pages/deny-game.php",
+        type: "POST",
+        data: {id: game_id},
+        dataType: "html"
+    });
+
+    request.success(function() {
+        console.log(game_id + ' denied');
+    });
+}
+
+
 //function swapContent(e) {
 //    e && e.preventDefault();
 //    var content = $('#swap-able-content');

@@ -14,7 +14,6 @@ if (!authUser()) {
             <title>Favorites | My Games</title>
             <meta charset="utf-8" />
             <? include($relative_path . 'includes/stylesheets.php') ?>
-            <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
         </head>
         <body>
             <? include($relative_path . 'templates/header.php'); ?>
@@ -29,10 +28,10 @@ if (!authUser()) {
                     session_start();
                     $user_id = $_SESSION['user_id'];
 
-                    $sql = "SELECT id, name, img, description, approved FROM games JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
+                    $sql = "SELECT id, name, img, description, approved FROM games INNER JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
                     $queryParams = [];
                     if (empty($tag) || empty($name)){
-                        $sql = "SELECT id, name, img, description, approved FROM games JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
+                        $sql = "SELECT id, name, img, description, approved FROM games INNER JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
                     }
                     if (!empty($tag)) {
                         $sql .= " AND category LIKE CONCAT('%', :tag, '%')";
@@ -84,7 +83,7 @@ if (!authUser()) {
                                                     <span><?=$row['name']?></span>
                                                     <?
                                                     if(authAdmin()) {
-                                                        if($row['approved'] != 0) {
+                                                        if($row['approved'] == 1) {
                                                             ?>
                                                             <strong class="fav red">
                                                                 <i class="fa fa-heart favorited icon<?=$row['id']?>" game_id="<?=$row['id']?>" user_id="<?=$_SESSION['user_id']?>" style="margin-left: -55px;"></i>
@@ -92,16 +91,16 @@ if (!authUser()) {
                                                             <?
                                                         }
                                                         ?>
-                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="edit_game" game_id="<?=$row['id']?>"></i>
+                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i>
                                                         <strong class="normal">
-                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="delete_game" game_id="<?=$row['id']?>"></i>
+                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="modify_game" type="delete-game" game_id="<?=$row['id']?>"></i>
                                                         </strong>
                                                         <?
                                                     } else {
-                                                        if($row['approved'] == 0) {
+                                                        if($row['approved'] != 1) {
                                                             ?>
                                                             <strong class="normal">
-                                                                <i class="fa fa-trash normal" id="delete_game" game_id="<?=$row['id']?>"></i>
+                                                                <i class="fa fa-trash normal" id="modify_game" type="delete-game" game_id="<?=$row['id']?>"></i>
                                                             </strong>
                                                             <?
                                                         } else {
