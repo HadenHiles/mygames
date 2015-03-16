@@ -1,4 +1,5 @@
 <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
+<script src="<?=$relative_path?>js/lib/jquery-ui.min.js"></script>
 <!--Script for directional hover-->
 <script src="<?=$relative_path?>js/lib/modernizr.custom.97074.js"></script>
 <script type="text/javascript" src="<?=$relative_path?>/js/lib/jquery.hoverdir.js"></script>

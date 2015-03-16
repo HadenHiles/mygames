@@ -319,6 +319,16 @@ if (!authUser()) {
                                     }
                                     return proxyUrl;
                                 },
+                                unproxifyUrl : function(url) {
+                                    var unproxifiedUrl = "";
+                                    if(url !== undefined && url != ""){
+                                        urlMatch = url.match(/.*\?q=([^&]*)&?.*/i);
+                                        if (urlMatch && urlMatch[1]) {
+                                            unproxifiedUrl = atob(urlMatch[1]);
+                                        }
+                                    }
+                                    return unproxifiedUrl;
+                                },
                                 handleResponse: function (e) {
                                     this.sourceDocument = e.detail.response;
                                 },
@@ -331,7 +341,8 @@ if (!authUser()) {
                                     jDoc.find(this.elementSelector).each(function (e) {
                                         originalUrl = $(this).attr('src') || $(this).attr('data');
                                         if(originalUrl) {
-                                            gameUrls.push(element.makeAbsoluteUrl(originalUrl));
+                                            gameUrls.push(element.unproxifyUrl(originalUrl));
+                                            console.log(gameUrls[-1]);
                                         }
                                     });
 
@@ -386,7 +397,7 @@ if (!authUser()) {
     </div>
     <footer>
         <div class="footer_content">
-            <p>Copyright &copy 2015</p>
+            <p>Copyright &copy <? date('Y')?> </p>
             <a href="http://haden.moonrockfamily.ca"><img src="<?=$relative_path?>images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
         </div>
     </footer>

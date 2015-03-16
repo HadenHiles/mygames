@@ -1163,7 +1163,7 @@ if($output && function_exists('parse')){
 	$content_type = $http->get_simple_content_type();
 
 	$output = parse($url, $output, $content_type);
-	
+
 } else if($http->error()){
 
 	throw_error("curl_error", $http->error());
@@ -1173,10 +1173,10 @@ if($output && function_exists('parse')){
 if($content_type == 'html'){
 
 	$url_form = tpl_include('url_form');
-	
+
 	// does the html page contain <body> tag
 	$output = preg_replace('@<body.*?>@is', '$0'.PHP_EOL.$url_form, $output, 1, $count);
-	
+
 	// <body> tag was not found, just put the form at the top of the page
 	if($count == 0){
 		$output = $url_form.$output;

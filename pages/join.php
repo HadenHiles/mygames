@@ -4,7 +4,7 @@ $relative_path = '../';
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up | My Games</title>
+    <title>Join | My Games</title>
     <meta charset="utf-8" />
     <? include($relative_path . 'includes/stylesheets.php') ?>
 </head>
@@ -80,12 +80,7 @@ $relative_path = '../';
         </form>
     </div>
 </div>
-<footer>
-    <div class="footer_content">
-        <p>Copyright &copy 2014</p>
-        <a href="http://haden.moonrockfamily.ca"><img src="../images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
-    </div>
-</footer>
+<? include($relative_path . 'templates/footer.php'); ?>
 <script src="../js/lib/jquery-2.1.3.min.js"></script>
 <script src="../js/main.js"></script>
 </body>

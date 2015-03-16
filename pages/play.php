@@ -1,5 +1,5 @@
 <?
-$relative_path = '../'
+$relative_path = '../';
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,6 +18,7 @@ $relative_path = '../'
             $connect = connection();
 
             //retrieve the user from the session
+            session_start();
             if(isset($_SESSION['user_id'])) {
                 $user_id = $_SESSION['user_id'];
             }

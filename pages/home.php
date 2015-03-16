@@ -11,7 +11,7 @@
     if(!authUser()) {
         ?>
         <a href="pages/favorites.php" class="button">LOGIN</a>
-        <a href="pages/sign-up.php" class="button">JOIN</a>
+        <a href="pages/join.php" class="button">JOIN</a>
     <?
     }
     ?>

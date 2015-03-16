@@ -54,7 +54,8 @@ require_once($relative_path . 'auth/authenticate.php');
                     //show the results of the tag filter
                     if ($result) {
                         ?>
-                        <ul id="da-thumbs" class="da-thumbs game_list_container">
+                        <div id="game_manager">
+                            <ul id="da-thumbs" class="da-thumbs game_list_container">
                             <?
                             foreach($result as $row) {
                                 ?>
@@ -78,39 +79,61 @@ require_once($relative_path . 'auth/authenticate.php');
                                             <?
                                             if(authUser()) {
                                                 $game_id = $row['id'];
+                                                session_start();
                                                 $user_id = $_SESSION['user_id'];
-                                                $sql_check = "SELECT game_id FROM user_games WHERE game_id = '$game_id' AND user_id = '$user_id'";
+                                                $sql_check = "SELECT game_id FROM user_games WHERE game_id = :game_id AND user_id = :user_id";
                                                 $check_result = $connect->prepare($sql_check);
+                                                $check_result->bindParam(':game_id', $game_id, PDO::PARAM_INT);
+                                                $check_result->bindParam(':user_id', $user_id, PDO::PARAM_INT);
                                                 $check_result->execute();
                                                 if($check_result->rowCount() == 0) {
-                                                    ?>
-                                                    <br>
-                                                    <strong class="fav">
-                                                        <i class="fa fa-heart-o icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>">
-                                                        </i>
-                                                    </strong>
+                                                    if(authAdmin()) {
+                                                        ?>
+                                                        <strong class="fav">
+                                                            <i class="fa fa-heart-o icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>" style="margin-left: -55px;"></i>
+                                                        </strong>
+                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="edit_game" game_id="<?=$game_id?>"></i>
+                                                        <strong class="normal">
+                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="delete_game" game_id="<?=$game_id?>"></i>
+                                                        </strong>
                                                     <?
+                                                    } else {
+                                                        ?>
+                                                        <strong class="fav">
+                                                            <i class="fa fa-heart-o icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>"></i>
+                                                        </strong>
+                                                        <?
+                                                    }
                                                 } else {
-                                                    ?>
-                                                    <br>
-                                                    <strong class="fav red">
-                                                        <i class="fa fa-heart icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>">
-                                                        </i>
-                                                    </strong>
+                                                    if(authAdmin()) {
+                                                        ?>
+                                                        <strong class="fav">
+                                                            <i class="fa fa-heart icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>" style="margin-left: -55px;"></i>
+                                                        </strong>
+                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="edit_game" game_id="<?=$game_id?>"></i>
+                                                        <strong class="normal">
+                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="delete_game" game_id="<?=$game_id?>"></i>
+                                                        </strong>
                                                     <?
+                                                    } else {
+                                                        ?>
+                                                        <strong class="fav">
+                                                            <i class="fa fa-heart icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>"></i>
+                                                        </strong>
+                                                        <?
+                                                    }
                                                 }
                                             }
                                             ?>
                                         </div>
-                                        <!--                            <h3 class="game_name">--><?//=$row['name']?><!--</h3>-->
-                                        <!--                            <p class="game_description">--><?//=$row['description']?><!--</p>-->
                                     </a>
                                 </li>
                             <?
                             }
                             ?>
                         </ul>
-                    <?
+                        </div>
+                        <?
                     } else {
                         ?>
                         <p class='text-center'>There were no matches for your search. Please try again.</p>

@@ -21,23 +21,56 @@ a:hover {
 }
 
 /* Header of site */
-.top_menu {
-    position: fixed;
-    top: -16px;
-    right: 0px;
-    left: 0px;
-    width: 1010px;
-    margin: 0 auto;
-    padding: 0px;
+.welcome h1 {
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    font-size: 38px;
+    left: 235px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-family: 'ShadowsIntoLightTwoRegular', 'Trebuchet Ms', helvetica;;
+    -ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg);
+}
+.strikethrough {
+    position: absolute;
+    z-index: 1;
+    left: 280px;
+    top: 15px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-size: 55px;
+    -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
 }
 .top_menu ul {
-    float: right;
-    margin-right: 4px;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    top: 10px;
+    z-index: 5;
+    right: 0;
+    margin-right: 0px;
     list-style: none;
+    width: 219px;
+}
+.top_menu ul li {
+    position: relative;
+    z-index: 5;
+    float: right;
+    display: inline-block;
+}
+.top_menu ul li a {
+    color: #fff;
     padding: 10px;
     width: 80px;
-    background: #278BF6;
-    border: 4px solid #000;
+    margin-left: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 4px solid #278BF6;
     border-top: none;
     border-radius: 0px 0px 10px 10px;
     -moz-border-radius: 0px 0px 10px 10px;
@@ -45,15 +78,16 @@ a:hover {
     -ms-border-radius: 0px 0px 10px 10px;
     -o-border-radius: 0px 0px 10px 10px;
 }
-.top_menu ul:hover {
-    background: #1B61AC;
+.top_menu ul li a.last {
+    border-right: none !important;
+    border-radius: 0px 0px 0px 10px;
+    -moz-border-radius: 0px 0px 0px 10px;
+    -webkit-border-radius: 0px 0px 0px 10px;
+    -ms-border-radius: 0px 0px 0px 10px;
+    -o-border-radius: 0px 0px 0px 10px;
 }
-.top_menu ul li {
-    float: left;
-    display: inline-block;
-}
-.top_menu ul li a {
-    color: #fff;
+.top_menu ul li a:hover {
+    background: #278BF6;
 }
 .header {
     padding: 25px 0px;
@@ -64,22 +98,27 @@ a:hover {
 .header .search {
     padding: 0px 0px 20px 0px;
 }
+.header #search_sticky {
+    z-index: 4;
+}
 .header .search i {
     color: #278BF6;
     font-size: 28px;
     margin: 0px -40px 0px 0px;
-    position: relative;
     top: 3px;
-    z-index: 1;
+    position: relative;
+    z-index: 3;
 }
 .header .search input {
+    position: relative;
+    z-index: 2;
     color: #fff;
     font-size: 16px;
-    margin-top: -4px;
-    width: 60px;
-    padding: 10.5px 40px 10.5px 40px;
+    line-height: 16px;
+    width: 100px;
+    padding: 10px 40px 10px 40px;
     background: rgba(0, 0, 0, 0.7);
-    border: 2px solid #1B61AC;
+    border: 4px solid #278BF6;
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -93,15 +132,17 @@ a:hover {
 }
 .header .search input:focus {
     outline: none;
-    border: 2px solid #278BF6;
+    border: 4px solid #278BF6;
 }
 .header .search a.go {
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    line-height: 16px;
     color: #fff;
     background: #278BF6;
-    padding: 12px;
-    margin-left: -44px;
+    border: 1px solid #278BF6;
+    padding: 10px;
+    margin-left: -48px;
     border-radius: 0px 20px 20px 0px;
     -moz-border-radius: 0px 20px 20px 0px;
     -webkit-border-radius: 0px 20px 20px 0px;
@@ -109,13 +150,15 @@ a:hover {
     -o-border-radius: 0px 20px 20px 0px;
 }
 .header .search a.go:hover {
-    background: #1B61AC;
+    background: #278BF6;
+    border: 1px solid #278BF6;
 }
 .loading {
     text-align: center;
     padding: 20px 0px;
 }
 .logo {
+    position: relative;
     width: 100%;
     text-align: center;
     padding: 20px 0px 10px 0px;
@@ -138,24 +181,25 @@ a:hover {
     margin: 0 auto;
 }
 nav {
-    width: 100%;
+    width: 1010px;
     float: left;
     margin: 0px auto 0px auto;
     padding: 0px 0px 20px 0px;
 }
 nav a.button.first {
     float: left;
-    width: 188px;
+    width: 158px;
 }
 nav a.button.second {
     float: left;
-    width: 278px;
-    margin-left: 15px;
+    width: 275px;
+    margin-left: 86px;
     text-align: center;
 }
 nav a.button.third {
     float: right;
-    width: 188px;
+    width: 158px;
+    margin-right: 6px;
     text-align: center;
 }
 .content {
@@ -217,13 +261,16 @@ ul.game_list_container li i.fa-plus.large_add {
 ul.game_list_container li i.fa-plus.large_add:hover {
     color: #278BF6;
 }
-ul.game_list_container i.fa-edit {
+ul.game_list_container i.fa.normal {
     color: rgba(255, 255, 255, 0.85);
     font-size: 46px !important;
+    margin: -10px 0px 0px 85px;
+}
+ul.game_list_container i.fa.normal.right {
     float: right;
     margin: -8px 15px 0px 0px;
 }
-ul.game_list_container i.fa-edit:hover {
+ul.game_list_container i.fa.normal:hover {
     color: #fff;
 }
 ul.game_list_container strong.fav {
@@ -276,11 +323,13 @@ footer .footer_content img.stamp {
 
 .button {
     /* POSITIONING */
-    padding: 55px 45px;
+    padding: 35px;
     /* BUTTON STYLING */
     /*border-top: 1px solid #fff;*/
-    border: 8px solid #000;
-    border-radius: 8px;
+    border: 4px solid #000;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     background: #278BF6;
     background-image: -ms-linear-gradient(top, #4CAEFB 0%, #278BF6 100%);
     background-image: -moz-linear-gradient(top, #4CAEFB 0%, #278BF6 100%);

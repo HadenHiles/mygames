@@ -10,21 +10,21 @@ $ok = true;
 
 //Validate name is entered
 if(empty($name)) {
-    header('location: ../pages/sign-up.php?message=name_error');
+    header('location: ../pages/join.php?message=name_error');
     $ok = false;
 }
 //Check email for empty
 if($ok == true && empty($username)) {
-    header('location: ../pages/sign-up.php?message=email_empty&name=' . $name);
+    header('location: ../pages/join.php?message=email_empty&name=' . $name);
     $ok = false;
 }
 if ($ok == true && (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/", $username))) {
-    header('location: ../pages/sign-up.php?message=email_error&un=' . urlencode($username));
+    header('location: ../pages/join.php?message=email_error&un=' . urlencode($username));
     $ok = false;
 }
 //validate that the passwords entered are the same
 if ($ok == true && (empty($password)) || ($password != $confirm_password)) {
-    header('location: ../pages/sign-up.php?message=password_error&un=' . urlencode($username) . '&name=' . $name);
+    header('location: ../pages/join.php?message=password_error&un=' . urlencode($username) . '&name=' . $name);
     $ok = false;
 }
 
@@ -47,7 +47,7 @@ if ($ok) {
     try {
         $cmd1 ->execute();
     }	catch (PDOException $e) {
-        header('location: ../pages/sign-up.php?message=signup_error&un=' . urlencode($username));
+        header('location: ../pages/join.php?message=signup_error&un=' . urlencode($username));
     }
 
     //store the number of rows returned in a variable
@@ -73,7 +73,7 @@ if ($ok) {
         }
         //handle any errors associated with inserting data to the db
         catch (PDOException $e) {
-            header('location: ../pages/sign-up.php?message=signup_error&un=' . urlencode($username));
+            header('location: ../pages/join.php?message=signup_error&un=' . urlencode($username));
         }
         //assign the number of rows returned from the insert to a variable
         $insertCount = $cmd2 ->rowCount();
@@ -110,9 +110,9 @@ if ($ok) {
             $mail->AltBody = '<img src="http://mygames.moonrockfamily.ca/images/logos/logo2.png" width="320" />Thank you for Joining MyGames! \r\nTo activate your account, please click the following link: http://mygames.moonrockfamily.ca/auth/activate.php?email=' . urlencode($username) . '&key=' . $activation;
 
             if(!$mail->send()) {
-                header('location: ../pages/sign-up.php?message=signup_error&un=' . urlencode($username));
+                header('location: ../pages/join.php?message=signup_error&un=' . urlencode($username));
             } else {
-                header('location: ../pages/sign-up.php?message=signup_success&un=' . urlencode($username));
+                header('location: ../pages/join.php?message=signup_success&un=' . urlencode($username));
             }
         } else {
             echo '';
@@ -123,6 +123,6 @@ if ($ok) {
         }
     }
     else {
-        header('location: ../pages/sign-up.php?message=un_taken&un=' . urlencode($username));
+        header('location: ../pages/join.php?message=un_taken&un=' . urlencode($username));
     }
 }

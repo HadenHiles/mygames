@@ -20,7 +20,7 @@ foreach ($result as $row) {
 // Check to see if link has expired
 if ($_SERVER["REQUEST_TIME"] - $timeStamp > $delta) {
     //redirect if it has
-    header('location:../pages/sign-up.php');
+    header('location:../pages/join.php');
 }
 
 //if the username and email contain data, then try a sql update

@@ -11,9 +11,10 @@ if (!authUser()) {
     <!DOCTYPE html>
     <html>
         <head>
-            <title>My Games</title>
+            <title>Favorites | My Games</title>
             <meta charset="utf-8" />
             <? include($relative_path . 'includes/stylesheets.php') ?>
+            <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
         </head>
         <body>
             <? include($relative_path . 'templates/header.php'); ?>
@@ -25,12 +26,13 @@ if (!authUser()) {
                     $name = $_REQUEST['name'];
 
                     //Get games specific to user
+                    session_start();
                     $user_id = $_SESSION['user_id'];
 
-                    $sql = "SELECT id, name, img, description FROM games JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
+                    $sql = "SELECT id, name, img, description, approved FROM games JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
                     $queryParams = [];
                     if (empty($tag) || empty($name)){
-                        $sql = "SELECT id, name, img, description FROM games JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
+                        $sql = "SELECT id, name, img, description, approved FROM games JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
                     }
                     if (!empty($tag)) {
                         $sql .= " AND category LIKE CONCAT('%', :tag, '%')";
@@ -55,65 +57,70 @@ if (!authUser()) {
                         //show the results of the tag filter
                         if ($result) {
                             ?>
-                            <ul id="da-thumbs" class="da-thumbs game_list_container">
-                                <li style="border-color: rgba(0, 0, 0, 0); background: none;">
-                                    <a href="<?=$relative_path?>pages/add-game.php">
-                                        <span style="width: 100%; text-align: center"><i class="fa fa-plus large_add"></i></span>
-                                    </a>
-                                </li>
-                                <?
-                                foreach($result as $row) {
-                                    ?>
-                                    <li>
-                                        <a href="<?=$relative_path?>pages/play.php?id=<?=$row['id']?>">
-                                            <?
-                                            if(file_exists($relative_path . $row['img'])) {
-                                                ?>
-                                                <img src="<?=$relative_path?><?=$row['img']?>" alt="<?=$row['name']?> image" />
-                                            <?
-                                            } else {
-                                                ?>
-                                                <img src="<?=$relative_path?>images/no-image.jpg" alt="No image" />
-                                            <?
-                                            }
-                                            ?>
-                                            <div>
-                                                <span><?=$row['name']?></span>
-                                                <br>
-                                                <?
-                                                if(authAdmin()) {
-                                                    ?>
-                                                    <strong class="fav red">
-                                                        <i class="fa fa-heart icon<?=$row['id']?>" game_id="<?=$row['id']?>" user_id="<?=$$_SESSION['user_id']?>" style="margin-left: -55px;"></i>
-                                                    </strong>
-                                                    <i class="fa fa-edit" id="edit_game<?=$row['id']?>"></i>
-                                                    <?
-                                                } else {
-                                                    ?>
-                                                    <strong class="fav red">
-                                                        <i class="fa fa-heart icon<?=$row['id']?>" game_id="<?=$row['id']?>" user_id="<?=$$_SESSION['user_id']?>"></i>
-                                                    </strong>
-                                                    <?
-                                                }
-                                                ?>
-                                            </div>
-                                            <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
-                                            <script type="text/javascript">
-                                                $(document).ready(function() {
-                                                    $('#edit_game<?=$row['id']?>').on('click', function(e) {
-                                                        e.preventDefault();
-                                                        window.location = location.protocol + '//' + location.host + '/pages/edit-game.php' + '?id=' + <?=$row['id']?>;
-                                                    });
-                                                });
-                                            </script>
-                                            <!--                            <h3 class="game_name">--><?//=$row['name']?><!--</h3>-->
-                                            <!--                            <p class="game_description">--><?//=$row['description']?><!--</p>-->
+                            <div id="game_manager">
+                                <ul id="da-thumbs" class="da-thumbs game_list_container">
+                                    <li style="border-color: rgba(0, 0, 0, 0); background: none;">
+                                        <a href="<?=$relative_path?>pages/add-game.php">
+                                            <span style="width: 100%; text-align: center"><i class="fa fa-plus large_add"></i></span>
                                         </a>
                                     </li>
-                                <?
-                                }
-                                ?>
-                            </ul>
+                                    <?
+                                    foreach($result as $row) {
+                                        ?>
+                                        <li>
+                                            <a href="<?=$relative_path?>pages/play.php?id=<?=$row['id']?>">
+                                                <?
+                                                if(file_exists($relative_path . $row['img'])) {
+                                                    ?>
+                                                    <img src="<?=$relative_path?><?=$row['img']?>" alt="<?=$row['name']?> image" />
+                                                <?
+                                                } else {
+                                                    ?>
+                                                    <img src="<?=$relative_path?>images/no-image.jpg" alt="No image" />
+                                                <?
+                                                }
+                                                ?>
+                                                <div>
+                                                    <span><?=$row['name']?></span>
+                                                    <?
+                                                    if(authAdmin()) {
+                                                        if($row['approved'] != 0) {
+                                                            ?>
+                                                            <strong class="fav red">
+                                                                <i class="fa fa-heart favorited icon<?=$row['id']?>" game_id="<?=$row['id']?>" user_id="<?=$_SESSION['user_id']?>" style="margin-left: -55px;"></i>
+                                                            </strong>
+                                                            <?
+                                                        }
+                                                        ?>
+                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="edit_game" game_id="<?=$row['id']?>"></i>
+                                                        <strong class="normal">
+                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="delete_game" game_id="<?=$row['id']?>"></i>
+                                                        </strong>
+                                                        <?
+                                                    } else {
+                                                        if($row['approved'] == 0) {
+                                                            ?>
+                                                            <strong class="normal">
+                                                                <i class="fa fa-trash normal" id="delete_game" game_id="<?=$row['id']?>"></i>
+                                                            </strong>
+                                                            <?
+                                                        } else {
+                                                            ?>
+                                                            <strong class="fav red">
+                                                                <i class="fa fa-heart favorited icon<?=$row['id']?>" game_id="<?=$row['id']?>" user_id="<?=$_SESSION['user_id']?>"></i>
+                                                            </strong>
+                                                            <?
+                                                        }
+                                                    }
+                                                    ?>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <?
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
                         <?
                         } else {
                             ?>

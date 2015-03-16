@@ -1,3 +1,6 @@
+<?
+$relative_path = '../';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,17 +42,12 @@
                     <input class="input" name="password" type="password" placeholder="Password*" required/>
                 </div>
                 <a class="form_button" onclick="$('#login_form').submit()">Login</a>
-                <p class="centerText">Don't have an account? <a href="sign-up.php">Join</a></p>
+                <p class="centerText">Don't have an account? <a href="join.php">Join</a></p>
             </fieldset>
         </form>
     </div>
 </div>
-<footer>
-    <div class="footer_content">
-        <p>Copyright &copy 2014</p>
-        <a href="http://haden.moonrockfamily.ca"><img src="../images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
-    </div>
-</footer>
+<? include('../templates/footer.php'); ?>
 <script src="../js/lib/jquery-2.1.3.min.js"></script>
 <script src="../js/main.js"></script>
 </body>

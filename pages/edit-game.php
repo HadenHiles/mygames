@@ -2,18 +2,20 @@
 $relative_path = '../';
 require_once($relative_path . 'auth/authenticate.php');
 
-require_once($relative_path . 'db/db-connect.php');
-$connect = connection();
-
-if (!authUser()) {
-    header('location: login.php');
+if (!authAdmin()) {
+    header('location: ' . $relative_path . 'pages/login.php');
 }
 
 $id = $_REQUEST['id'];
+session_start();
 $user_id = $_SESSION['user_id'];
 
-$sql = "SELECT name, img, description FROM games JOIN user_games ON games.id = user_games.game_id WHERE games.id = $id";
+require_once($relative_path . 'db/db-connect.php');
+$connect = connection();
+
+$sql = "SELECT name, img, description FROM games WHERE games.id = :game_id";
 $stmt = $connect->prepare($sql);
+$stmt->bindParam(':game_id', $id, PDO::PARAM_INT);
 $stmt->execute();
 $result = $stmt->fetchAll();
 foreach($result as $row) {
@@ -28,7 +30,7 @@ if(!file_exists($img)) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Game | My Games</title>
+    <title>Edit Game | My Games</title>
     <script src="../js/lib/jquery-2.1.3.min.js"></script>
     <script src="../bower_components/platform/platform.js"></script>
 
@@ -408,7 +410,7 @@ if(!file_exists($img)) {
     </div>
     <footer>
         <div class="footer_content">
-            <p>Copyright &copy 2015</p>
+            <p>Copyright &copy <?=date('Y')?></p>
             <a href="http://haden.moonrockfamily.ca"><img src="../images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
         </div>
     </footer>

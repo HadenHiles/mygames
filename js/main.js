@@ -23,11 +23,14 @@ $(document).ready(function() {
         $(this).animate({width: "185px"}, 100);
     });
     $('.search input').focusout(function() {
-        $(this).animate({width: "70px"}, 100);
+        $(this).animate({width: "100px"}, 100);
     });
 
     $('.fav').on('click', 'i.fa', function(e) {
         e.preventDefault();
+        if($(this).hasClass('favorited')) {
+            $(this).closest('li').toggle('puff', {direction: 'up'}, 200);
+        }
         var user_id = $(this).attr('user_id');
         var game_id = $(this).attr('game_id');
         var request = $.ajax({
@@ -53,6 +56,44 @@ $(document).ready(function() {
 //        });
     });
 });
+
+$(document).ready(function() {
+    $('#game_manager').on('click', '#edit_game', function(e) {
+        e.preventDefault();
+        window.location = location.protocol + '//' + location.host + '/pages/edit-game.php' + '?id=' + $(this).attr('game_id');
+    });
+    $('#game_manager').on('click', '#delete_game', function(e) {
+        e.preventDefault();
+        if (confirm("Are you sure you want to delete this game?")){
+            $(this).closest('li').toggle('puff', {direction: 'up'}, 200);
+            var game_id = $(this).attr('game_id');
+            var request = $.ajax({
+                url: "../pages/delete-game.php",
+                type: "POST",
+                data: {id: game_id},
+                dataType: "html"
+            });
+
+            request.success(function() {
+                console.log(game_id + ' deleted');
+            });
+        }
+    });
+});
+
+//Stick the search field to the top of the screen
+$(window).scroll(function() {
+    var search = $('.header #search_sticky');
+    if($(window).scrollTop() >= 173) {
+        search.css({position: 'fixed', top: '3px', left: '0px', right: '0px'});
+        $('.logo').css({'margin-bottom': '63px'});
+    }
+    if($(window).scrollTop() < 173) {
+        search.css({position: 'static', top: 'auto'});
+        $('.logo').css({'margin-bottom': '0px'});
+    }
+});
+
 function search() {
     var search_value = $('#search').val();
     var query = encodeURIComponent(search_value);

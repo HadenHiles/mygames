@@ -7,3 +7,12 @@
          url('../fonts/counter_strike.ttf') format('truetype'),
          url('../fonts/counter_strike.svg#CounterStrikeRegular') format('svg');
 }
+@font-face {
+    font-family: 'ShadowsIntoLightTwoRegular';
+    src: url('../fonts/ShadowsIntoLightTwoRegular.eot');
+    src: url('../fonts/ShadowsIntoLightTwoRegular.eot') format('embedded-opentype'),
+    url('../fonts/ShadowsIntoLightTwoRegular.woff2') format('woff2'),
+    url('../fonts/ShadowsIntoLightTwoRegular.woff') format('woff'),
+    url('../fonts/ShadowsIntoLightTwoRegular.ttf') format('truetype'),
+    url('../fonts/ShadowsIntoLightTwoRegular.svg#ShadowsIntoLightTwoRegular') format('svg');
+}

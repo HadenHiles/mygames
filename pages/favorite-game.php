@@ -9,6 +9,7 @@ if (!authUser()) {
     $connect = connection();
 
     //Get passed through variables
+    session_start();
     $user_id = $_SESSION['user_id'];
     $game_id = $_REQUEST['game_id'];
 
