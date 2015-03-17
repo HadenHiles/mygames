@@ -63,8 +63,13 @@ $relative_path = '../';
                 <div class="game_container">
                     <h1 class="game_name"><?=$row['name']?></h1>
                     <div class="game_description"><?=$description?></div>
-                    <div style="width: 100%; margin: 20px 0;"></div>
-                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="700" height="550">
+                    <div style="margin: 5px 0px;"
+                        class="fb-like"
+                        data-share="true"
+                        data-width="800"
+                        data-show-faces="true">
+                    </div>
+                    <object class="flash_object" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="700" height="550">
                         <param name="allowFullScreen" value="true" />
                         <embed class="game" src="<?=$row['url']?>" width="800" height="650" allowFullScreen="true" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
                     </object>
@@ -121,7 +126,9 @@ $relative_path = '../';
             if ($connect) {
                 $connect = null;
             }
+            $current_link = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
             ?>
+            <div style="margin-left: 80px;" class="fb-comments" data-href="<?=$current_link?>" data-width="800" data-numposts="10" data-colorscheme="dark" data-order-by="time"></div>
         </div>
         </div>
         <? include($relative_path . 'templates/footer.php'); ?>

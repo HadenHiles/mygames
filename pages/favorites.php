@@ -82,19 +82,26 @@ if (!authUser()) {
                                                 <div>
                                                     <span><?=$row['name']?></span>
                                                     <?
-                                                    if(authAdmin()) {
+                                                    if(authSuper()){
                                                         if($row['approved'] == 1) {
                                                             ?>
                                                             <strong class="fav red">
                                                                 <i class="fa fa-heart favorited icon<?=$row['id']?>" game_id="<?=$row['id']?>" user_id="<?=$_SESSION['user_id']?>" style="margin-left: -55px;"></i>
                                                             </strong>
-                                                            <?
+                                                        <?
                                                         }
                                                         ?>
                                                         <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i>
                                                         <strong class="normal">
                                                             <i class="fa fa-trash normal right" style="margin-top: -2px;" id="modify_game" type="delete-game" game_id="<?=$row['id']?>"></i>
                                                         </strong>
+                                                        <?
+                                                    } else if(authAdmin()) {
+                                                        ?>
+                                                        <strong class="fav red">
+                                                            <i class="fa fa-heart favorited icon<?=$row['id']?>" game_id="<?=$row['id']?>" user_id="<?=$_SESSION['user_id']?>" style="margin-left: -55px;"></i>
+                                                        </strong>
+                                                        <i class="fa fa-edit normal right" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i>
                                                         <?
                                                     } else {
                                                         if($row['approved'] != 1) {

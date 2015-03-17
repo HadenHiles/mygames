@@ -10,7 +10,6 @@ if (!authUser()) {
 <html>
 <head>
     <title>Add Game | My Games</title>
-    <meta charset="utf-8" />
 
     <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
     <script src="<?=$relative_path?>bower_components/platform/platform.js"></script>
@@ -397,10 +396,20 @@ if (!authUser()) {
     </div>
     <footer>
         <div class="footer_content">
-            <p>Copyright &copy <? date('Y')?> </p>
+            <p>Copyright &copy <?=date('Y')?> </p>
             <a href="http://haden.moonrockfamily.ca"><img src="<?=$relative_path?>images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
         </div>
     </footer>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-45303914-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     <script src="<?=$relative_path?>js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+User-agent: *
+Disallow:
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: Slurp
+Disallow:
+
+User-agent: msnbot
+Disallow:
+
+SITEMAP: http://mygames.moonrockfamily.ca/sitemap.xml
+SITEMAP: http://mygames.moonrockfamily.ca/urllist.txt

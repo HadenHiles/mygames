@@ -1,0 +1,7 @@
+http://mygames.moonrockfamily.ca/pages/games.php
+http://mygames.moonrockfamily.ca/pages/play.php
+http://mygames.moonrockfamily.ca/pages/add-game.php
+http://mygames.moonrockfamily.ca/pages/edit-game.php
+http://mygames.moonrockfamily.ca/pages/favorites.php
+http://mygames.moonrockfamily.ca/pages/join.php
+http://mygames.moonrockfamily.ca/pages/login.php

@@ -10,7 +10,6 @@ require_once($relative_path . 'auth/authenticate.php');
 <html>
     <head>
         <title>Games | My Games</title>
-        <meta charset="utf-8" />
         <? include($relative_path . 'includes/stylesheets.php') ?>
     </head>
     <body>
