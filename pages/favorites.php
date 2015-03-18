@@ -1,5 +1,6 @@
 <?php
 $relative_path = '../';
+$page_name = 'Favorites';
 require_once($relative_path . 'auth/authenticate.php');
 
 if (!authUser()) {
@@ -11,8 +12,6 @@ if (!authUser()) {
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Favorites | My Games</title>
-            <meta charset="utf-8" />
             <? include($relative_path . 'includes/stylesheets.php') ?>
         </head>
         <body>

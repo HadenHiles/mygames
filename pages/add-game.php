@@ -1,5 +1,6 @@
 <?
 $relative_path = '../';
+$page_name = 'Add Game';
 require_once($relative_path . 'auth/authenticate.php');
 
 if (!authUser()) {
@@ -9,8 +10,6 @@ if (!authUser()) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Game | My Games</title>
-
     <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
     <script src="<?=$relative_path?>bower_components/platform/platform.js"></script>
 
@@ -178,7 +177,7 @@ if (!authUser()) {
                         <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
                             <!-- Current avatar -->
-                            <div class="avatar-view" title="Upload an Image">
+                            <div class="avatar-view" id="current_image" title="Upload an Image">
                                 <img src="{{imageUrl}}" alt="No Image">
                             </div>
                             <!-- Cropping modal -->
@@ -239,6 +238,9 @@ if (!authUser()) {
                                                 -webkit-border-radius: 5px;
                                                 -ms-border-radius: 5px;
                                                 -o-border-radius: 5px;
+                                            }
+                                            .game_item:hover {
+                                                border: 5px solid #1B61AC;
                                             }
                                             .game_item.core-selected {
                                                 background: #000;
@@ -323,7 +325,11 @@ if (!authUser()) {
                                     if(url !== undefined && url != ""){
                                         urlMatch = url.match(/.*\?q=([^&]*)&?.*/i);
                                         if (urlMatch && urlMatch[1]) {
-                                            unproxifiedUrl = atob(urlMatch[1]);
+                                            try {
+                                                unproxifiedUrl = atob(urlMatch[1]);
+                                            } catch (exception) {
+                                                unproxifiedUrl = url;
+                                            }
                                         }
                                     }
                                     return unproxifiedUrl;
@@ -331,17 +337,20 @@ if (!authUser()) {
                                 handleResponse: function (e) {
                                     this.sourceDocument = e.detail.response;
                                 },
-                                elementSelector : 'object embed[src], object[data], param[value]',
+                                elementSelector : 'object embed[src], object[data], param[value], div[data-src]',
+                                elementAttributes : ['data-src', 'src', 'data', 'value'],
                                 gameUrls : function(document) {
                                     var jDoc = $(document);
                                     var originalUrl;
                                     var element = this;
                                     // Find game urls in html element src and data attributes.
-                                    jDoc.find(this.elementSelector).each(function (e) {
-                                        originalUrl = $(this).attr('src') || $(this).attr('data');
-                                        if(originalUrl) {
-                                            gameUrls.push(element.unproxifyUrl(originalUrl));
-                                            console.log(gameUrls[-1]);
+                                    jDoc.find(this.elementSelector).each(function (key, el) {
+                                        for(var idx = 0; idx < element.elementAttributes.length; idx++) {
+                                            originalUrl = $(el).attr(element.elementAttributes[idx]);
+                                            if(originalUrl) {
+                                                gameUrls.push(element.unproxifyUrl(originalUrl));
+                                                console.log(gameUrls[-1]);
+                                            }
                                         }
                                     });
 
@@ -396,7 +405,7 @@ if (!authUser()) {
     </div>
     <footer>
         <div class="footer_content">
-            <p>Copyright &copy <?=date('Y')?> </p>
+            <p>Copyright &copy <?=date('Y')?></p>
             <a href="http://haden.moonrockfamily.ca"><img src="<?=$relative_path?>images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
         </div>
     </footer>

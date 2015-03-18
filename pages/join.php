@@ -1,11 +1,10 @@
 <?
 $relative_path = '../';
+$page_name = 'Join';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Join | My Games</title>
-    <meta charset="utf-8" />
     <? include($relative_path . 'includes/stylesheets.php') ?>
 </head>
 <body>

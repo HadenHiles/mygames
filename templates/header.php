@@ -65,15 +65,21 @@ $connect = connection();
                     <?
                     }
                     ?>
-                    <li><a href="<?=$relative_path?>pages/logout.php">LOGOUT <i class="fa fa-sign-out"></i></a></li>
+                    <li><a href="<?=$relative_path?>pages/logout.php">Logout <i class="fa fa-sign-out"></i></a></li>
                     <?
                 } else {
                     ?>
-                    <li><a href="<?=$relative_path?>pages/join.php">JOIN <i class="fa fa-gamepad"></i></a></li>
-                    <li><a href="<?=$relative_path?>pages/login.php">LOGIN <i class="fa fa-sign-in"></i></a></li>
+                    <li><a href="<?=$relative_path?>pages/join.php">Join <i class="fa fa-gamepad"></i></a></li>
+                    <li><a href="<?=$relative_path?>pages/login.php">Login <i class="fa fa-sign-in"></i></a></li>
                 <?
                 }
                 ?>
+            </div>
+            <div class="share">
+                <li class="tell_friends">Tell Your Friends!</li>
+                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://mygames.moonrockfamily.ca/" title="Share MyGames On Facebook"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/home?status=I%20finally%20found%20a%20website%20where%20I%20can%20play%20ALL%20of%20my%20favourite%20flash%20games!%20Join%20MyGames%20for%20free%20today!%20http://mygames.moonrockfamily.ca/" title="Share MyGames On Twitter"><i class="fa fa-twitter-square"></i></a></li>
+                <li><a target="_blank" href="https://plus.google.com/share?url=http://mygames.moonrockfamily.ca/" title="Share MyGames On Google +"><i class="fa fa-google-plus-square"></i></a></li>
             </div>
         </ul>
     </div>

@@ -1,5 +1,6 @@
 <?
 $relative_path = '../';
+$page_name = 'Edit Game';
 require_once($relative_path . 'auth/authenticate.php');
 
 if (!authAdmin()) {
@@ -7,7 +8,6 @@ if (!authAdmin()) {
 }
 
 $id = $_REQUEST['id'];
-session_start();
 $user_id = $_SESSION['user_id'];
 
 require_once($relative_path . 'db/db-connect.php');
@@ -30,8 +30,6 @@ if(!file_exists($img)) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Edit Game | My Games</title>
-
     <script src="<?=$relative_path?>js/lib/jquery-2.1.3.min.js"></script>
     <script src="<?=$relative_path?>bower_components/platform/platform.js"></script>
 
@@ -195,8 +193,8 @@ if(!file_exists($img)) {
                         </style>
                         <!--Cropper styles-->
                         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-                        <link href="../cropper/css/cropper.min.css" rel="stylesheet">
-                        <link href="../cropper/css/crop-avatar.css" rel="stylesheet">
+                        <link href="<?=$relative_path?>cropper/css/cropper.min.css" rel="stylesheet">
+                        <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
                             <!-- Current avatar -->
                             <div class="avatar-view" id="current_image" title="Upload an Image">
@@ -206,7 +204,7 @@ if(!file_exists($img)) {
                             <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
-                                        <form class="avatar-form" action="../cropper/crop-game-image.php" enctype="multipart/form-data" method="post">
+                                        <form class="avatar-form" action="<?=$relative_path?>cropper/crop-game-image.php" enctype="multipart/form-data" method="post">
                                             <div class="modal-header">
                                                 <button class="close" data-dismiss="modal" type="button">&times;</button>
                                                 <h4 class="modal-title" id="avatar-modal-label" style="color: #000;">Upload An Image For Your Game</h4>
@@ -261,6 +259,9 @@ if(!file_exists($img)) {
                                                 -ms-border-radius: 5px;
                                                 -o-border-radius: 5px;
                                             }
+                                            .game_item:hover {
+                                                border: 5px solid #1B61AC;
+                                            }
                                             .game_item.core-selected {
                                                 background: #000;
                                                 border: 5px solid #278BF6;
@@ -293,7 +294,7 @@ if(!file_exists($img)) {
                                 <!--</div>-->
                                 <!--<input type="hidden" name="game_url" value="{{game_url}}" class="input" />-->
                                 <div class="input_wrapper third">
-                                    <paper-input-decorator label="Game Title" floatinglabel="" layout="" vertical="">
+                                    <paper-input-decorator label="Game Title" floatinglabel="" layout="" vertical="" error="A title is Required!">
                                         <input is="core-input" placeholder="Game Title" aria-label="Game Title" name="title" required="required" value="<?=$title?>" />
                                     </paper-input-decorator>
                                 </div>
@@ -340,19 +341,34 @@ if(!file_exists($img)) {
                                     }
                                     return proxyUrl;
                                 },
+                                unproxifyUrl : function(url) {
+                                    var unproxifiedUrl = "";
+                                    if(url !== undefined && url != ""){
+                                        urlMatch = url.match(/.*\?q=([^&]*)&?.*/i);
+                                        if (urlMatch && urlMatch[1]) {
+                                            try {
+                                                unproxifiedUrl = atob(urlMatch[1]);
+                                            } catch (exception) {
+                                                unproxifiedUrl = url;
+                                            }
+                                        }
+                                    }
+                                    return unproxifiedUrl;
+                                },
                                 handleResponse: function (e) {
                                     this.sourceDocument = e.detail.response;
                                 },
-                                elementSelector : 'object embed[src], object[data], param[value]',
+                                elementSelector : 'object embed[src], object[data], param[value], [data-src*=swf]',
                                 gameUrls : function(document) {
                                     var jDoc = $(document);
                                     var originalUrl;
                                     var element = this;
                                     // Find game urls in html element src and data attributes.
                                     jDoc.find(this.elementSelector).each(function (e) {
-                                        originalUrl = $(this).attr('src') || $(this).attr('data');
+                                        originalUrl = $(this).attr('src') || $(this).attr('data') || $(this).attr('data-src');
                                         if(originalUrl) {
-                                            gameUrls.push(element.makeAbsoluteUrl(originalUrl));
+                                            gameUrls.push(element.unproxifyUrl(originalUrl));
+                                            console.log(gameUrls[-1]);
                                         }
                                     });
 
@@ -408,7 +424,7 @@ if(!file_exists($img)) {
     <footer>
         <div class="footer_content">
             <p>Copyright &copy <?=date('Y')?></p>
-            <a href="http://haden.moonrockfamily.ca"><img src="../images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
+            <a href="http://haden.moonrockfamily.ca"><img src="<?=$relative_path?>images/logos/stamp-light-bevel.png" alt="HH" class="stamp" /></a>
         </div>
     </footer>
     <script>

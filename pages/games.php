@@ -1,6 +1,6 @@
 <?
 $relative_path = '../';
-
+$page_name = 'Games';
 require_once($relative_path . 'db/db-connect.php');
 $connect = connection();
 
@@ -9,7 +9,6 @@ require_once($relative_path . 'auth/authenticate.php');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Games | My Games</title>
         <? include($relative_path . 'includes/stylesheets.php') ?>
     </head>
     <body>

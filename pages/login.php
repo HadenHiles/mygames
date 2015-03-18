@@ -1,13 +1,11 @@
 <?
 $relative_path = '../';
+$page_name = 'Login';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login | My Games</title>
-    <meta charset="utf-8" />
-    <link href="../css/fonts.css" type="text/css" rel="stylesheet" />
-    <link href="../css/styles.css" type="text/css" rel="stylesheet" />
+    <? include($relative_path . 'includes/stylesheets.php') ?>
 </head>
 <body>
 <div class="header" id="header">

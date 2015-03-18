@@ -1,5 +1,6 @@
 <?php
 $relative_path = '../';
+$page_name = 'Approve';
 require_once($relative_path . 'auth/authenticate.php');
 
 if (!authSuper()) {
@@ -11,8 +12,6 @@ $connect = connection();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Approve | My Games</title>
-        <meta charset="utf-8" />
         <? include($relative_path . 'includes/stylesheets.php') ?>
     </head>
     <body>
