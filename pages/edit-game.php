@@ -358,17 +358,20 @@ if(!file_exists($img)) {
                                 handleResponse: function (e) {
                                     this.sourceDocument = e.detail.response;
                                 },
-                                elementSelector : 'object embed[src], object[data], param[value], [data-src*=swf]',
+                                elementSelector : 'object embed[src], object[data], param[value], div[data-src]',
+                                elementAttributes : ['data-src', 'src', 'data', 'value'],
                                 gameUrls : function(document) {
                                     var jDoc = $(document);
                                     var originalUrl;
                                     var element = this;
                                     // Find game urls in html element src and data attributes.
-                                    jDoc.find(this.elementSelector).each(function (e) {
-                                        originalUrl = $(this).attr('src') || $(this).attr('data') || $(this).attr('data-src');
-                                        if(originalUrl) {
-                                            gameUrls.push(element.unproxifyUrl(originalUrl));
-                                            console.log(gameUrls[-1]);
+                                    jDoc.find(this.elementSelector).each(function (key, el) {
+                                        for(var idx = 0; idx < element.elementAttributes.length; idx++) {
+                                            originalUrl = $(el).attr(element.elementAttributes[idx]);
+                                            if(originalUrl) {
+                                                gameUrls.push(element.unproxifyUrl(originalUrl));
+                                                console.log(gameUrls[-1]);
+                                            }
                                         }
                                     });
 
