@@ -35,6 +35,7 @@ if (!authUser()) {
         <div id="swap-able-content">
             <div class="content" style="position: relative;">
                 <h1 style="text-align: center;">Add Game</h1>
+                <p>Find your flash game on any page! Just paste the url in the input below, hit tab, and wait for your game to appear for selection!</p>
                 <game-scraper-element></game-scraper-element>
                 <polymer-element name="game-scraper-element" attributes="url">
                     <template>
@@ -280,7 +281,7 @@ if (!authUser()) {
                                 </div>
                                 <input type="hidden" name="game_url" value="{{game_url}}" required="required" />
                                 <div class="input_wrapper third">
-                                    <paper-input floatingLabel label="URL of Game Page" type="url" pattern="https?://.+" error="Input is not a URL!"
+                                    <paper-input floatingLabel label="URL where Game is Played" type="url" pattern="https?://.+" error="Input is not a URL!"
                                                  value="{{url}}"></paper-input>
                                 </div>
                                 <div class="input_wrapper third">

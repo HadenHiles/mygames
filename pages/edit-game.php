@@ -300,7 +300,7 @@ if(!file_exists($img)) {
                                 </div>
                                 <input type="hidden" name="game_url" value="{{game_url}}" required="required" />
                                 <div class="input_wrapper third">
-                                    <paper-input floatingLabel label="URL of Game Page" type="url" pattern="https?://.+" error="Input is not a URL!"
+                                    <paper-input floatingLabel label="URL where Game is Played" type="url" pattern="https?://.+" error="Input is not a URL!"
                                                  value="{{url}}"></paper-input>
                                 </div>
                                 <div class="input_wrapper third">

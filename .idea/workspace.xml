@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" name="Default" comment="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/save-user-game.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unproxify-url.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/game-images/20150317232232.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/game-images/20150318062639.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/game-images/20150318062756.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/game-images/20150318063532.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon.psd" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/encodings.xml" afterPath="" />
@@ -94,21 +97,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/mygames.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/sign-up.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/add-game.php" afterPath="$PROJECT_DIR$/pages/add-game.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/approve.php" afterPath="$PROJECT_DIR$/pages/approve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cropper/css/crop-avatar.css" afterPath="$PROJECT_DIR$/cropper/css/crop-avatar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/direction-hover/direction-hover.css" afterPath="$PROJECT_DIR$/css/direction-hover/direction-hover.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db-connect.php" afterPath="$PROJECT_DIR$/db/db-connect.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/edit-game.php" afterPath="$PROJECT_DIR$/pages/edit-game.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/favorites.php" afterPath="$PROJECT_DIR$/pages/favorites.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" afterPath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/games.php" afterPath="$PROJECT_DIR$/pages/games.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.php" afterPath="$PROJECT_DIR$/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/join.php" afterPath="$PROJECT_DIR$/pages/join.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login.php" afterPath="$PROJECT_DIR$/pages/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/play.php" afterPath="$PROJECT_DIR$/pages/play.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/save-game.php" afterPath="$PROJECT_DIR$/pages/save-game.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/stylesheets.php" afterPath="$PROJECT_DIR$/includes/stylesheets.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mygames-design.iws" />
@@ -121,7 +112,7 @@
     <file path="/findGame.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995033378" ignored="false" />
     <file path="/myGames.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995044547" ignored="false" />
     <file path="/addGame.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995054797" ignored="false" />
-    <file path="/styles.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426640767796" ignored="false" />
+    <file path="/styles.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426722906336" ignored="false" />
     <file path="/findGame.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999713801" ignored="false" />
     <file path="/myGames.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999760402" ignored="false" />
     <file path="/addGame.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999791107" ignored="false" />
@@ -134,9 +125,9 @@
     <file path="/mygames.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420180243375" ignored="false" />
     <file path="/home.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421124751414" ignored="false" />
     <file path="/config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396359357" ignored="false" />
-    <file path="/db-connect.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396829755" ignored="false" />
+    <file path="/db-connect.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719181505" ignored="false" />
     <file path="/games.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426477128772" ignored="false" />
-    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426627442782" ignored="false" />
+    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426767880742" ignored="false" />
     <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426638600743" ignored="false" />
     <file path="/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393397014" ignored="false" />
     <file path="/Applications/MAMP/conf/apache/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393571557" ignored="false" />
@@ -169,10 +160,10 @@
     <file path="$USER_HOME$/Documents/Web/HGame/mail_test.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421019599036" ignored="false" />
     <file path="/save_user.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426297767675" ignored="false" />
     <file path="/a.dummy" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426655031243" ignored="false" />
-    <file path="/activate.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426298296649" ignored="false" />
+    <file path="/activate.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719088571" ignored="false" />
     <file path="/game-scraper.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421301039316" ignored="false" />
     <file path="/paper-input.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421331741439" ignored="false" />
-    <file path="/flash-game-element.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421287755765" ignored="false" />
+    <file path="/flash-game-element.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426710778157" ignored="false" />
     <file path="/save-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426657254522" ignored="false" />
     <file path="/add-game.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1425877194811" ignored="false" />
     <file path="/paper-input-decorator.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421299826238" ignored="false" />
@@ -188,7 +179,7 @@
     <file path="/crop-avatar.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426633205030" ignored="false" />
     <file path="/crop-game-image.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1425877579763" ignored="false" />
     <file path="/cleanUnusedFiles.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1425873043884" ignored="false" />
-    <file path="/add-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426653163468" ignored="false" />
+    <file path="/add-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426769081554" ignored="false" />
     <file path="/crop-avatar.js" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1425964539242" ignored="false" />
     <file path="/scripts.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426444044090" ignored="false" />
     <file path="/favorite-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426217215251" ignored="false" />
@@ -204,6 +195,7 @@
     <file path="/direction-hover.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426638346349" ignored="false" />
     <file path="/atob.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426653895000" ignored="false" />
     <file path="/save-user-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426657930327" ignored="false" />
+    <file path="/proxy.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426708626968" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +210,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -255,6 +246,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -264,29 +256,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <file leaf-file-name="save-user-game.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/save-user-game.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="20" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.0">
+            <state line="18" column="74" selection-start="610" selection-end="610" vertical-scroll-proportion="-11.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="39" selection-start="2825" selection-end="2837" vertical-scroll-proportion="-25.958334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add-game.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="add-game.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/add-game.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="331" column="46" selection-start="19604" selection-end="19875" vertical-scroll-proportion="-206.875">
-              <folding />
+            <state line="283" column="67" selection-start="17035" selection-end="17035" vertical-scroll-proportion="0.090361446">
+              <folding>
+                <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -294,43 +281,7 @@
       <file leaf-file-name="edit-game.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/edit-game.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="218" selection-end="218" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unproxify-url.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unproxify-url.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="15" selection-end="27" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save-game.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/save-game.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="43" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.5479452">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save-user-game.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/save-user-game.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="267" selection-end="267" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="proxy.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proxy.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="2170" selection-end="2170" vertical-scroll-proportion="-17.916666">
+            <state line="302" column="94" selection-start="17524" selection-end="17524" vertical-scroll-proportion="-13.375">
               <folding />
             </state>
           </provider>
@@ -354,22 +305,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pages/games.php" />
-        <option value="$PROJECT_DIR$/pages/join.php" />
-        <option value="$PROJECT_DIR$/pages/login.php" />
-        <option value="$PROJECT_DIR$/cropper/css/crop-avatar.css" />
-        <option value="$PROJECT_DIR$/includes/stylesheets.php" />
-        <option value="$PROJECT_DIR$/includes/scripts.php" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/templates/header.php" />
         <option value="$PROJECT_DIR$/css/direction-hover/direction-hover.css" />
         <option value="$PROJECT_DIR$/pages/play.php" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/pages/add-game.php" />
         <option value="$PROJECT_DIR$/atob.php" />
-        <option value="$PROJECT_DIR$/pages/edit-game.php" />
         <option value="$PROJECT_DIR$/pages/save-user-game.php" />
         <option value="$PROJECT_DIR$/pages/save-game.php" />
+        <option value="$PROJECT_DIR$/proxy.php" />
+        <option value="$PROJECT_DIR$/pages/flash-game-element.html" />
+        <option value="$PROJECT_DIR$/db/db-connect.php" />
+        <option value="$PROJECT_DIR$/pages/approve.php" />
+        <option value="$PROJECT_DIR$/auth/activate.php" />
+        <option value="$PROJECT_DIR$/auth/authenticate.php" />
+        <option value="$PROJECT_DIR$/auth/save_user.php" />
+        <option value="$PROJECT_DIR$/auth/validate_user.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/pages/add-game.php" />
+        <option value="$PROJECT_DIR$/pages/edit-game.php" />
       </list>
     </option>
   </component>
@@ -382,7 +333,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="height" value="1173" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -410,8 +361,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -432,6 +381,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,13 +402,13 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="PublishConfig" serverName="mygames" serverId="3b9d2a65-3db1-4c1c-9d3d-4505ba931197" promptOnLocalOverwrite="false">
+  <component name="PublishConfig" serverName="mygames" serverId="3b9d2a65-3db1-4c1c-9d3d-4505ba931197" promptOnLocalOverwrite="false" autoUpload="true">
     <servers>
       <server id="04220da7-02cb-42be-9fdd-e96a28ec4f48">
         <serverdata />
@@ -628,7 +579,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -659,17 +620,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -687,11 +638,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="3b9d2a65-3db1-4c1c-9d3d-4505ba931197" server_name="mygames">
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -715,7 +662,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="3b9d2a65-3db1-4c1c-9d3d-4505ba931197" server_name="mygames">
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="port 9000" type="Remote" factoryName="Remote">
@@ -814,14 +765,22 @@
       <created>1426627445209</created>
       <updated>1426627445209</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="-fixed issue where game scraping wouldn't work with miniclip&#10;    --now it uses the proxy to display the game but then when the game is added it adds the correct url (uses unproxify url function in unproxify-url.php page)&#10;    -changed game scraper to search for elements that have an attribute of data-src">
+      <created>1426658307090</created>
+      <updated>1426658307090</updated>
+    </task>
+    <task id="LOCAL-00013" summary="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games">
+      <created>1426658373511</created>
+      <updated>1426658373511</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31866953" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31844106" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -834,20 +793,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32832617" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13811563" sideWeight="0.6738197" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13811563" sideWeight="0.6815589" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -893,7 +852,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Did search engine optimization (sitemap and robots/urllist .txt files)&#10;-varified site to google webmaster and submitted sitemap&#10;-added apple touch and fav icons&#10;-added facebook commenting and like/sharing for each game that goes on the site&#10;-adjusted style of game embed tags to have blue border" />
+    <option name="LAST_COMMIT_MESSAGE" value="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -911,12 +870,13 @@
     <MESSAGE value="-Removed loading container&#10;-Tweaked modal button styles" />
     <MESSAGE value="-Added search filter and re-organized files to have includes with relative paths for each page.&#10;-Styled search field and other small style adjustments&#10;-consolidated script and css includes to be in separate files as well as created header and footer files for including on each page." />
     <MESSAGE value="-Added favoriting ability for users who are logged in&#10;-added ability to edit games&#10;-created plus button on favorites page to add more games... thinking of where else to put an &quot;add game&quot; button since that is the main purpose of the web app" />
-    <MESSAGE value="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games" />
     <MESSAGE value="-Added multi level auth deleting/un-approving of games using different authenticatino levels (Super, Admin, and User)&#10;-Took out big buttons unless logged in&#10;-Moved login and join buttons to top of page&#10;-Added animations when deleting or un-favoriting a game" />
     <MESSAGE value="-Fixed issue with search bar and top nav overlapping when scrolled down&#10;-fixed z-index issue with image upload modal&#10;-other minor style adjustments" />
     <MESSAGE value="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games&#10;-fixed authentication issues" />
     <MESSAGE value="-fixed issue where go button on search wouldn't work" />
     <MESSAGE value="-Did search engine optimization (sitemap and robots/urllist .txt files)&#10;-varified site to google webmaster and submitted sitemap&#10;-added apple touch and fav icons&#10;-added facebook commenting and like/sharing for each game that goes on the site&#10;-adjusted style of game embed tags to have blue border" />
+    <MESSAGE value="-fixed issue where game scraping wouldn't work with miniclip&#10;    --now it uses the proxy to display the game but then when the game is added it adds the correct url (uses unproxify url function in unproxify-url.php page)&#10;    -changed game scraper to search for elements that have an attribute of data-src" />
+    <MESSAGE value="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -945,119 +905,97 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/favorites.php">
+    <entry file="file://$PROJECT_DIR$/includes/scripts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="55" selection-end="55" vertical-scroll-proportion="0.034246575">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/stylesheets.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="142" selection-end="142" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="48" selection-start="172" selection-end="172" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cropper/css/crop-avatar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="331" selection-end="331" vertical-scroll-proportion="0.28333333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/direction-hover/direction-hover.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="75" selection-start="724" selection-end="724" vertical-scroll-proportion="0.55">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/play.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="89" selection-start="3094" selection-end="3094" vertical-scroll-proportion="0.69524914">
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="7" selection-start="2892" selection-end="2892" vertical-scroll-proportion="0.55">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="20" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.0">
+        <state line="215" column="35" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.8666667" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="384" selection-end="384" vertical-scroll-proportion="0.18835616" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/db-connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="755" selection-end="755" vertical-scroll-proportion="0.29109588" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/update-game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/delete-game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/save-game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="38" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.58219177">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proxy.php">
+    <entry file="file://$PROJECT_DIR$/pages/approve.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="2170" selection-end="2170" vertical-scroll-proportion="-17.916666">
+        <state line="9" column="24" selection-start="275" selection-end="275" vertical-scroll-proportion="0.15410958" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/validate_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="47" selection-start="316" selection-end="316" vertical-scroll-proportion="0.15410958" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/save_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="48" selection-start="205" selection-end="205" vertical-scroll-proportion="0.08690614">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="5" column="40" selection-start="157" selection-end="157" vertical-scroll-proportion="0.08561644" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/activate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="37" selection-start="66" selection-end="66" vertical-scroll-proportion="0.034246575" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/save-user-game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="74" selection-start="610" selection-end="610" vertical-scroll-proportion="-11.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/edit-game.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="218" selection-end="218" vertical-scroll-proportion="-5.625">
+        <state line="302" column="94" selection-start="17524" selection-end="17524" vertical-scroll-proportion="-13.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/add-game.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="331" column="46" selection-start="19604" selection-end="19875" vertical-scroll-proportion="-206.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="39" selection-start="2825" selection-end="2837" vertical-scroll-proportion="-25.958334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unproxify-url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="15" selection-end="27" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/save-user-game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="267" selection-end="267" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/save-game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="43" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.5479452">
-          <folding />
+        <state line="283" column="67" selection-start="17035" selection-end="17035" vertical-scroll-proportion="0.090361446">
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
