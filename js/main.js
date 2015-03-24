@@ -83,6 +83,29 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('.game_play_actions a.full_screen').click(function(e) {
+        e.preventDefault();
+        toggleFullScreen();
+    });
+});
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) { // escape key maps to keycode `27`
+        toggleFullScreen();
+    }
+});
+
+function toggleFullScreen() {
+    if($('body').hasClass('full')) {
+        $('.game_play_actions a.full_screen i').removeClass('fa-compress');
+        $('.game_play_actions a.full_screen i').addClass('fa-expand');
+    } else {
+        $('.game_play_actions a.full_screen i').removeClass('fa-expand');
+        $('.game_play_actions a.full_screen i').addClass('fa-compress');
+    }
+    $('body').toggleClass('full');
+}
+
 //Stick the search field to the top of the screen
 $(window).scroll(function() {
     var search = $('.header #search_sticky');

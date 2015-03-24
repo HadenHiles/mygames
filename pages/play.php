@@ -75,6 +75,7 @@ foreach ($game_name_result as $row) {
                 ?>
                 <div class="game_container">
                     <h1 class="game_name"><?=$row['name']?></h1>
+                    <div class="game_play_actions"><a href="" class="full_screen"><i class="fa fa-expand"></i></a></div>
 <!--                    <div class="game_description">--><?//=$description?><!--</div>-->
                     <p style="text-align: left; float: left; margin-left: 80px;">Share <?=$gameName?> with your friends!</p>
                     <div style="margin: 15px 0px 5px 10px; float: left;"

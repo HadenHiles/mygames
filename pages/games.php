@@ -77,7 +77,6 @@ require_once($relative_path . 'auth/authenticate.php');
                                             <?
                                             if(authUser()) {
                                                 $game_id = $row['id'];
-                                                session_start();
                                                 $user_id = $_SESSION['user_id'];
                                                 $sql_check = "SELECT game_id FROM user_games WHERE game_id = :game_id AND user_id = :user_id";
                                                 $check_result = $connect->prepare($sql_check);
