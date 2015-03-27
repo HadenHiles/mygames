@@ -1,5 +1,6 @@
 <?
 $relative_path = '../';
+require_once($relative_path . 'auth/authenticate.php');
 
 //get the id from the url
 $id = $_REQUEST['id'];
@@ -44,7 +45,7 @@ foreach ($game_name_result as $row) {
             }
 
             //set up the sql select statements
-            $prep = $connect->prepare("SELECT name, url, img, description FROM games WHERE id = :id");
+            $prep = $connect->prepare("SELECT id, name, url, img, description FROM games WHERE id = :id");
             //	$sqlSelect = "SELECT id FROM users WHERE admin = TRUE";
             //	$stmt = $connect->prepare($sqlSelect);
 
@@ -74,15 +75,28 @@ foreach ($game_name_result as $row) {
                 $image = $row['img'];
                 ?>
                 <div class="game_container">
-                    <h1 class="game_name"><?=$row['name']?></h1>
-                    <div class="game_play_actions"><a href="" class="full_screen"><i class="fa fa-expand"></i></a></div>
-<!--                    <div class="game_description">--><?//=$description?><!--</div>-->
-                    <p style="text-align: left; float: left; margin-left: 80px;">Share <?=$gameName?> with your friends!</p>
-                    <div style="margin: 15px 0px 5px 10px; float: left;"
-                        class="fb-like"
-                        data-share="true"
-                        data-width="100"
-                        data-show-faces="true">
+                    <div class="game_actions_wrapper">
+                        <h1 class="game_name"><?=$row['name']?></h1>
+                        <div class="game_play_actions">
+                            <div id="game_manager">
+                                <?
+                                if(authAdmin()) {
+                                    ?>
+                                    <a href=""><i class="fa fa-edit normal" style="font-size: 34px; margin: 0px 4px 0px 0px; position: relative; top: 1px;" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i></a>
+                                    <?
+                                }
+                                ?>
+                                <a href="" class="full_screen"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+    <!--                    <div class="game_description">--><?//=$description?><!--</div>-->
+                        <p style="text-align: left; float: left;">Share <?=$gameName?> with your friends!</p>
+                        <div style="margin: 15px 0px 5px 10px; float: left;"
+                            class="fb-like"
+                            data-share="true"
+                            data-width="100"
+                            data-show-faces="true">
+                        </div>
                     </div>
                     <object class="flash_object" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="700" height="550">
                         <param name="allowFullScreen" value="true" />
