@@ -66,6 +66,7 @@ a:hover {
     top: 5px;
     z-index: 1;
     margin-left: 608px;
+    min-width: 1010px;
 }
 .top_menu .share li.tell_friends {
     font-family: 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
@@ -110,6 +111,7 @@ a:hover {
 }
 .header {
     padding: 25px 0px;
+    min-width: 1010px;
     width: 1010px !important;
     margin: 0 auto;
     text-align: center;
