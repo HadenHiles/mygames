@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" name="Default" comment="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/demo.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/encodings.xml" afterPath="" />
@@ -92,7 +93,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/mygames.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/sign-up.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" afterPath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.php" afterPath="$PROJECT_DIR$/templates/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mygames-design.iws" />
@@ -100,7 +101,7 @@
     <file path="/fonts.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1414176065597" ignored="false" />
     <file path="/index.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420859208172" ignored="false" />
     <file path="/main.js" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427199929958" ignored="false" />
-    <file path="/dummy.xml" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427420224134" ignored="false" />
+    <file path="/dummy.xml" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427477925782" ignored="false" />
     <file path="/pageLoader.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1414181266164" ignored="false" />
     <file path="/findGame.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995033378" ignored="false" />
     <file path="/myGames.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995044547" ignored="false" />
@@ -120,16 +121,16 @@
     <file path="/config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396359357" ignored="false" />
     <file path="/db-connect.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719181505" ignored="false" />
     <file path="/games.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426477128772" ignored="false" />
-    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427458925208" ignored="false" />
+    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427511959620" ignored="false" />
     <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427420562310" ignored="false" />
     <file path="/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393397014" ignored="false" />
     <file path="/Applications/MAMP/conf/apache/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393571557" ignored="false" />
     <file path="/Applications/MAMP/logs/mysql_error_log.err" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420416985092" ignored="false" />
     <file path="$USER_HOME$/Documents/Web/HGame/Config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396131448" ignored="false" />
     <file path="/index.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426315126676" ignored="false" />
-    <file path="/support-files.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426877413058" ignored="false" />
+    <file path="/support-files.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427484381480" ignored="false" />
     <file path="/footer.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426129966804" ignored="false" />
-    <file path="/header.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427149874201" ignored="false" />
+    <file path="/header.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427513695559" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Websites/innisfilhydro.com/includes/site-settings.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420475921006" ignored="false" />
     <file path="/site-settings.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420467323406" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Websites/innisfilhydro.com/includes/social-media-sharing.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420468177026" ignored="false" />
@@ -137,7 +138,7 @@
     <file path="$USER_HOME$/Dropbox/Websites/innisfilhydro.com/includes/footer.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420471620001" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Websites/innisfilhydro.com/widgets/footer-sitemap.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420470857461" ignored="false" />
     <file path="/footer-sitemap.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420470362702" ignored="false" />
-    <file path="/style.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1423689884741" ignored="false" />
+    <file path="/style.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427469592647" ignored="false" />
     <file path="/Applications/MAMP/bin/php/php5.5.3/conf/php.ini" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420471516290" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Websites/innisfilhydro.com/css/calendar.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420472087411" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Websites/innisfilhydro.com/customer-self-serve.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420475314083" ignored="false" />
@@ -152,7 +153,7 @@
     <file path="$USER_HOME$/Documents/Web/HGame/index.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420996527048" ignored="false" />
     <file path="$USER_HOME$/Documents/Web/HGame/mail_test.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421019599036" ignored="false" />
     <file path="/save_user.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426297767675" ignored="false" />
-    <file path="/a.dummy" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426794401646" ignored="false" />
+    <file path="/a.dummy" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427466761775" ignored="false" />
     <file path="/activate.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719088571" ignored="false" />
     <file path="/game-scraper.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421301039316" ignored="false" />
     <file path="/paper-input.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1421331741439" ignored="false" />
@@ -199,6 +200,48 @@
     <file path="$USER_HOME$/Dropbox/Websites/ecs-cares.com/css/jquery-nivo-slider.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426875805301" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Websites/ecs-cares.com/product-category.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426876300427" ignored="false" />
     <file path="/product-category.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426876297774" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/includes/support-files.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485451664" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/.idea/workspace.xml" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427489415384" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/widgets/products-list-test.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485390210" ignored="false" />
+    <file path="/products-list-test.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485388025" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/product-category.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427464758024" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/product-category-test.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427464764719" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/widgets/products-list.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485707586" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/widgets/products-highlight-test.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427465206571" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/css/style.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427469592647" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/widgets/messages.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427469556045" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/cart-info.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427467490771" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/cart-purchase.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427488814715" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/cart-stripe-charge.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485727919" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/cart-submit.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427489402893" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/cart.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427466904068" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/purchase-complete.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427470508941" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/purchase-print.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427471032656" ignored="false" />
+    <file path="/cart-submit.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427489253750" ignored="false" />
+    <file path="/cart-purchase.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427468861164" ignored="false" />
+    <file path="/messages.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427469556045" ignored="false" />
+    <file path="/purchase-print.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427469699644" ignored="false" />
+    <file path="/purchase-complete.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427470509332" ignored="false" />
+    <file path="/cart-stripe-charge.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427476243608" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/admin/includes/jquery-slide-menu.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427476854952" ignored="false" />
+    <file path="/jquery-slide-menu.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485899379" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/admin/shipping.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427480799385" ignored="false" />
+    <file path="/shipping.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427480317979" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/admin/shipping-postal-add.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427478591405" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/admin/shipping-postal-edit.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427479183430" ignored="false" />
+    <file path="/shipping-postal-edit.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427478656285" ignored="false" />
+    <file path="/shipping-postal-add.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427478575104" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/admin/includes/form-submit.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427479612293" ignored="false" />
+    <file path="/form-submit.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427479121152" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/cart-add-item.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485235659" ignored="false" />
+    <file path="/cart-add-item.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485017509" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/includes/jquery-slide-menu.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427485898824" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/css/jquery-slide-menu.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427487552633" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/delivery-services.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427486762352" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/admin/delivery-services.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427486285233" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/js/jquery-slide-menu.js" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427486824349" ignored="false" />
+    <file path="/jquery-slide-menu.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427487552240" ignored="false" />
+    <file path="$USER_HOME$/Dropbox/Websites/rocksandgravel.ca/stripe/config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427488596263" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +256,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -249,7 +293,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -259,10 +302,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="22" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.4245098">
+            <state line="68" column="22" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -271,7 +314,16 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="59" selection-start="1858" selection-end="1858" vertical-scroll-proportion="-33.125">
+            <state line="69" column="112" selection-start="2571" selection-end="2571" vertical-scroll-proportion="-21.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/demo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="20" selection-start="47" selection-end="47" vertical-scroll-proportion="0.034246575">
               <folding />
             </state>
           </provider>
@@ -280,7 +332,7 @@
       <file leaf-file-name="play.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/play.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="224" selection-start="3580" selection-end="3580" vertical-scroll-proportion="-6.875">
+            <state line="84" column="224" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -289,7 +341,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="33" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.0">
+            <state line="128" column="106" selection-start="4633" selection-end="4633" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -298,7 +350,7 @@
       <file leaf-file-name="favorites.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/favorites.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="55" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+            <state line="3" column="55" selection-start="111" selection-end="111" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -322,7 +374,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pages/save-game.php" />
         <option value="$PROJECT_DIR$/proxy.php" />
         <option value="$PROJECT_DIR$/pages/flash-game-element.html" />
         <option value="$PROJECT_DIR$/db/db-connect.php" />
@@ -333,11 +384,12 @@
         <option value="$PROJECT_DIR$/auth/validate_user.php" />
         <option value="$PROJECT_DIR$/pages/edit-game.php" />
         <option value="$PROJECT_DIR$/pages/games.php" />
-        <option value="$PROJECT_DIR$/templates/header.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/pages/add-game.php" />
         <option value="$PROJECT_DIR$/pages/play.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/templates/header.php" />
+        <option value="$PROJECT_DIR$/pages/demo.php" />
       </list>
     </option>
   </component>
@@ -348,10 +400,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Mamp Php 5.5.3" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1173" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -379,6 +430,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -397,10 +450,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mygames-full" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mygames-full" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mygames-full" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mygames-full" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -806,14 +885,18 @@
       <created>1427421173119</created>
       <updated>1427421173119</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="-fixed share buttons for small screens">
+      <created>1427460078761</created>
+      <updated>1427460078761</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1920" height="1173" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3146388" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3143777" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -832,7 +915,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16862956" sideWeight="0.6853612" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16862956" sideWeight="0.68562233" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -885,7 +968,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-added edit button to the play page for admins" />
+    <option name="LAST_COMMIT_MESSAGE" value="-fixed share buttons for small screens" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -913,6 +996,7 @@
     <MESSAGE value="-provided some extra direction on the add game page to make it more clear that it will find flash games on any website" />
     <MESSAGE value="-added full screen feature for all games" />
     <MESSAGE value="-added edit button to the play page for admins" />
+    <MESSAGE value="-fixed share buttons for small screens" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,11 +1008,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/save-game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="38" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.58219177" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/approve.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="24" selection-start="275" selection-end="275" vertical-scroll-proportion="0.15410958" />
@@ -979,37 +1058,44 @@
         <state line="42" column="65" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.65753424" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="33" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/favorites.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/play.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="224" selection-start="3580" selection-end="3580" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="59" selection-start="1858" selection-end="1858" vertical-scroll-proportion="-33.125">
+        <state line="84" column="224" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="22" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.4245098">
+        <state line="68" column="22" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="106" selection-start="4633" selection-end="4633" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/favorites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="55" selection-start="111" selection-end="111" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="112" selection-start="2571" selection-end="2571" vertical-scroll-proportion="-21.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/demo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="47" selection-end="47" vertical-scroll-proportion="0.034246575">
           <folding />
         </state>
       </provider>
