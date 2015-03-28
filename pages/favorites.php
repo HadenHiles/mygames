@@ -27,6 +27,19 @@ if (!authUser()) {
                     session_start();
                     $user_id = $_SESSION['user_id'];
 
+                    $user_games_sql = "SELECT * FROM user_games WHERE user_id = :user_id";
+                    $user_games_cmd = $connect->prepare($user_games_sql);
+                    $user_games_cmd->bindParam(':user_id', $user_id, PDO::PARAM_STR, 50);
+
+                    //handle any pdo query errors
+                    try {
+                        $user_games_cmd->execute();
+                    } catch (PDOException $e) {
+                    }
+                    if($user_games_cmd->rowCount() == 0) {
+                        header('location: ' . $relative_path . 'pages/demo.php');
+                    }
+
                     $sql = "SELECT id, name, img, description, approved FROM games INNER JOIN user_games ON id = user_games.game_id WHERE user_id = $user_id";
                     $queryParams = [];
                     if (empty($tag) || empty($name)){

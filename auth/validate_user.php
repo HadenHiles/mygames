@@ -32,8 +32,9 @@ $count = $cmd -> rowCount();
 
 //check if any matches are found in the db
 if ($count == 1) {
+    $result = $cmd->fetchAll();
     //if we found matches, we need to determine and store the user's id
-    foreach ($cmd as $row) {
+    foreach ($result as $row) {
         //access the existing session created automatically by the server
         session_start();
         //take the user's id from the database and store it in a session variable

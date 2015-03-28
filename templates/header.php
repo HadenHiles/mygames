@@ -22,13 +22,13 @@ $connect = connection();
         <?
         if(authUser()) {
             $user_id = $_SESSION['user_id'];
-            $sql = "SELECT name, first_login FROM users WHERE id = $user_id";
+            $sql = "SELECT name FROM users WHERE id = :user_id";
             $stmt = $connect->prepare($sql);
+            $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $row) {
                 $name = $row['name'];
-                $first_login = $row['first_login'];
             }
             ?>
             <a href="<?=$relative_path?>pages/favorites.php" title="home">
@@ -62,12 +62,12 @@ $connect = connection();
                 if(authUser()) {
                     if(authSuper()) {
                         ?>
-                        <li><a href="<?=$relative_path?>pages/approve.php">Approve <i class="fa fa-check-circle"></i></a></li>
+                        <li><a href="<?=$relative_path?>pages/approve.php"><i class="fa fa-check-circle"></i></a></li>
                     <?
                     }
                     ?>
                     <li><a href="<?=$relative_path?>pages/logout.php">Logout <i class="fa fa-sign-out"></i></a></li>
-                    <li><a href="<?=$relative_path?>pages/demo.php">Demo <i class="fa fa-question"></i></a></li>
+                    <li><a href="<?=$relative_path?>pages/demo.php">Demo <i class="fa fa-play"></i></a></li>
                     <?
                 } else {
                     ?>
