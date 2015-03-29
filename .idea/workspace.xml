@@ -91,24 +91,23 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/home.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/mygames.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/sign-up.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/demo.php" afterPath="$PROJECT_DIR$/pages/demo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/favorites.php" afterPath="$PROJECT_DIR$/pages/favorites.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" afterPath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.php" afterPath="$PROJECT_DIR$/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/validate_user.php" afterPath="$PROJECT_DIR$/auth/validate_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/play.php" afterPath="$PROJECT_DIR$/pages/play.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mygames-design.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fonts.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1414176065597" ignored="false" />
     <file path="/index.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420859208172" ignored="false" />
-    <file path="/main.js" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427199929958" ignored="false" />
-    <file path="/dummy.xml" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427477925782" ignored="false" />
+    <file path="/main.js" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427654922207" ignored="false" />
+    <file path="/dummy.xml" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427653600194" ignored="false" />
     <file path="/pageLoader.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1414181266164" ignored="false" />
     <file path="/findGame.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995033378" ignored="false" />
     <file path="/myGames.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995044547" ignored="false" />
     <file path="/addGame.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995054797" ignored="false" />
-    <file path="/styles.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427420378094" ignored="false" />
+    <file path="/styles.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427653855747" ignored="false" />
     <file path="/findGame.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999713801" ignored="false" />
     <file path="/myGames.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999760402" ignored="false" />
     <file path="/addGame.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999791107" ignored="false" />
@@ -123,8 +122,8 @@
     <file path="/config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396359357" ignored="false" />
     <file path="/db-connect.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719181505" ignored="false" />
     <file path="/games.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426477128772" ignored="false" />
-    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427513878307" ignored="false" />
-    <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427420562310" ignored="false" />
+    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427654784460" ignored="false" />
+    <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427653599730" ignored="false" />
     <file path="/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393397014" ignored="false" />
     <file path="/Applications/MAMP/conf/apache/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393571557" ignored="false" />
     <file path="/Applications/MAMP/logs/mysql_error_log.err" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420416985092" ignored="false" />
@@ -259,7 +258,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -296,6 +294,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -308,7 +307,7 @@
       <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="22" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
+            <state line="309" column="19" selection-start="7409" selection-end="7409" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -317,7 +316,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="37" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-15.625">
+            <state line="30" column="37" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -326,10 +325,8 @@
       <file leaf-file-name="demo.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/demo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="44" selection-start="516" selection-end="516" vertical-scroll-proportion="-10.625">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="17" column="44" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -337,7 +334,7 @@
       <file leaf-file-name="validate_user.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/validate_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="60" selection-start="682" selection-end="682" vertical-scroll-proportion="-11.875">
+            <state line="19" column="60" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -346,25 +343,29 @@
       <file leaf-file-name="play.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/play.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="224" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="152" column="40" selection-start="7950" selection-end="7950" vertical-scroll-proportion="-15.958333">
+              <folding>
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="106" selection-start="4633" selection-end="4633" vertical-scroll-proportion="0.0">
+            <state line="92" column="61" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.80622345">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="favorites.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="favorites.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/favorites.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="81" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.4280822">
+            <state line="39" column="81" selection-start="1512" selection-end="1512" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -373,7 +374,7 @@
       <file leaf-file-name="authenticate.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/authenticate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="45" selection-start="504" selection-end="504" vertical-scroll-proportion="-11.875">
+            <state line="19" column="45" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -405,14 +406,14 @@
         <option value="$PROJECT_DIR$/auth/save_user.php" />
         <option value="$PROJECT_DIR$/pages/edit-game.php" />
         <option value="$PROJECT_DIR$/pages/games.php" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/pages/add-game.php" />
-        <option value="$PROJECT_DIR$/pages/play.php" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/pages/demo.php" />
         <option value="$PROJECT_DIR$/auth/validate_user.php" />
         <option value="$PROJECT_DIR$/templates/header.php" />
         <option value="$PROJECT_DIR$/pages/favorites.php" />
+        <option value="$PROJECT_DIR$/pages/play.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -424,8 +425,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Mamp Php 5.5.3" />
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -453,8 +454,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -489,21 +488,23 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="177" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="208" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="177" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="177" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="/User Information" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../personalPortfolio" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="214" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1226" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1226" />
@@ -517,8 +518,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -704,7 +705,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -735,17 +746,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -763,11 +764,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="3b9d2a65-3db1-4c1c-9d3d-4505ba931197" server_name="mygames">
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -791,7 +788,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="3b9d2a65-3db1-4c1c-9d3d-4505ba931197" server_name="mygames">
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="port 9000" type="Remote" factoryName="Remote">
@@ -918,19 +919,24 @@
       <created>1427513880679</created>
       <updated>1427513880679</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="-fixed issue with login not working properly&#10;-demo page is displayed if the user doesn't have any favorite games... also accessible via the top menu">
+      <created>1427520612398</created>
+      <updated>1427520612398</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3143777" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31382978" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.68133044" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -938,20 +944,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32832617" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16862956" sideWeight="0.67167383" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1685879" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285985" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -997,7 +1003,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-added page for mygames demo that will be shown on first login and to non-users at un-determined time/placement as of current" />
+    <option name="LAST_COMMIT_MESSAGE" value="-fixed issue with login not working properly&#10;-demo page is displayed if the user doesn't have any favorite games... also accessible via the top menu" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1027,6 +1033,7 @@
     <MESSAGE value="-added edit button to the play page for admins" />
     <MESSAGE value="-fixed share buttons for small screens" />
     <MESSAGE value="-added page for mygames demo that will be shown on first login and to non-users at un-determined time/placement as of current" />
+    <MESSAGE value="-fixed issue with login not working properly&#10;-demo page is displayed if the user doesn't have any favorite games... also accessible via the top menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1078,60 +1085,62 @@
         <state line="42" column="65" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.65753424" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/play.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="224" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="22" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="106" selection-start="4633" selection-end="4633" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/demo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="44" selection-start="516" selection-end="516" vertical-scroll-proportion="-10.625">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="17" column="44" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="45" selection-start="504" selection-end="504" vertical-scroll-proportion="-11.875">
+        <state line="19" column="45" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="37" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-15.625">
+        <state line="30" column="37" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/validate_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="60" selection-start="682" selection-end="682" vertical-scroll-proportion="-11.875">
+        <state line="19" column="60" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/favorites.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="81" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.4280822">
+        <state line="39" column="81" selection-start="1512" selection-end="1512" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/play.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="40" selection-start="7950" selection-end="7950" vertical-scroll-proportion="-15.958333">
+          <folding>
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="309" column="19" selection-start="7409" selection-end="7409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="61" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.80622345">
           <folding />
         </state>
       </provider>

@@ -317,16 +317,14 @@ ul.game_list_container strong.fav i.fa-heart:hover, ul.game_list_container stron
     width: 600px;
     margin: 25px auto;
 }
-.game_container .game_actions_wrapper {
+.game_container .game_actions_wrapper, .facebook_share {
     width: 808px;
     margin: 0 auto;
 }
 .game_container .game_play_actions {
     float: right;
     text-align: right;
-    position: relative;
-    top: 6px;
-    margin: 0px 0px 0px 20px;
+    margin: -60px 0px 5px 20px;
     padding: 5px 10px;
     /*border: 4px solid #278BF6;*/
     /*border-bottom: none;*/

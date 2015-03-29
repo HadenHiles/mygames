@@ -88,6 +88,11 @@ $(document).ready(function() {
         e.preventDefault();
         toggleFullScreen();
     });
+    setTimeout(function() {
+        $('html, body').animate({
+            scrollTop: $('.game_container').offset().top - 90
+        }, 1000);
+    }, 1000);
 });
 $(document).keyup(function(e) {
     if (e.keyCode == 27) { // escape key maps to keycode `27`

@@ -90,13 +90,6 @@ foreach ($game_name_result as $row) {
                             </div>
                         </div>
     <!--                    <div class="game_description">--><?//=$description?><!--</div>-->
-                        <p style="text-align: left; float: left;">Share <?=$gameName?> with your friends!</p>
-                        <div style="margin: 15px 0px 5px 10px; float: left;"
-                            class="fb-like"
-                            data-share="true"
-                            data-width="100"
-                            data-show-faces="true">
-                        </div>
                     </div>
                     <object class="flash_object" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="700" height="550">
                         <param name="allowFullScreen" value="true" />
@@ -157,6 +150,15 @@ foreach ($game_name_result as $row) {
             }
             $current_link = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
             ?>
+            <div class="facebook_share">
+                <p style="text-align: left; float: left;">Share <?=$gameName?> with your friends!</p>
+                <div style="margin: 15px 0px 5px 10px; float: left;"
+                     class="fb-like"
+                     data-share="true"
+                     data-width="100"
+                     data-show-faces="true">
+                </div>
+            </div>
             <div style="margin-left: 80px;" class="fb-comments" data-href="<?=$current_link?>" data-width="800" data-numposts="10" data-colorscheme="dark" data-order-by="time"></div>
         </div>
         </div>
