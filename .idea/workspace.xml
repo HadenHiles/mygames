@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" name="Default" comment="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lib/froogaloop.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/encodings.xml" afterPath="" />
@@ -92,11 +91,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/home.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/mygames.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/sign-up.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/favorites.php" afterPath="$PROJECT_DIR$/pages/favorites.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" afterPath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/play.php" afterPath="$PROJECT_DIR$/pages/play.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mygames-design.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,7 +118,7 @@
     <file path="/config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396359357" ignored="false" />
     <file path="/db-connect.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719181505" ignored="false" />
     <file path="/games.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427675965282" ignored="false" />
-    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427687129354" ignored="false" />
+    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427689306570" ignored="false" />
     <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427688245776" ignored="false" />
     <file path="/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393397014" ignored="false" />
     <file path="/Applications/MAMP/conf/apache/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393571557" ignored="false" />
@@ -404,9 +399,6 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
-  </component>
-  <component name="Git.Push.Settings">
-    <option name="myUpdateMethod" value="REBASE" />
   </component>
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="SYNC" />
@@ -947,7 +939,11 @@
       <created>1427687131488</created>
       <updated>1427687131488</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="-play game page auto scroll speed up&#10;-local copy of vimeo js (stop playing)">
+      <created>1427689309923</created>
+      <updated>1427689309924</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -974,7 +970,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16809422" sideWeight="0.6738197" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16809422" sideWeight="0.67167383" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1027,7 +1023,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-favoriting a game is more snappy&#10;-added button to join success message&#10;-other minor improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="-play game page auto scroll speed up&#10;-local copy of vimeo js (stop playing)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1062,6 +1058,7 @@
     <MESSAGE value="-added bootstrap 3.2.0 to the project" />
     <MESSAGE value="-When users aren't logged in a modal now displays encouraging people to create an account.&#10;-pops up on second game played, or every fourth game played (play page loaded)&#10;-added functionality for stopping of vimeo video for modal closing so that sound doesn't continue to play once closed" />
     <MESSAGE value="-favoriting a game is more snappy&#10;-added button to join success message&#10;-other minor improvements" />
+    <MESSAGE value="-play game page auto scroll speed up&#10;-local copy of vimeo js (stop playing)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
