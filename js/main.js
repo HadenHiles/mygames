@@ -93,12 +93,12 @@ $(document).ready(function() {
             $('html, body').animate({
                 scrollTop: $('.game_container').offset().top - 90
             }, 1000);
-            setTimeout(function() {
-                if($('#join-modal').length > 0) {
-                    $('#join-modal').modal('show');
-                }
-            }, 100);
         }, 1000);
+        if($('#join-modal').length > 0) {
+            setTimeout(function() {
+                $('#join-modal').modal('show');
+            }, 2200);
+        }
     }
 });
 $(document).keyup(function(e) {

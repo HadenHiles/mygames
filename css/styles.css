@@ -475,6 +475,44 @@ a.form_button:hover {
     background: #000;
     border: 2px solid #000;
 }
+/* Modal Buttons */
+.modal .form_button {
+    padding: 15px;
+    width: 100%;
+    float: left;
+    color: #fff;
+    background: #278BF6;
+    border: 2px solid #278BF6;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font: bold 30px 'CounterStrikeRegular', 'Trebuchet Ms', helvetica;
+}
+.modal .form_button:hover {
+    /* BUTTON STYLING */
+    cursor: pointer;
+    cursor: hand;
+    background: #1B61AC;
+    border-color: #1B61AC;
+}
+.modal .form_button.modal_button {
+    padding: 15px;
+    width: 25%;
+    float: right;
+    margin: 0px 5px;
+}
+.modal .form_button.modal_button.dark {
+    color: #fff;
+    background: #222222;
+    border: 2px solid #222222;
+}
+.modal .form_button.modal_button.dark:hover {
+    color: #fff;
+    background: #000;
+    border: 2px solid #000;
+}
 
 /* FORM STYLES */
 .form_container {
