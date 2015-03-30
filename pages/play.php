@@ -18,6 +18,10 @@ $game_name_result = $prep_name->fetchAll();
 foreach ($game_name_result as $row) {
     $page_name = $row['name'];
 }
+
+$update_count = $connect->prepare("UPDATE games SET play_count = play_count + 1 WHERE id = :id");
+$update_count->bindParam(':id', $id, PDO::PARAM_INT);
+$update_count->execute();
 ?>
 <!DOCTYPE html>
 <html>

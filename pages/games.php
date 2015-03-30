@@ -43,7 +43,7 @@ require_once($relative_path . 'auth/authenticate.php');
                 } else {
                     $sql .= " WHERE approved = 1";
                 }
-                $sql .= " ORDER BY name";
+                $sql .= " ORDER BY play_count DESC, name";
 
                 try {
                     $stmt = $connect->prepare($sql);
