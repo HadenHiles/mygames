@@ -459,6 +459,22 @@ a.form_button:hover {
     background: #1B61AC;
     color: #fff;
 }
+.form_button.modal_button {
+    padding: 15px;
+    width: 25%;
+    float: right;
+    margin: 0px 5px;
+}
+.form_button.modal_button.dark {
+    color: #fff;
+    background: #111111;
+    border: 2px solid #111111;
+}
+.form_button.modal_button.dark:hover {
+    color: #fff;
+    background: #000;
+    border: 2px solid #000;
+}
 
 /* FORM STYLES */
 .form_container {
@@ -496,7 +512,7 @@ a.form_button:hover {
     width: 100%;
 }
 input:-webkit-autofill, #inputId:-webkit-autofill, input:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px #141414 inset;
+    -webkit-box-shadow:0 0 0 50px #222222 inset;
     color: #fff !important;
     -webkit-text-fill-color: #fff;
 }
@@ -508,7 +524,7 @@ input:-webkit-autofill, #inputId:-webkit-autofill, input:-webkit-autofill {
     border-bottom: none;
     outline: none;
     padding: 10px;
-    background: #141414 !important;
+    background: #222222 !important;
 }
 .form_container a.form_button {
     padding: 15px;

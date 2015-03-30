@@ -124,7 +124,7 @@ if (!authUser()) {
                                 outline: none;
                                 margin: 5px 0px;
                                 padding: 10px;
-                                background: #141414 !important;
+                                background: #222222 !important;
                             }
                             .form_container fieldset p {
                                 font-size: 14px;
@@ -163,17 +163,17 @@ if (!authUser()) {
                             }
                             .form_button.modal_button.dark {
                                 color: #fff;
-                                background: #141414;
-                                border: 2px solid #141414;
+                                background: #222222;
+                                border: 2px solid #222222;
                             }
                             .form_button.modal_button.dark:hover {
                                 color: #fff;
                                 background: #000;
-                                border: 2px solid #141414;
+                                border: 2px solid #000;
                             }
                         </style>
                         <!--Cropper styles-->
-                        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="<?=$relative_path?>bootstrap-3.2.0/css/bootstrap.min.css">
                         <link href="<?=$relative_path?>cropper/css/cropper.min.css" rel="stylesheet">
                         <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">

@@ -15,7 +15,6 @@ require_once($relative_path . 'auth/authenticate.php');
 
 require_once($relative_path . 'db/db-connect.php');
 $connect = connection();
-
 ?>
 <div class="header" id="header">
     <div class="logo">
@@ -86,14 +85,8 @@ $connect = connection();
         </ul>
     </div>
     <nav>
-        <?
-        if (authUser()) {
-            ?>
-            <a href="<?=$relative_path?>pages/games.php" class="button first">ALL</a>
-            <a href="<?=$relative_path?>pages/favorites.php" class="button second">FAVORITES</a>
-            <a href="<?=$relative_path?>pages/add-game.php" class="button third">ADD</a>
-            <?
-        }
-        ?>
+        <a href="<?=$relative_path?>pages/games.php" class="button first">ALL</a>
+        <a href="<?=$relative_path?>pages/favorites.php" class="button second">FAVORITES</a>
+        <a href="<?=$relative_path?>pages/add-game.php" class="button third">ADD</a>
     </nav>
 </div>

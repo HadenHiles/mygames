@@ -3,6 +3,8 @@
 <!--Script for directional hover-->
 <script src="<?=$relative_path?>js/lib/modernizr.custom.97074.js"></script>
 <script type="text/javascript" src="<?=$relative_path?>/js/lib/jquery.hoverdir.js"></script>
+<!--Bootstrap js-->
+<script type="text/javascript" src="<?=$relative_path?>bootstrap-3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $(function() {
         $(' #da-thumbs > li ').each( function() { $(this).hoverdir({

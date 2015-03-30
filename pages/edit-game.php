@@ -131,7 +131,7 @@ if(!file_exists($img)) {
                                 float: left;
                             }
                             input:-webkit-autofill, #inputId:-webkit-autofill, input:-webkit-autofill {
-                                -webkit-box-shadow:0 0 0 50px #141414 inset;
+                                -webkit-box-shadow:0 0 0 50px #222222 inset;
                                 color: #fff !important;
                                 -webkit-text-fill-color: #fff;
                             }
@@ -143,7 +143,7 @@ if(!file_exists($img)) {
                                 outline: none;
                                 margin: 5px 0px;
                                 padding: 10px;
-                                background: #141414 !important;
+                                background: #222222 !important;
                             }
                             .form_container fieldset p {
                                 font-size: 14px;
@@ -182,17 +182,17 @@ if(!file_exists($img)) {
                             }
                             .form_button.modal_button.dark {
                                 color: #fff;
-                                background: #141414;
-                                border: 2px solid #141414;
+                                background: #222222;
+                                border: 2px solid #222222;
                             }
                             .form_button.modal_button.dark:hover {
                                 color: #fff;
                                 background: #000;
-                                border: 2px solid #141414;
+                                border: 2px solid #222222;
                             }
                         </style>
                         <!--Cropper styles-->
-                        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="<?=$relative_path?>bootstrap-3.2.0/css/bootstrap.min.css">
                         <link href="<?=$relative_path?>cropper/css/cropper.min.css" rel="stylesheet">
                         <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
@@ -251,8 +251,8 @@ if(!file_exists($img)) {
                                                 padding: 5px;
                                                 margin: 5px;
                                                 color: #fff;
-                                                background: #141414;
-                                                border: 5px solid #141414;
+                                                background: #222222;
+                                                border: 5px solid #222222;
                                                 border-radius: 5px;
                                                 -moz-border-radius: 5px;
                                                 -webkit-border-radius: 5px;
