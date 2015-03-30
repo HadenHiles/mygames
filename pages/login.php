@@ -1,6 +1,7 @@
 <?
 $relative_path = '../';
 $page_name = 'Login';
+require_once($relative_path . 'auth/authenticate.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,21 +40,12 @@ $page_name = 'Login';
                 <div class="input_wrapper">
                     <input class="input" name="password" type="password" placeholder="Password*" required/>
                 </div>
-                <a class="form_button" onclick="$('#login_form').submit()">Login</a>
+                <a class="form_button" id="login_button">Login</a>
                 <p class="centerText">Don't have an account? <a href="join.php">Join</a></p>
             </fieldset>
         </form>
     </div>
 </div>
-<? include('../templates/footer.php'); ?>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#login_form').keypress(function (e) {
-            if (e.which == 13) {
-                $(this).submit();
-            }
-        });
-    });
-</script>
+<? include($relative_path . 'templates/footer.php'); ?>
 </body>
 </html>

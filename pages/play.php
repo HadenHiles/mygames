@@ -10,10 +10,6 @@ if(empty($id) || !isset($id)) {
 require_once($relative_path . 'db/db-connect.php');
 $connect = connection();
 
-session_start();
-if(empty($_SESSION['games_played'])) {
-    $_SESSION['games_played'] = 1;
-}
 
 $prep_name = $connect->prepare("SELECT name FROM games WHERE id = :game_id");
 $prep_name->bindParam(':game_id', $id, PDO::PARAM_INT);
@@ -26,7 +22,6 @@ foreach ($game_name_result as $row) {
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="<?=$relative_path?>bootstrap-3.2.0/css/bootstrap-modal.css">
         <? include($relative_path . 'includes/stylesheets.php') ?>
     </head>
     <body>
@@ -39,6 +34,7 @@ foreach ($game_name_result as $row) {
                 $connect = connection();
 
                 //retrieve the user from the session
+                session_start();
                 if(isset($_SESSION['user_id'])) {
                     $user_id = $_SESSION['user_id'];
                 }
@@ -143,50 +139,6 @@ foreach ($game_name_result as $row) {
                 <div style="margin-left: 80px;" class="fb-comments" data-href="<?=$current_link?>" data-width="800" data-numposts="10" data-colorscheme="dark" data-order-by="time"></div>
             </div>
         </div>
-        <?
-        if(!authUser() && ($_SESSION['games_played'] == 2 || $_SESSION['games_played'] % 4 == 0)) {
-            ?>
-            <div class="modal fade" id="join-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header" style="margin: 0; border-bottom: none;">
-                            <button class="close modal_close" data-dismiss="modal" type="button">&times;</button>
-<!--                            <h4 class="modal-title" id="avatar-modal-label" style="color: #000;">Find Out What You're Missing!</h4>-->
-                        </div>
-                        <div class="modal-body" style="margin-top: -20px;">
-                            <div class="avatar-body" style="text-align: center;">
-                                <h2>With MyGames you can add and manage YOUR OWN favorite flash games!</h2>
-                                <h3><a href="<?=$relative_path?>pages/join.php">Join now</a> to find out what you're missing!</h3>
-                                <div id="vimeoWrap">
-                                    <iframe src="https://player.vimeo.com/video/123472626" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="form_button modal_button dark modal_close" data-dismiss="modal" type="button">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?
-        }
-        ?>
         <? include($relative_path . 'templates/footer.php'); ?>
-        <!--Vimeo js-->
-        <script type="text/javascript" src="<?=$relative_path?>js/lib/froogaloop.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                if($('#vimeoWrap').length > 0) {
-                    $('#join-modal').on('click', '.modal_close', function() {
-                        vimeoWrap = $('#vimeoWrap');
-                        vimeoWrap.html( vimeoWrap.html() );
-                        $('#join-modal').modal('hide');
-                    });
-                }
-            });
-        </script>
     </body>
 </html>
-<?
-$_SESSION['games_played']++;
-?>

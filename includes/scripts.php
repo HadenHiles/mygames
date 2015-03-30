@@ -7,9 +7,11 @@
 <script type="text/javascript" src="<?=$relative_path?>bootstrap-3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $(function() {
-        $(' #da-thumbs > li ').each( function() { $(this).hoverdir({
-            hoverDelay : 55
-        }); } );
+        $(' #da-thumbs > li ').each(function() {
+            $(this).hoverdir({
+                hoverDelay : 55
+            });
+        });
     });
 </script>
 <script type="text/javascript" src="<?=$relative_path?>js/main.js"></script>

@@ -85,8 +85,20 @@ $connect = connection();
         </ul>
     </div>
     <nav>
-        <a href="<?=$relative_path?>pages/games.php" class="button first">ALL</a>
-        <a href="<?=$relative_path?>pages/favorites.php" class="button second">FAVORITES</a>
-        <a href="<?=$relative_path?>pages/add-game.php" class="button third">ADD</a>
+        <?
+        if(!authUser()) {
+            ?>
+            <a href="<?=$relative_path?>pages/games.php" class="button first">ALL</a>
+            <a href="<?=$relative_path?>pages/favorites.php" class="button second modal_launch_button">FAVORITES</a>
+            <a href="<?=$relative_path?>pages/add-game.php" class="button third modal_launch_button">ADD</a>
+            <?
+        } else {
+            ?>
+            <a href="<?=$relative_path?>pages/games.php" class="button first">ALL</a>
+            <a href="<?=$relative_path?>pages/favorites.php" class="button second">FAVORITES</a>
+            <a href="<?=$relative_path?>pages/add-game.php" class="button third">ADD</a>
+            <?
+        }
+        ?>
     </nav>
 </div>

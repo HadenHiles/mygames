@@ -102,12 +102,23 @@ $(document).ready(function() {
                 scrollTop: $('.game_container').offset().top - 90
             }, 500);
         }, 500);
-        if($('#join-modal').length > 0) {
-            setTimeout(function() {
-                $('#join-modal').modal('show');
-            }, 1200);
-        }
     }
+    $('#login_button').click(function() {
+        $('#login_form').submit();
+    });
+    $('#login_form').keypress(function(e) {
+        if (e.which == 13) {
+            $(this).submit();
+        }
+    });
+    $('#join_button').click(function () {
+        $('#join_form').submit();
+    });
+    $('#join_form').keypress(function (e) {
+        if (e.which == 13) {
+            $(this).submit();
+        }
+    });
 });
 $(document).keyup(function(e) {
     if (e.keyCode == 27) { // escape key maps to keycode `27`

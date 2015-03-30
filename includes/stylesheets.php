@@ -9,6 +9,7 @@ if(isset($page_name)) {
     <?
 }
 ?>
+<link rel="stylesheet" href="<?=$relative_path?>bootstrap-3.2.0/css/bootstrap-modal.css">
 <link href="<?=$relative_path?>css/fonts.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="<?=$relative_path?>css/direction-hover/direction-hover.css" />
 <link href="<?=$relative_path?>css/styles.css" type="text/css" rel="stylesheet" />
