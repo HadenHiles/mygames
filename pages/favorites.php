@@ -118,7 +118,7 @@ if (!authUser()) {
                                                     } else {
                                                         if($row['approved'] != 1) {
                                                             ?>
-                                                            <strong class="normal">
+                                                            <strong class="normal" style="margin-left: 80px;">
                                                                 <i class="fa fa-trash normal" id="modify_game" type="delete-game" game_id="<?=$row['id']?>"></i>
                                                             </strong>
                                                             <?

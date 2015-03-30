@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" name="Default" comment="-fixed some autorization issues&#10;-added add button to nav and moved logout button to top when user is logged in&#10;-fixed issue with updating games&#10;-only users with admin permissions can access the edit button for games">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lib/froogaloop.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/.idea/encodings.xml" afterPath="" />
@@ -93,12 +94,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/sign-up.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/favorites.php" afterPath="$PROJECT_DIR$/pages/favorites.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" afterPath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/games.php" afterPath="$PROJECT_DIR$/pages/games.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/join.php" afterPath="$PROJECT_DIR$/pages/join.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login.php" afterPath="$PROJECT_DIR$/pages/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/play.php" afterPath="$PROJECT_DIR$/pages/play.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mygames-design.iws" />
@@ -126,8 +123,8 @@
     <file path="/config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396359357" ignored="false" />
     <file path="/db-connect.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719181505" ignored="false" />
     <file path="/games.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427675965282" ignored="false" />
-    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427681246502" ignored="false" />
-    <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427685233177" ignored="false" />
+    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427687129354" ignored="false" />
+    <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427688245776" ignored="false" />
     <file path="/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393397014" ignored="false" />
     <file path="/Applications/MAMP/conf/apache/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393571557" ignored="false" />
     <file path="/Applications/MAMP/logs/mysql_error_log.err" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420416985092" ignored="false" />
@@ -184,7 +181,7 @@
     <file path="/favorite-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426217215251" ignored="false" />
     <file path="/edit-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426621941025" ignored="false" />
     <file path="/update-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426453576099" ignored="false" />
-    <file path="/favorites.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427520208720" ignored="false" />
+    <file path="/favorites.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427688923041" ignored="false" />
     <file path="/delete-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426460289134" ignored="false" />
     <file path="/approve.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426477399712" ignored="false" />
     <file path="/stylesheets.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427678161568" ignored="false" />
@@ -309,10 +306,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="293" column="17" selection-start="6899" selection-end="6899" vertical-scroll-proportion="0.68666667">
+            <state line="293" column="17" selection-start="6899" selection-end="6899" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -321,7 +318,7 @@
       <file leaf-file-name="play.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/play.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="99" selection-start="5620" selection-end="5620" vertical-scroll-proportion="-19.708334">
+            <state line="164" column="51" selection-start="8864" selection-end="8864" vertical-scroll-proportion="-16.375">
               <folding>
                 <element signature="e#6720#6758#0" expanded="true" />
                 <element signature="e#6828#6875#0" expanded="true" />
@@ -334,10 +331,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="46" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
+            <state line="107" column="21" selection-start="3673" selection-end="3673" vertical-scroll-proportion="0.9">
               <folding />
             </state>
           </provider>
@@ -366,8 +363,10 @@
       <file leaf-file-name="favorites.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/favorites.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="69" selection-start="6660" selection-end="6667" vertical-scroll-proportion="-18.125">
-              <folding />
+            <state line="123" column="62" selection-start="7418" selection-end="7418" vertical-scroll-proportion="-23.125">
+              <folding>
+                <element signature="e#7097#7123#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -399,21 +398,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/scripts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="101" selection-start="532" selection-end="532" vertical-scroll-proportion="-3.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Push.Settings">
+    <option name="myUpdateMethod" value="REBASE" />
   </component>
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="SYNC" />
@@ -427,7 +420,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/header.php" />
         <option value="$PROJECT_DIR$/auth/authenticate.php" />
         <option value="$PROJECT_DIR$/pages/add-game.php" />
         <option value="$PROJECT_DIR$/pages/edit-game.php" />
@@ -438,11 +430,12 @@
         <option value="$PROJECT_DIR$/pages/login.php" />
         <option value="$PROJECT_DIR$/auth/save_user.php" />
         <option value="$PROJECT_DIR$/pages/join.php" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/pages/play.php" />
         <option value="$PROJECT_DIR$/pages/games.php" />
-        <option value="$PROJECT_DIR$/pages/favorites.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/pages/play.php" />
+        <option value="$PROJECT_DIR$/js/lib/froogaloop.js" />
+        <option value="$PROJECT_DIR$/pages/favorites.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -950,7 +943,11 @@
       <created>1427681249814</created>
       <updated>1427681249814</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="-favoriting a game is more snappy&#10;-added button to join success message&#10;-other minor improvements">
+      <created>1427687131488</created>
+      <updated>1427687131488</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -977,7 +974,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16809422" sideWeight="0.6866953" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16809422" sideWeight="0.6738197" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1030,7 +1027,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-When users aren't logged in a modal now displays encouraging people to create an account.&#10;-pops up on second game played, or every fourth game played (play page loaded)&#10;-added functionality for stopping of vimeo video for modal closing so that sound doesn't continue to play once closed" />
+    <option name="LAST_COMMIT_MESSAGE" value="-favoriting a game is more snappy&#10;-added button to join success message&#10;-other minor improvements" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1064,6 +1061,7 @@
     <MESSAGE value="-added automatic scroll on play page&#10;-adjusted facebook sharing widget to be with comment widget and moved flash game up on page" />
     <MESSAGE value="-added bootstrap 3.2.0 to the project" />
     <MESSAGE value="-When users aren't logged in a modal now displays encouraging people to create an account.&#10;-pops up on second game played, or every fourth game played (play page loaded)&#10;-added functionality for stopping of vimeo video for modal closing so that sound doesn't continue to play once closed" />
+    <MESSAGE value="-favoriting a game is more snappy&#10;-added button to join success message&#10;-other minor improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1075,13 +1073,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/add-game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="29" selection-start="8576" selection-end="8576" vertical-scroll-proportion="0.8504566">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap-3.2.0/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5350" column="16" selection-start="115316" selection-end="115316" vertical-scroll-proportion="0.15219842">
@@ -1154,16 +1145,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/pages/games.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="46" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
+        <state line="93" column="95" selection-start="4902" selection-end="4902" vertical-scroll-proportion="-25.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="293" column="17" selection-start="6899" selection-end="6899" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lib/froogaloop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/play.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="99" selection-start="5620" selection-end="5620" vertical-scroll-proportion="-19.708334">
+        <state line="164" column="51" selection-start="8864" selection-end="8864" vertical-scroll-proportion="-16.375">
           <folding>
             <element signature="e#6720#6758#0" expanded="true" />
             <element signature="e#6828#6875#0" expanded="true" />
@@ -1175,23 +1180,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/games.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="95" selection-start="4902" selection-end="4902" vertical-scroll-proportion="-25.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/favorites.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="69" selection-start="6660" selection-end="6667" vertical-scroll-proportion="-18.125">
-          <folding />
+        <state line="123" column="62" selection-start="7418" selection-end="7418" vertical-scroll-proportion="-23.125">
+          <folding>
+            <element signature="e#7097#7123#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="293" column="17" selection-start="6899" selection-end="6899" vertical-scroll-proportion="0.68666667">
+        <state line="107" column="21" selection-start="3673" selection-end="3673" vertical-scroll-proportion="0.9">
           <folding />
         </state>
       </provider>

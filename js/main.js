@@ -100,12 +100,12 @@ $(document).ready(function() {
         setTimeout(function() {
             $('html, body').animate({
                 scrollTop: $('.game_container').offset().top - 90
-            }, 1000);
-        }, 1000);
+            }, 500);
+        }, 500);
         if($('#join-modal').length > 0) {
             setTimeout(function() {
                 $('#join-modal').modal('show');
-            }, 2200);
+            }, 1200);
         }
     }
 });

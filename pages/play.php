@@ -168,23 +168,23 @@ foreach ($game_name_result as $row) {
                     </div>
                 </div>
             </div>
-            <!--Vimeo js-->
-            <script type="text/javascript" src="https://raw.github.com/vimeo/player-api/master/javascript/froogaloop.js"></script>
-            <script type="text/javascript">
-                $(document).ready(function() {
-                    if($('#vimeoWrap').length > 0) {
-                        $('#join-modal').on('click', '.modal_close', function() {
-                            vimeoWrap = $('#vimeoWrap');
-                            vimeoWrap.html( vimeoWrap.html() );
-                            $('#join-modal').modal('hide');
-                        });
-                    }
-                });
-            </script>
             <?
         }
         ?>
         <? include($relative_path . 'templates/footer.php'); ?>
+        <!--Vimeo js-->
+        <script type="text/javascript" src="<?=$relative_path?>js/lib/froogaloop.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if($('#vimeoWrap').length > 0) {
+                    $('#join-modal').on('click', '.modal_close', function() {
+                        vimeoWrap = $('#vimeoWrap');
+                        vimeoWrap.html( vimeoWrap.html() );
+                        $('#join-modal').modal('hide');
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
 <?
