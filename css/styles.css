@@ -272,10 +272,16 @@ ul.game_list_container li img {
     height: 200px;
     width: 200px;
 }
+ul.game_list_container li i {
+    position: absolute;
+    bottom: 15px;
+}
 ul.game_list_container li i.fa-plus.large_add {
     font-size: 150px;
     color: #1B61AC;
     margin: 25px 0px 0px 45px;
+    position: static;
+    bottom: auto;
 }
 ul.game_list_container li i.fa-plus.large_add:hover {
     color: #278BF6;
@@ -283,11 +289,14 @@ ul.game_list_container li i.fa-plus.large_add:hover {
 ul.game_list_container i.fa.normal {
     color: rgba(255, 255, 255, 0.85);
     font-size: 46px !important;
-    margin: -10px 0px 0px 85px;
+}
+ul.game_list_container i.fa-edit {
+    bottom: 13px;
+    margin: 0px 0px 0px 10px;
 }
 ul.game_list_container i.fa.normal.right {
-    float: right;
-    margin: -8px 15px 0px 0px;
+    right: 0;
+    margin: 0px 15px 0px 0px;
 }
 ul.game_list_container i.fa.normal:hover {
     color: #fff;
@@ -295,12 +304,11 @@ ul.game_list_container i.fa.normal:hover {
 ul.game_list_container strong.fav {
     margin: 0px 0px 0px 75px;
 }
-ul.game_list_container strong.fav i.fa-heart, ul.game_list_container strong.fav i.fa-heart-o {
+strong.fav i.fa-heart, strong.fav i.fa-heart-o {
     font-size: 46px !important;
-    margin-top: -10px;
     color: rgba(230, 0, 0, 0.8);
 }
-ul.game_list_container strong.fav i.fa-heart:hover, ul.game_list_container strong.fav i.fa-heart-o:hover {
+strong.fav i.fa-heart:hover, strong.fav i.fa-heart-o:hover {
     font-size: 46px !important;
     color: rgba(230, 0, 0, 1);
 }
@@ -333,6 +341,14 @@ ul.game_list_container strong.fav i.fa-heart:hover, ul.game_list_container stron
     /*-webkit-border-radius: 10px 10px 0px 0px;*/
     /*-ms-border-radius: 10px 10px 0px 0px;*/
     /*-o-border-radius: 10px 10px 0px 0px;*/
+}
+.game_container .game_play_actions #game_manager i {
+    font-size: 38px !important;
+    margin: 0px 4px 0px 0px;
+}
+.game_container .game_play_actions #game_manager a.full_screen i {
+    font-size: 36px !important;
+    margin: 0px 0px 0px -2px;
 }
 .game_container .game_play_actions a {
     color: #fff;

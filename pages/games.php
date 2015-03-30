@@ -89,9 +89,9 @@ require_once($relative_path . 'auth/authenticate.php');
                                                         <strong class="fav">
                                                             <i class="fa fa-heart-o icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>" style="margin-left: -55px;"></i>
                                                         </strong>
-                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="modify_game" type="edit-game" game_id="<?=$game_id?>"></i>
+                                                        <i class="fa fa-edit normal" id="modify_game" type="edit-game" game_id="<?=$game_id?>"></i>
                                                         <strong class="normal">
-                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="modify_game" type="delete-game" game_id="<?=$game_id?>"></i>
+                                                            <i class="fa fa-trash normal right" id="modify_game" type="delete-game" game_id="<?=$game_id?>"></i>
                                                         </strong>
                                                     <?
                                                     } else {

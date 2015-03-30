@@ -46,7 +46,14 @@ $page_name = 'Login';
     </div>
 </div>
 <? include('../templates/footer.php'); ?>
-<script src="../js/lib/jquery-2.1.3.min.js"></script>
-<script src="../js/main.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#login_form').keypress(function (e) {
+            if (e.which == 13) {
+                $(this).submit();
+            }
+        });
+    });
+</script>
 </body>
 </html>

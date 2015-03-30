@@ -74,6 +74,7 @@ foreach ($game_name_result as $row) {
 
                 //display the according flash game in an embed tag format
                 foreach ($result as $row) {
+                    $game_id = $row['id'];
                     $gameName = $row['name'];
                     $gameUrl = $row['url'];
                     $description = $row['description'];
@@ -85,9 +86,29 @@ foreach ($game_name_result as $row) {
                             <div class="game_play_actions">
                                 <div id="game_manager">
                                     <?
+                                    if(authUser()) {
+                                        $sql_check = "SELECT game_id FROM user_games WHERE game_id = :game_id AND user_id = :user_id";
+                                        $check_result = $connect->prepare($sql_check);
+                                        $check_result->bindParam(':game_id', $game_id, PDO::PARAM_INT);
+                                        $check_result->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+                                        $check_result->execute();
+                                        if($check_result->rowCount() == 0) {
+                                            ?>
+                                            <strong class="fav">
+                                                <a href=""><i class="fa fa-heart-o icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>"></i></a>
+                                            </strong>
+                                            <?
+                                        } else {
+                                            ?>
+                                            <strong class="fav">
+                                                <a href=""><i class="fa fa-heart icon<?=$game_id?>" game_id="<?=$game_id?>" user_id="<?=$user_id?>"></i></a>
+                                            </strong>
+                                            <?
+                                        }
+                                    }
                                     if(authAdmin()) {
                                         ?>
-                                        <a href=""><i class="fa fa-edit normal" style="font-size: 34px; margin: 0px 4px 0px 0px; position: relative; top: 1px;" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i></a>
+                                        <a href=""><i class="fa fa-edit" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i></a>
                                         <?
                                     }
                                     ?>
@@ -122,9 +143,8 @@ foreach ($game_name_result as $row) {
                 <div style="margin-left: 80px;" class="fb-comments" data-href="<?=$current_link?>" data-width="800" data-numposts="10" data-colorscheme="dark" data-order-by="time"></div>
             </div>
         </div>
-        <? include($relative_path . 'templates/footer.php'); ?>
         <?
-        if($_SESSION['games_played'] == 2 || ($_SESSION['games_played'] % 4 == 0 && !authUser())) {
+        if(!authUser() && ($_SESSION['games_played'] == 2 || $_SESSION['games_played'] % 4 == 0)) {
             ?>
             <div class="modal fade" id="join-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
                 <div class="modal-dialog modal-lg">
@@ -164,6 +184,7 @@ foreach ($game_name_result as $row) {
             <?
         }
         ?>
+        <? include($relative_path . 'templates/footer.php'); ?>
     </body>
 </html>
 <?

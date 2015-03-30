@@ -33,6 +33,14 @@ $(document).ready(function() {
         }
         var user_id = $(this).attr('user_id');
         var game_id = $(this).attr('game_id');
+        var icon = $('.fav i.icon' + game_id);
+        if(icon.hasClass('fa-heart')) {
+            icon.removeClass('fa-heart');
+            icon.addClass('fa-heart-o');
+        } else if(icon.hasClass('fa-heart-o')) {
+            icon.removeClass('fa-heart-o');
+            icon.addClass('fa-heart');
+        }
         var request = $.ajax({
             url: "../pages/favorite-game.php",
             type: "POST",
@@ -40,19 +48,19 @@ $(document).ready(function() {
             dataType: "html"
         });
 
-        request.success(function() {
+//        request.success(function() {
+//
+//        });
+        request.fail(function(jqXHR, textStatus) {
             var icon = $('ul.game_list_container .fav i.icon' + game_id);
             if(icon.hasClass('fa-heart')) {
-                icon.removeClass('fa-heart');
-                icon.addClass('fa-heart-o');
-            } else if(icon.hasClass('fa-heart-o')) {
-                icon.removeClass('fa-heart-o');
                 icon.addClass('fa-heart');
+                icon.removeClass('fa-heart-o');
+            } else if(icon.hasClass('fa-heart-o')) {
+                icon.addClass('fa-heart-o');
+                icon.removeClass('fa-heart');
             }
         });
-//        request.fail(function(jqXHR, textStatus) {
-//            alert( "Request failed: " + textStatus );
-//        });
     });
 
     //Determine whether the search field should be fixed or not

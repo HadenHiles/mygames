@@ -46,7 +46,12 @@ $page_name = 'Join';
             <?
             } else if($message == "signup_success") {
                 ?>
-                <div class="message_success hide">An activation email has been sent to <?=$username?>.  Thank you for joining MyGames! :)</div>
+                <div class="message_success hide">
+                    An activation email has been sent to <?=$username?>.  Thank you for joining MyGames! :)
+                </div>
+                <div class="clear"></div>
+                <a class="form_button" style="width: auto; clear: both;   margin: 10px 0px 0px 40px;" href="/">All Games</a>
+                <div class="clear"></div>
             <?
             } else if($message == "un_taken") {
                 ?>
@@ -80,7 +85,14 @@ $page_name = 'Join';
     </div>
 </div>
 <? include($relative_path . 'templates/footer.php'); ?>
-<script src="../js/lib/jquery-2.1.3.min.js"></script>
-<script src="../js/main.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#join_form').keypress(function (e) {
+            if (e.which == 13) {
+                $(this).submit();
+            }
+        });
+    });
+</script>
 </body>
 </html>

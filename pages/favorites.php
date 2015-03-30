@@ -103,9 +103,9 @@ if (!authUser()) {
                                                         <?
                                                         }
                                                         ?>
-                                                        <i class="fa fa-edit normal" style="margin: 0px 0px 0px 15px;" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i>
+                                                        <i class="fa fa-edit normal" id="modify_game" type="edit-game" game_id="<?=$row['id']?>"></i>
                                                         <strong class="normal">
-                                                            <i class="fa fa-trash normal right" style="margin-top: -2px;" id="modify_game" type="delete-game" game_id="<?=$row['id']?>"></i>
+                                                            <i class="fa fa-trash normal right" id="modify_game" type="delete-game" game_id="<?=$row['id']?>"></i>
                                                         </strong>
                                                         <?
                                                     } else if(authAdmin()) {
