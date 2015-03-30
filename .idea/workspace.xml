@@ -91,6 +91,45 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/home.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/mygames.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/sign-up.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/7eV2Uw_qc96.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/7r8gQb8MIqE(1).html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/7r8gQb8MIqE.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/919662793-postmessagerelay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/cb=gapi.loaded_0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/cb=gapi.loaded_1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/core-rpc-shindig.random-shindig.sha1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/count.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/down-arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/fake-file-upload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/fastbutton.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/form-validation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/ga.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/hideshare.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-banner-slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-cycle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-nivo-slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-pretty-photo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-rating-pack-3.13.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-slide-menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery-ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/jquery.sticky.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/like.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/pin_it_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/plusone.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/postmessageRelay.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/secureAnonymousFramework" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/social-media.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/swap-image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/tweet_button.214e3d3b0c5437701f749bab582597f0.en.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/websitestampWHT.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Home Healthcare Products   Parsons ADL_files/widgets.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" afterPath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" />
     </list>
     <ignored path="mygames-design.iws" />
@@ -970,7 +1009,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16809422" sideWeight="0.67167383" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16809422" sideWeight="0.67167383" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
