@@ -11,13 +11,15 @@ if(!authUser()) {
                 <div class="modal-body" style="margin-top: -20px;">
                     <div class="avatar-body" style="text-align: center;">
                         <h2>With MyGames you can add and manage YOUR OWN favorite flash games!</h2>
-                        <h3><a href="<?=$relative_path?>pages/join.php">Join now</a> to find out what you're missing!</h3>
+                        <h3><a class="form_button modal_button" style="margin: 10px auto; float: none;" href="<?=$relative_path?>pages/join.php">Join Now</a> to find out what you're missing!</h3>
+                        <div style="margin: 25px 0px;"></div>
                         <div id="vimeoWrap">
                             <iframe src="https://player.vimeo.com/video/123472626" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <h3 style="float: left; margin-top: 12px;">Already have an account? <a href="<?=$relative_path?>pages/login.php">Login</a></h3>
                     <button class="form_button modal_button dark modal_close" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -33,20 +35,26 @@ if(!authUser()) {
     </div>
 </footer>
 <? include($relative_path . 'includes/scripts.php'); ?>
-<!--Vimeo js-->
-<script type="text/javascript" src="<?=$relative_path?>js/lib/froogaloop.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#header').on('click', '.modal_launch_button', function(e) {
-            e.preventDefault();
-            $('#join-modal').modal('show');
-        });
-        if($('#vimeoWrap').length > 0) {
-            $('#join-modal').on('click', '.modal_close', function() {
-                vimeoWrap = $('#vimeoWrap');
-                vimeoWrap.html( vimeoWrap.html() );
-                $('#join-modal').modal('hide');
+<?
+if(!authUser()) {
+    ?>
+    <!--Vimeo js-->
+    <script type="text/javascript" src="<?=$relative_path?>js/lib/froogaloop.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#header').on('click', '.modal_launch_button', function(e) {
+                e.preventDefault();
+                $('#join-modal').modal('show');
             });
-        }
-    });
-</script>
+            if($('#vimeoWrap').length > 0) {
+                $('#join-modal').on('click', '.modal_close', function() {
+                    vimeoWrap = $('#vimeoWrap');
+                    vimeoWrap.html( vimeoWrap.html() );
+                    $('#join-modal').modal('hide');
+                });
+            }
+        });
+    </script>
+    <?
+}
+?>

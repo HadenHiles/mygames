@@ -120,11 +120,11 @@ $(document).ready(function() {
         }
     });
 });
-$(document).keyup(function(e) {
-    if (e.keyCode == 27) { // escape key maps to keycode `27`
-        toggleFullScreen();
-    }
-});
+//$(document).keyup(function(e) {
+//    if (e.keyCode == 27) { // escape key maps to keycode `27`
+//        toggleFullScreen();
+//    }
+//});
 
 function toggleFullScreen() {
     if($('body').hasClass('full')) {

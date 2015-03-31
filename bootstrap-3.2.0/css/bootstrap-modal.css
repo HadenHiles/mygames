@@ -38,6 +38,9 @@ button.close {
     -webkit-overflow-scrolling: touch;
     outline: 0;
 }
+.modal iframe {
+    max-width: 100%;
+}
 .modal.fade .modal-dialog {
     -webkit-transition: -webkit-transform .3s ease-out;
     -o-transition:      -o-transform .3s ease-out;
@@ -57,7 +60,7 @@ button.close {
 }
 .modal-dialog {
     position: relative;
-    width: auto;
+    min-width: 960px;
     margin: 10px;
 }
 .modal-content {

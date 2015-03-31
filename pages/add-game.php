@@ -173,7 +173,7 @@ if (!authUser()) {
                             }
                         </style>
                         <!--Cropper styles-->
-                        <link rel="stylesheet" href="<?=$relative_path?>bootstrap-3.2.0/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="<?=$relative_path?>bootstrap-3.2.0/css/bootstrap-modal.css">
                         <link href="<?=$relative_path?>cropper/css/cropper.min.css" rel="stylesheet">
                         <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
