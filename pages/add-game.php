@@ -35,14 +35,18 @@ if (!authUser()) {
         <div id="swap-able-content">
             <div class="content" style="position: relative;">
                 <h1 style="text-align: center;">Add Game</h1>
-                <p>Find your flash game on any page! Just paste the url in the input below, hit tab, and wait for your game to appear for selection!</p>
+                <p>Find your flash game on any page! Just paste the url in the input below, hit enter, and wait for your game to appear for selection!</p>
                 <game-scraper-element></game-scraper-element>
                 <polymer-element name="game-scraper-element" attributes="url">
                     <template>
                         <style type="text/css">
                             .flash_element_container {
-                                width: 72%;
                                 float: right;
+                                width: 600px;
+                                border: 4px solid #000;
+                            }
+                            .flash_element_container.error {
+                                border: 4px solid #d34336;
                             }
                             paper-input {
                                 width: 100%;
@@ -98,7 +102,7 @@ if (!authUser()) {
                             }
                             .form_container .message_error {
                                 font-size: 12px;
-                                color: #E60000;
+                                color: #d34336;
                                 margin-left: -60px;
                             }
                             .form_container fieldset {
@@ -171,6 +175,91 @@ if (!authUser()) {
                                 background: #000;
                                 border: 2px solid #000;
                             }
+
+                            /* POPUP */
+                            .popup {
+                                position: relative;
+                                left: 240px;
+                                top: 55px;
+                                width: 205px;
+                                height: 65px;
+                                padding: 5px;
+                                background: #000;
+                                -webkit-border-radius: 10px;
+                                -moz-border-radius: 10px;
+                                border-radius: 10px;
+                                border: #d34336 solid 4px;
+                            }
+                            .popup p {
+                                position: absolute;
+                                width: auto !important;
+                                color: #fff;
+                            }
+                            .popup:after {
+                                content: '';
+                                position: absolute;
+                                border-style: solid;
+                                border-width: 15px 25px 15px 0;
+                                border-color: transparent #000;
+                                display: block;
+                                width: 0;
+                                z-index: 1;
+                                left: -25px;
+                                top: 30px;
+                            }
+                            .popup:before {
+                                content: '';
+                                position: absolute;
+                                border-style: solid;
+                                border-width: 18px 28px 18px 0;
+                                border-color: transparent #d34336;
+                                display: block;
+                                width: 0;
+                                z-index: 0;
+                                left: -32px;
+                                top: 27px;
+                            }
+                            .game_select_popup {
+                                position: absolute;
+                                left: 120px;
+                                width: 205px;
+                                height: 50px;
+                                padding: 5px;
+                                background: #000;
+                                -webkit-border-radius: 10px;
+                                -moz-border-radius: 10px;
+                                border-radius: 10px;
+                                border: #d34336 solid 4px;
+                            }
+
+                            .game_select_popup:after {
+                                content: '';
+                                position: absolute;
+                                border-style: solid;
+                                border-width: 15px 0 15px 25px;
+                                border-color: transparent #000;
+                                display: block;
+                                width: 0;
+                                z-index: 1;
+                                right: -25px;
+                                top: 16px;
+                            }
+
+                            .game_select_popup:before {
+                                content: '';
+                                position: absolute;
+                                border-style: solid;
+                                border-width: 18px 0 18px 28px;
+                                border-color: transparent #d34336;
+                                display: block;
+                                width: 0;
+                                z-index: 0;
+                                right: -32px;
+                                top: 13px;
+                            }
+                            .hide {
+                                display:none;
+                            }
                         </style>
                         <!--Cropper styles-->
                         <link rel="stylesheet" href="<?=$relative_path?>bootstrap-3.2.0/css/bootstrap-modal.css">
@@ -224,6 +313,9 @@ if (!authUser()) {
                         </div>
                         <form id="add_game" class="form_container" method="post" action="save-game.php" style="width: 100%;">
                             <div class="flash_element_container">
+                                <div class="game_select_popup hide" id="game_select_popup">
+                                    <p>You must select your game!</p>
+                                </div>
                                 <core-selector selected="{{game_url}}" valueattr="url">
                                     <template repeat="{{gameUrl in gameUrls(sourceDocument)}}">
                                         <style type="text/css">
@@ -276,16 +368,19 @@ if (!authUser()) {
                                 <!--<input type="hidden" name="game_url" value="{{game_url}}" class="input" />-->
                                 <div class="input_wrapper third">
                                     <paper-input-decorator label="Game Title" floatinglabel="" layout="" vertical="" error="A title is Required!">
-                                        <input is="core-input" placeholder="Game Title" aria-label="Game Title" name="title" required="required" />
+                                        <input is="core-input" placeholder="Game Title" aria-label="Game Title" name="title" id="game_title" required="required" />
                                     </paper-input-decorator>
                                 </div>
-                                <input type="hidden" name="game_url" value="{{game_url}}" required="required" />
+                                <input name="game_url" type="hidden" value="{{game_url}}" required="required" />
                                 <div class="input_wrapper third">
-                                    <paper-input floatingLabel label="URL where Game is Played" type="url" pattern="https?://.+" error="Input is not a URL!"
-                                                 value="{{url}}"></paper-input>
+                                    <paper-input floatingLabel label="URL where Game is Played" type="url" pattern="(https?://.+)?" error="Input is not a URL!"
+                                                 value="{{url}}" id="provided_url"></paper-input>
+                                </div>
+                                <div class="popup hide" id="url_popup">
+                                    <p>You must enter the URL where your game is played!</p>
                                 </div>
                                 <div class="input_wrapper third">
-                                    <input type="submit" value="Add Game" class="form_button" />
+                                    <input type="submit" value="Add Game" class="form_button" id="add_game_button" />
                                 </div>
                                 <input id="image_url" type="hidden" name="image_url" value="{{imageUrl}}" />
                                 <core-ajax id="ajax" auto
@@ -296,20 +391,59 @@ if (!authUser()) {
                             </fieldset>
                         </form>
                     </template>
+                    <script type="text/javascript" src="<?=$relative_path?>js/lib/jquery-ui.min.js"></script>
                     <script>
                         (function() {
                             var gameUrls = [];
+                            var gameSelected = false;
+
                             Polymer('selected-element');
                             Polymer('game-scraper-element', {
                                 domReady: function () {
-                                    //					this.url = location.href;
-                                    //					this.sourceDocument = "todd really does rock; says Haden!";
+                                    var shadowRoot = this.shadowRoot || this;
+
                                     var example = new CropAvatar($(this.$.cropAvatar));
                                     this.imageUrl = '<?=$relative_path?>images/upload-image.jpg';
 
                                     var me = this;
                                     $(window).on('avatar_src_change', function(e, url) {
                                         me.imageUrl = url;
+                                    });
+
+                                    var gameSelectPopup = $(shadowRoot.querySelector('#game_select_popup'));
+                                    var flashElement = $(shadowRoot.querySelector('.flash_element_container'));
+                                    $('game-scraper-element').on('core-activate', function() {
+                                        gameSelected = true;
+                                        if(gameSelectPopup.css('display') == 'block') {
+                                            gameSelectPopup.toggle('drop', {direction: 'right'}, 200);
+                                        }
+                                        flashElement.removeClass('error');
+                                    });
+
+                                    var addGameForm = $(shadowRoot.querySelector('#add_game'));
+                                    var providedUrlInput = $(shadowRoot.querySelector('#provided_url'));
+                                    var providedUrl = $(shadowRoot.querySelector('#provided_url')).attr('value');
+                                    var urlPopup = $(shadowRoot.querySelector('.popup#url_popup'));
+                                    addGameForm.on('submit', function(e) {
+                                        if(providedUrl == '{{url}}') {
+                                            e.preventDefault();
+                                            providedUrl = '';
+                                            urlPopup.toggle('drop', {direction: 'left'}, 200);
+                                        } else if(!gameSelected) {
+                                            e.preventDefault();
+                                            if(gameSelectPopup.css('display') == 'none') {
+                                                gameSelectPopup.toggle('drop', {direction: 'right'}, 200);
+                                            }
+                                            flashElement.addClass('error');
+                                        } else {
+                                            addGameForm.submit();
+                                        }
+                                    });
+                                    providedUrlInput.on('change', function() {
+                                        if(urlPopup.css('display') == 'block') {
+                                            urlPopup.toggle('drop', {direction: 'left'}, 200);
+                                        }
+                                        providedUrl = '';
                                     });
                                 },
 

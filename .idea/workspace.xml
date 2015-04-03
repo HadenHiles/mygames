@@ -92,11 +92,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/mygames.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../mygames-design/pages/sign-up.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/add-game.php" afterPath="$PROJECT_DIR$/pages/add-game.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.2.0/css/bootstrap-modal.css" afterPath="$PROJECT_DIR$/bootstrap-3.2.0/css/bootstrap-modal.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/footer.php" afterPath="$PROJECT_DIR$/templates/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/edit-game.php" afterPath="$PROJECT_DIR$/pages/edit-game.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" afterPath="$PROJECT_DIR$/../sugarRush/Scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/stylesheets.php" afterPath="$PROJECT_DIR$/includes/stylesheets.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/play.php" afterPath="$PROJECT_DIR$/pages/play.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mygames-design.iws" />
@@ -104,12 +103,12 @@
     <file path="/fonts.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1414176065597" ignored="false" />
     <file path="/index.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420859208172" ignored="false" />
     <file path="/main.js" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427682411390" ignored="false" />
-    <file path="/dummy.xml" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427770549250" ignored="false" />
+    <file path="/dummy.xml" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1428084938277" ignored="false" />
     <file path="/pageLoader.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1414181266164" ignored="false" />
     <file path="/findGame.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995033378" ignored="false" />
     <file path="/myGames.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995044547" ignored="false" />
     <file path="/addGame.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419995054797" ignored="false" />
-    <file path="/styles.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427687049304" ignored="false" />
+    <file path="/styles.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1428084897221" ignored="false" />
     <file path="/findGame.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999713801" ignored="false" />
     <file path="/myGames.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999760402" ignored="false" />
     <file path="/addGame.html" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1419999791107" ignored="false" />
@@ -124,8 +123,8 @@
     <file path="/config.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420396359357" ignored="false" />
     <file path="/db-connect.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426719181505" ignored="false" />
     <file path="/games.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427675965282" ignored="false" />
-    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427769689815" ignored="false" />
-    <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427721694355" ignored="false" />
+    <file path="/Dummy.txt" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1428076385140" ignored="false" />
+    <file path="/play.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1428076725466" ignored="false" />
     <file path="/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393397014" ignored="false" />
     <file path="/Applications/MAMP/conf/apache/httpd.conf" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420393571557" ignored="false" />
     <file path="/Applications/MAMP/logs/mysql_error_log.err" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1420416985092" ignored="false" />
@@ -176,11 +175,11 @@
     <file path="/crop-avatar.css" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426633205030" ignored="false" />
     <file path="/crop-game-image.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1425877579763" ignored="false" />
     <file path="/cleanUnusedFiles.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1425873043884" ignored="false" />
-    <file path="/add-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427419879082" ignored="false" />
+    <file path="/add-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1428092100073" ignored="false" />
     <file path="/crop-avatar.js" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1425964539242" ignored="false" />
     <file path="/scripts.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427679516199" ignored="false" />
     <file path="/favorite-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426217215251" ignored="false" />
-    <file path="/edit-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426621941025" ignored="false" />
+    <file path="/edit-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1428092720769" ignored="false" />
     <file path="/update-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426453576099" ignored="false" />
     <file path="/favorites.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1427688923041" ignored="false" />
     <file path="/delete-game.php" changelist="e0f706fd-d5c3-47c2-a4fa-e9b6241deaa0" time="1426460289134" ignored="false" />
@@ -311,8 +310,12 @@
       <file leaf-file-name="play.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/play.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="97" selection-start="678" selection-end="678" vertical-scroll-proportion="-0.625">
-              <folding />
+            <state line="30" column="29" selection-start="953" selection-end="953" vertical-scroll-proportion="-18.75">
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -320,23 +323,44 @@
       <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="17" selection-start="2157" selection-end="2157" vertical-scroll-proportion="-23.75">
+            <state line="38" column="17" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-game.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/add-game.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="393" column="109" selection-start="22674" selection-end="22674" vertical-scroll-proportion="-6.5">
               <folding>
-                <element signature="e#283#322#0" expanded="true" />
-                <element signature="e#652#678#0" expanded="true" />
-                <element signature="e#725#752#0" expanded="true" />
-                <element signature="e#918#957#0" expanded="true" />
-                <element signature="e#1079#1104#0" expanded="true" />
-                <element signature="e#1496#1534#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-game.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit-game.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/edit-game.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="442" column="44" selection-start="24775" selection-end="24775" vertical-scroll-proportion="0.50342464">
+              <folding>
+                <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="646" column="1" selection-start="15732" selection-end="15732" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -345,7 +369,7 @@
       <file leaf-file-name="update-game.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/update-game.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -363,43 +387,25 @@
       <file leaf-file-name="stylesheets.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/stylesheets.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="93" selection-start="264" selection-end="264" vertical-scroll-proportion="-8.75">
+            <state line="14" column="93" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="approve.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/approve.php">
+      <file leaf-file-name="scripts.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/scripts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="1" column="89" selection-start="182" selection-end="182" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-game.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/add-game.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="51" selection-start="9399" selection-end="9399" vertical-scroll-proportion="-26.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-modal.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootstrap-3.2.0/css/bootstrap-modal.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="21" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="3" selection-start="3946" selection-end="3946" vertical-scroll-proportion="0.48333332">
+            <state line="121" column="3" selection-start="3946" selection-end="3946" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -424,22 +430,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/auth/save_user.php" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/lib/froogaloop.js" />
         <option value="$PROJECT_DIR$/pages/favorites.php" />
         <option value="$PROJECT_DIR$/includes/scripts.php" />
         <option value="$PROJECT_DIR$/templates/header.php" />
         <option value="$PROJECT_DIR$/pages/login.php" />
         <option value="$PROJECT_DIR$/pages/join.php" />
-        <option value="$PROJECT_DIR$/pages/play.php" />
         <option value="$PROJECT_DIR$/pages/games.php" />
         <option value="$PROJECT_DIR$/bootstrap-3.2.0/css/bootstrap-modal.css" />
         <option value="$PROJECT_DIR$/cropper/js/crop-avatar.js" />
-        <option value="$PROJECT_DIR$/pages/add-game.php" />
         <option value="$PROJECT_DIR$/templates/footer.php" />
         <option value="$PROJECT_DIR$/includes/stylesheets.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/pages/play.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/pages/add-game.php" />
+        <option value="$PROJECT_DIR$/pages/edit-game.php" />
       </list>
     </option>
   </component>
@@ -480,6 +486,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -498,42 +505,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mygames-full" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mygames-full" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cropper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mygames-full" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mygames-full" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cropper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -608,6 +582,9 @@
           </mappings>
         </serverdata>
       </server>
+      <server id="3c045404-3de7-4992-aec4-707fde853c6f">
+        <serverdata />
+      </server>
       <server id="3df4761e-f68a-44d6-b9a4-5354420724ad">
         <serverdata />
       </server>
@@ -651,6 +628,9 @@
         <serverdata />
       </server>
       <server id="93dcee22-30c6-48a2-b7e3-13b937b3cf03">
+        <serverdata />
+      </server>
+      <server id="9bfb4cd9-fcc9-4266-baf5-5b464346881f">
         <serverdata />
       </server>
       <server id="a16e77c8-c702-4ec2-96aa-4f233621bc96">
@@ -1004,11 +984,15 @@
       <created>1427721872128</created>
       <updated>1427721872128</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="-fixed conflict with multiple bootstrap modals being on one page&#10;-hitting escape no longer exits full screen mode (anoying because some games require escape button and games refresh on resize)">
+      <created>1427773682271</created>
+      <updated>1427773682271</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31223175" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1084,7 +1068,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-games now order by number of times they have been played" />
+    <option name="LAST_COMMIT_MESSAGE" value="-fixed conflict with multiple bootstrap modals being on one page&#10;-hitting escape no longer exits full screen mode (anoying because some games require escape button and games refresh on resize)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1122,6 +1106,7 @@
     <MESSAGE value="-play game page auto scroll speed up&#10;-local copy of vimeo js (stop playing)" />
     <MESSAGE value="-join modal only shows up if favorites or add game buttons are clicked" />
     <MESSAGE value="-games now order by number of times they have been played" />
+    <MESSAGE value="-fixed conflict with multiple bootstrap modals being on one page&#10;-hitting escape no longer exits full screen mode (anoying because some games require escape button and games refresh on resize)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1133,39 +1118,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/favorites.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="62" selection-start="7418" selection-end="7418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="15" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="55" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/join.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="55" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/games.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="57" selection-start="1675" selection-end="1675" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
+        <state line="45" column="57" selection-start="1675" selection-end="1675" vertical-scroll-proportion="-0.625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/approve.php">
@@ -1189,51 +1154,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/add-game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="51" selection-start="9399" selection-end="9399" vertical-scroll-proportion="-26.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="117" selection-start="4188" selection-end="4188" vertical-scroll-proportion="0.7323291">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/play.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="97" selection-start="678" selection-end="678" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
+        <state line="92" column="117" selection-start="4188" selection-end="4188" vertical-scroll-proportion="0.7323291" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/stylesheets.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="93" selection-start="264" selection-end="264" vertical-scroll-proportion="-8.75">
+        <state line="14" column="93" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="17" selection-start="2157" selection-end="2157" vertical-scroll-proportion="-23.75">
-          <folding>
-            <element signature="e#283#322#0" expanded="true" />
-            <element signature="e#652#678#0" expanded="true" />
-            <element signature="e#725#752#0" expanded="true" />
-            <element signature="e#918#957#0" expanded="true" />
-            <element signature="e#1079#1104#0" expanded="true" />
-            <element signature="e#1496#1534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/edit-game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="38" column="17" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1247,8 +1182,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="3" selection-start="3946" selection-end="3946" vertical-scroll-proportion="0.48333332">
+        <state line="121" column="3" selection-start="3946" selection-end="3946" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/play.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="29" selection-start="953" selection-end="953" vertical-scroll-proportion="-18.75">
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="646" column="1" selection-start="15732" selection-end="15732" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="89" selection-start="182" selection-end="182" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/add-game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="393" column="109" selection-start="22674" selection-end="22674" vertical-scroll-proportion="-6.5">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/edit-game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="442" column="44" selection-start="24775" selection-end="24775" vertical-scroll-proportion="0.50342464">
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#template#0;n#polymer-element#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

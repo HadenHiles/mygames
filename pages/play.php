@@ -2,6 +2,12 @@
 $relative_path = '../';
 require_once($relative_path . 'auth/authenticate.php');
 
+//retrieve the user from the session
+session_start();
+if(isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+}
+
 //get the id from the url
 $id = $_REQUEST['id'];
 if(empty($id) || !isset($id)) {
@@ -19,9 +25,11 @@ foreach ($game_name_result as $row) {
     $page_name = $row['name'];
 }
 
-$update_count = $connect->prepare("UPDATE games SET play_count = play_count + 1 WHERE id = :id");
-$update_count->bindParam(':id', $id, PDO::PARAM_INT);
-$update_count->execute();
+if(!authSuper() && $user_id != 20 && $user_id != 27) {
+    $update_count = $connect->prepare("UPDATE games SET play_count = play_count + 1 WHERE id = :id");
+    $update_count->bindParam(':id', $id, PDO::PARAM_INT);
+    $update_count->execute();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,11 +45,6 @@ $update_count->execute();
                 require_once($relative_path . 'db/db-connect.php');
                 $connect = connection();
 
-                //retrieve the user from the session
-                session_start();
-                if(isset($_SESSION['user_id'])) {
-                    $user_id = $_SESSION['user_id'];
-                }
                 if (isset($_REQUEST['description'])) {
                     $description = $_REQUEST['description'];
                 }
