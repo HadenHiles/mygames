@@ -422,14 +422,13 @@ if (!authUser()) {
 
                                     var addGameForm = $(shadowRoot.querySelector('#add_game'));
                                     var providedUrlInput = $(shadowRoot.querySelector('#provided_url'));
-                                    var providedUrl = $(shadowRoot.querySelector('#provided_url')).attr('value');
+                                    var providedUrl = this.url;
                                     var urlPopup = $(shadowRoot.querySelector('.popup#url_popup'));
                                     addGameForm.on('submit', function(e) {
-                                        if(providedUrl == '{{url}}') {
+                                        if(providedUrl == '') {
                                             e.preventDefault();
-                                            providedUrl = '';
                                             urlPopup.toggle('drop', {direction: 'left'}, 200);
-                                        } else if(!gameSelected) {
+                                        } else if(!gameSelected && providedUrl != '') {
                                             e.preventDefault();
                                             if(gameSelectPopup.css('display') == 'none') {
                                                 gameSelectPopup.toggle('drop', {direction: 'right'}, 200);
@@ -439,11 +438,12 @@ if (!authUser()) {
                                             addGameForm.submit();
                                         }
                                     });
+                                    var me = this;
                                     providedUrlInput.on('change', function() {
                                         if(urlPopup.css('display') == 'block') {
                                             urlPopup.toggle('drop', {direction: 'left'}, 200);
                                         }
-                                        providedUrl = '';
+                                        providedUrl = me.url;
                                     });
                                 },
 

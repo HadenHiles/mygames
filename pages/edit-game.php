@@ -442,14 +442,10 @@ if(!file_exists($img)) {
 
                                     var editGameForm = $(shadowRoot.querySelector('#edit_game'));
                                     var providedUrlInput = $(shadowRoot.querySelector('#provided_url'));
-                                    var providedUrl = $(shadowRoot.querySelector('#provided_url')).attr('value');
+                                    var providedUrl = this.url;
                                     var urlPopup = $(shadowRoot.querySelector('.popup#url_popup'));
                                     editGameForm.on('submit', function(e) {
-                                        if(providedUrl == '{{url}}') {
-                                            e.preventDefault();
-                                            providedUrl = '';
-                                            urlPopup.toggle('drop', {direction: 'left'}, 200);
-                                        } else if(!gameSelected) {
+                                        if(providedUrl != '' && !gameSelected) {
                                             e.preventDefault();
                                             if(gameSelectPopup.css('display') == 'none') {
                                                 gameSelectPopup.toggle('drop', {direction: 'right'}, 200);
@@ -459,11 +455,12 @@ if(!file_exists($img)) {
                                             editGameForm.submit();
                                         }
                                     });
+                                    var me = this;
                                     providedUrlInput.on('change', function() {
                                         if(urlPopup.css('display') == 'block') {
                                             urlPopup.toggle('drop', {direction: 'left'}, 200);
                                         }
-                                        providedUrl = '';
+                                        providedUrl = me.url;
                                     });
                                 },
 
