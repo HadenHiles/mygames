@@ -2,7 +2,5 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="PROJECT" libraries="{Node.js v0.10.32 Core Modules, typescript}" />
-    <includedPredefinedLibrary name="Node.js Globals" />
   </component>
 </project>
-

@@ -267,7 +267,7 @@ if (!authUser()) {
                         <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
                             <!-- Current avatar -->
-                            <div class="avatar-view" id="current_image" title="Upload an Image">
+                            <div class="avatar-view" id="current_image">
                                 <img src="{{imageUrl}}" alt="No Image">
                             </div>
                             <!-- Cropping modal -->
@@ -425,9 +425,11 @@ if (!authUser()) {
                                     var providedUrl = this.url;
                                     var urlPopup = $(shadowRoot.querySelector('.popup#url_popup'));
                                     addGameForm.on('submit', function(e) {
-                                        if(providedUrl == '') {
+                                        if(providedUrl == '' && !gameSelected) {
                                             e.preventDefault();
-                                            urlPopup.toggle('drop', {direction: 'left'}, 200);
+                                            if(urlPopup.css('display') == 'none') {
+                                                urlPopup.toggle('drop', {direction: 'left'}, 200);
+                                            }
                                         } else if(!gameSelected && providedUrl != '') {
                                             e.preventDefault();
                                             if(gameSelectPopup.css('display') == 'none') {

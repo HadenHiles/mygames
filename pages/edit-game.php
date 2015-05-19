@@ -286,7 +286,7 @@ if(!file_exists($img)) {
                         <link href="<?=$relative_path?>cropper/css/crop-avatar.css" rel="stylesheet">
                         <div class="crop-avatar" id="cropAvatar">
                             <!-- Current avatar -->
-                            <div class="avatar-view" id="current_image" title="Upload an Image">
+                            <div class="avatar-view" id="current_image">
                                 <img src="{{imageUrl}}" alt="No Image">
                             </div>
                             <!-- Cropping modal -->

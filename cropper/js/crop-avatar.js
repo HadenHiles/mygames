@@ -50,7 +50,7 @@
         this.initIframe();
       }
 
-      this.initTooltip();
+//      this.initTooltip();
       this.initModal();
       this.addListener();
     },
@@ -61,11 +61,11 @@
       this.$avatarForm.on("submit", $.proxy(this.submit, this));
     },
 
-    initTooltip: function () {
-      this.$avatarView.tooltip({
-        placement: "bottom"
-      });
-    },
+//    initTooltip: function () {
+//      this.$avatarView.tooltip({
+//        placement: "bottom"
+//      });
+//    },
 
     initModal: function () {
       this.$avatarModal.modal("hide");

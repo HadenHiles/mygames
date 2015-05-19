@@ -6,8 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/PHPMailer-master/docs/docs.iml" filepath="$PROJECT_DIR$/PHPMailer-master/docs/docs.iml" />
       <module fileurl="file://$PROJECT_DIR$/PHPMailer-master/examples/examples.iml" filepath="$PROJECT_DIR$/PHPMailer-master/examples/examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/cropper/js/js.iml" filepath="$PROJECT_DIR$/cropper/js/js.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mygames-full.iml" filepath="$PROJECT_DIR$/mygames-full.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mygames.iml" filepath="$PROJECT_DIR$/mygames.iml" />
     </modules>
   </component>
 </project>
-
